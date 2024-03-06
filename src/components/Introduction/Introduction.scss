@@ -1,0 +1,77 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/_global" as *;
+
+.intro{
+    &__header{
+        font-weight: 400;
+        padding: 2rem 0 1rem 3rem;
+        // font-weight: 700;
+    }
+    &__tabsparent{
+        display: flex;
+        flex-direction: row;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+    &__tab{
+        width: 30rem;
+        padding: 2.4rem;
+        // color: white;
+        background-color: lightgray;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        transition: all 0.3s ease;
+        &:hover{
+            background-color: white;
+            transform: scale(1.02);
+            text-align: center;
+            font-size: 1.3rem;
+            // font-weight: 700;
+        }
+    }
+    &__card{
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        height: 30rem;
+        width: 63rem;
+        border-radius: 4px;
+        &--content{
+            padding: 2rem;
+        }
+        &--image{
+            padding: 1rem;
+            width: 40rem;
+        }
+    }
+    &__labels{
+
+    }
+}
+.active{
+    background-color: white;
+    // font-weight: 700;
+    text-align: center;
+    font-size: 1.3rem;
+    &:hover{
+        background-color: white;
+    }
+}
+@keyframes slideIn {
+    from {
+        // transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        // transform: translateX(0);
+        opacity: 1;
+    }
+}
+.intro__card--animate {
+    animation: slideIn 1s forwards; // Adjust duration as needed
+}
+// .tab1, .tab2, .tab3{
+//     width: 4rem;
+//     height: 4rem;
+//     background-color: red;
+// }
