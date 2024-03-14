@@ -5,6 +5,13 @@
 
 .header{
     padding-top: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 
     &__list{
         display: flex;
@@ -15,6 +22,10 @@
             list-style-type: none;
             &:hover{
                 font-weight: 700;
+            }
+            &.active{
+                font-weight: 700;
+                font-size: 1rem;
             }
         }
     }

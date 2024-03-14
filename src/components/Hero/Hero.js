@@ -6,7 +6,7 @@ export default function Hero(){
     return(
     <section className="hero__parent">
         <section className="hero__child1">
-            <h1 className="hero__brandname">Renobelle</h1>
+            <h1 className="hero__brandname">Renontario</h1>
             <p className="hero__about1">Building Dreams</p>
             <p className="hero__about2">Renovating Realities</p>
             <p className="hero__about3">Renovation <br/>& <br/>Remodeling</p>

@@ -1,15 +1,22 @@
 import "./Header.scss";
+import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
 export default function Header(){
     const navigate = useNavigate();
+    const [activeLink, setActiveLink] = useState("/");
 
     return(
     <header className="header">
         <nav className="header__nav">
             <ul className="header__list">
-                <li className="header__list--item" onClick={()=>navigate("/")}>Home</li>
-                <li className="header__list--item" onClick={()=>navigate("/services")}>Services</li>
+                <li className={`header__list--item ${activeLink === '/' ? 'active':''}`} onClick={()=> {
+                    navigate("/"); 
+                    setActiveLink('/'); 
+                    }}>Home</li>
+                <li className={`header__list--item ${activeLink === '/services' ? 'active':''}`} onClick={()=>{
+                    navigate("/services");
+                    setActiveLink('/services')}}>Services</li>
                 <li className="header__list--item">About Us</li>
                 <li className="header__list--item">Contact Us</li>
                 <li className="header__list--item">Log In</li>
