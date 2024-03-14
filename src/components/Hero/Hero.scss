@@ -10,12 +10,13 @@
     }
     &__child2{
         background-image: url('../../assets/images/Hero.png'); // Adjust the path as needed
-        background-size: cover;
+        background-size: contain;
         background-position: center;
+        object-fit: contain;
         background-repeat: no-repeat;
         background-attachment: fixed; // This makes the background fixed during scroll
         height: 600px; // Adjust as needed
-        width: 1200px;
+        width: 3500px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -23,18 +24,25 @@
     &__parent{
         display: flex;
         flex-direction: row;
-
+        margin-top: 2.5rem;
     }
     &__child1{
         background-color: rgb(44, 43, 43);
-        padding: 10rem 9rem 2rem 9rem;
+        padding: 6rem 9rem 2rem 9rem;
         height: 600px;
+    }
+    &__about4{
+        color: white;
+        padding-top: 1rem;
     }
     &__about1{
         padding-top: 0.5rem;
         line-height: 2rem;
         word-spacing: 30px;
         padding-bottom: 0.2rem;
+    }
+    &__form{
+        // background-color: gold;
     }
     &__brandname{
         font-size: 2rem;
