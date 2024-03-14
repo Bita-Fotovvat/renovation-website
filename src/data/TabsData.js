@@ -4,8 +4,8 @@ import Landscaping from "../assets/images/landscaping.jpg"
 export const TabsData = [
     {
         id:1,
-        title: "Interior Renovation & Remodeling",
-        content:"Kitchen, Bathroom, Basement, Home Remodeling",
+        title: "Interior Home Services",
+        content:["Kitchen, Bathroom, Basement, Home Remodeling"],
         image: InteriorReno,
         tag: "renovation & remodeling"
     },
@@ -18,22 +18,29 @@ export const TabsData = [
     },
     {
         id:3,
+        title: "Renovation & Remodeling Services",
+        content:"Demolishing, Painting, Drywalling & Framing, Taping, Mudding & Sanding",
+        image: "",
+        tag: "electrical services"
+    },
+    {
+        id:4,
         title: "Electrical Services",
         content:"Panel Changes, Panel Upgrading, Wiring, Spotlight, Light",
         image: "",
         tag: "electrical services"
     },
     {
-        id:4,
+        id:5,
         title: "Plumbing Services",
         content:"Vanity Changing, Faucet Changing",
         image: "",
         tag: "plumbing services"
     },
     {
-        id:5,
+        id:6,
         title: "Small Jobs & Other Services",
-        content:"Painting, Electrical, Carpentry, Plumbing, Light, Spotlight, Switch, Plug, Flooring, Ceiling, Door Changing, Demolishing, Drywalling & Framing, Taping, Mudding & Sanding",
+        content:"Painting, Electrical, Carpentry, Plumbing, Light, Spotlight, Switch, Plug, Flooring, Ceiling, Door Changing",
         image: "",
         tag: "small jobs"
     }
