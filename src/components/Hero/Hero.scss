@@ -8,9 +8,22 @@
         width: 100%;
         height: 600px;
     }
+    &__child2{
+        background-image: url('../../assets/images/Hero.png'); // Adjust the path as needed
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; // This makes the background fixed during scroll
+        height: 600px; // Adjust as needed
+        width: 1200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     &__parent{
         display: flex;
         flex-direction: row;
+
     }
     &__child1{
         background-color: rgb(44, 43, 43);

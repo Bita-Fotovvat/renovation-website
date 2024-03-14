@@ -1,5 +1,6 @@
 import "./Hero.scss";
 import HeroImage from "../../assets/images/Hero.png"
+import { useState, useEffect } from 'react';
 
 export default function Hero(){
     return(
@@ -11,7 +12,7 @@ export default function Hero(){
             <p className="hero__about3">Renovation <br/>& <br/>Remodeling</p>
         </section>
         <section className="hero__child2">
-            <img src={HeroImage} alt="Hero Image" className="hero__image" />
+            {/* <img src={HeroImage} alt="Hero Image" className="hero__image" /> */}
         </section>
     </section>
     )
