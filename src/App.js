@@ -2,7 +2,7 @@ import './App.scss';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "../src/components/Header/Header";
 import HomePage from './pages/HomePage/HomePage';
-
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
         <Route path="/get-a-quote" element={<QuotePage/>} /> 
         <Route path="/login" element={<LoginPage/>} />  */}
         </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }

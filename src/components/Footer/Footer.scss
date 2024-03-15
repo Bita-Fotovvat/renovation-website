@@ -1,0 +1,42 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/_global" as *;
+
+.footer{
+    background-color: $website-darkgray;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 8rem;
+    display: flex;
+    flex-direction: row;
+    // justify-content:space-around;
+    gap: 30vw;
+    &__phoneparent, &__emailparent{
+        display: flex;
+        flex-direction: row;
+        &--text{
+            padding-bottom: 1rem;
+        }
+    }
+    &__title{
+        color: white;
+        font-size: 2rem;
+        font-weight: 400;
+        padding-bottom: 1rem;
+    }
+    &__phone, &__email{
+        color: white;
+        font-size: 1rem;
+    }
+    &__icon{
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+    &__logo{
+        width: 20rem;
+        padding-right: 1rem;
+    }
+}

@@ -1,12 +1,14 @@
 import "./Hero.scss";
-import HeroImage from "../../assets/images/Hero.png"
+import HeroImage from "../../assets/images/Hero.png";
+import Logo from "../../assets/logo/logo.png";
 import { useState, useEffect } from 'react';
 
 export default function Hero(){
     return(
     <section className="hero__parent">
         <section className="hero__child1">
-            <h1 className="hero__brandname">Renontario</h1>
+            <img className="hero__logo" src={Logo} alt="renontario logo" />
+            {/* <h1 className="hero__brandname">Renontario</h1> */}
             <p className="hero__about1">slogan</p>
             <p className="hero__about2">Renovation & Remodeling Company</p>
             <p className="hero__about3">Need a Quote or Consultation?</p>
