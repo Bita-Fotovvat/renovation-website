@@ -8,14 +8,12 @@
         background-image: url('../../assets/images/Heromobile.jpg'); // Adjust the path as needed
         background-size: contain;
         background-position: top;
-        object-fit: contain;
+        // object-fit: contain;
+        height: 70%;
         background-repeat: no-repeat;
-        // background-attachment: fixed;
-        height: 16.2vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        // width: 100%;
+        background-attachment: fixed;
+        background-position-y: 2rem;
+        aspect-ratio: 16/6.2;
         margin-top: 2rem;
         @include tablet-and-desktop{
             display: none;
@@ -26,22 +24,29 @@
         flex-direction: row;
         max-width: 90%;
         margin: auto;
+        padding-top: 1rem;
         @include tablet-and-desktop{
             flex-direction: column;
+            padding-top: 0;
         }
     }
     &__logo{
         width: 27vw;
         margin: 0.5rem;
         @include tablet-and-desktop{
-            width: 13rem;
+            width: 9rem;
             display: block;
             margin: auto;
+            padding-top: 1rem;
+        }
+        @include desktop{
+            padding-bottom: 1rem;  
         }
     }
     &__about2{
         padding-top: 1.5rem;
-        padding-left: 2%;
+        padding-left: 5%;
+        align-self: center;
         @include tablet-and-desktop{
             padding-top: 0;
         }
@@ -52,8 +57,8 @@
         width: 60%;
         margin: auto;
         @include tablet-and-desktop{
-            padding-top: 5rem;
-            font-size: 1.6rem;
+            padding-top: 2rem;
+            font-size: 1.2rem;
         }
     }
     &__about4{
@@ -66,7 +71,7 @@
         text-align: center;
         @include tablet-and-desktop{
             padding-top: 1rem;
-            padding-bottom: 0.5rem;
+            padding-bottom: 1rem;
         }
     }
     &__image{
@@ -79,7 +84,7 @@
         @include tablet-and-desktop{
             display: flex;
             flex-direction: row;
-            margin-top: 2.5rem;
+            margin-top: 2.2rem;
             width: 100%;
         }
     }
@@ -87,26 +92,34 @@
         background-color: rgb(44, 43, 43);
         @include tablet-and-desktop{
             background-color: rgb(44, 43, 43);
-            padding: 3rem 3rem 2rem 3rem;
+            height: 540px;
+            width: 35%;
+        }
+        @include desktop{
             height: 600px;
-            width: 30%;
+            padding: 1rem 3rem 2rem 3rem;
+            width: 23%;
         }
     }
     &__child2{
         display: none;
         @include tablet-and-desktop{
-            background-image: url('../../assets/images/Hero.png'); // Adjust the path as needed
-            background-size: contain;
+            background-image: url('../../assets/images/Hero.png');
+            background-size: cover;
             background-position: center;
-            object-fit: contain;
             background-repeat: no-repeat;
-            background-attachment: fixed; // This makes the background fixed during scroll
-            height: 600px; // Adjust as needed
+            background-attachment: fixed;
+            background-position-x: 3rem;
+            height: 540px;
             width: 3500px;
             display: flex;
             justify-content: center;
             align-items: center;
             width: 70%;
+        }
+        @include desktop{
+            height: 600px;
+            width: 77%;
         }
     }
     &__about1{
@@ -133,6 +146,9 @@
             font-family: Nexa;
             font-weight: 400;
             background-color: rgb(235, 234, 234);
+            @include tablet-and-desktop{
+                height: 1.8rem;
+            }
         }
         &--button{
             border-radius: 6px;

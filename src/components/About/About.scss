@@ -1,0 +1,33 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/_global" as *;
+
+.about{
+    &__photo{
+        height: 15rem;
+        margin-top: 3rem;
+    //     background-image: url('../../assets/images/about.jpg'); // Adjust the path as needed
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    //     background-attachment: fixed;
+    //     height: 40vh;
+    //     width: 40%;
+    }
+    &__wrapper{
+        display: flex;
+        padding: 3rem;
+        padding-top: 4rem;
+    }
+    &__maintitle{
+        font-size: 2rem;
+    }
+    &__parent{
+        // background-color: $website-darkgray;
+        padding: 3rem 2rem;
+        width: 70%;
+        margin: auto;
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+}

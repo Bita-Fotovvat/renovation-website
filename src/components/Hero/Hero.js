@@ -16,7 +16,7 @@ export default function Hero(){
                 <p className="hero__about2">Renovation & Remodeling Company</p>
             </section>
             <p className="hero__about3">Need a Quote or Consultation?</p>
-            <p className="hero__about4">Enter your contact information and we will contact you for a quotation</p>
+            <p className="hero__about4">Enter your contact information to get a quotation</p>
             <form className="hero__form">
                 <input className="hero__form--name"  type="name" placeholder="Name" />
                 <input className="hero__form--email" type="email"  placeholder="Email" />
