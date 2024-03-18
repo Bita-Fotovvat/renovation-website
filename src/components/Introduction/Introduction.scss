@@ -5,9 +5,13 @@
 
 .intro{
     &__header{
-        font-weight: 400;
-        padding: 2rem 0 1rem 3rem;
-        // font-weight: 700;
+        padding: 0.5rem;
+        font-size: 1.2rem;
+        @include tablet-and-desktop{
+            font-weight: 400;
+            padding: 2rem 0 1rem 3rem;
+            // font-weight: 700;
+        }
     }
     &__tabsparent{
         display: flex;
@@ -42,6 +46,10 @@
         &--image{
             padding: 1rem;
             width: 40rem;
+            // position: fixed;
+            // top: 20px; /* Adjust as needed */
+            // left: 20px; /* Adjust as needed */
+            // z-index: 10; /* Ensure it's above the content; adjust as needed */
         }
     }
     &__labels{

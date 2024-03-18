@@ -4,7 +4,8 @@
 @use "../../styles/partials/_global" as *;
 
 .header{
-    padding-top: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -16,10 +17,11 @@
     &__list{
         display: flex;
         flex-direction: row;
-        gap: 2rem;
+        padding-left: 1.5rem;
+        gap: 10%;
         &--item{
-            padding-bottom: 1rem;
             list-style-type: none;
+            font-size: 0.8rem;
             &:hover{
                 font-weight: 700;
             }

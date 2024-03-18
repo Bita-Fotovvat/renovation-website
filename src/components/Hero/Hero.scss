@@ -4,10 +4,70 @@
 @use "../../styles/partials/_global" as *;
 
 .hero{
-    &__logo{
-        width: 13rem;
-        display: block;
+    &__childmobile{
+        background-image: url('../../assets/images/Heromobile.jpg'); // Adjust the path as needed
+        background-size: contain;
+        background-position: top;
+        object-fit: contain;
+        background-repeat: no-repeat;
+        // background-attachment: fixed;
+        height: 16.2vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // width: 100%;
+        margin-top: 2rem;
+        @include tablet-and-desktop{
+            display: none;
+        }
+    }
+    &__branding{
+        display: flex;
+        flex-direction: row;
+        max-width: 90%;
         margin: auto;
+        @include tablet-and-desktop{
+            flex-direction: column;
+        }
+    }
+    &__logo{
+        width: 27vw;
+        margin: 0.5rem;
+        @include tablet-and-desktop{
+            width: 13rem;
+            display: block;
+            margin: auto;
+        }
+    }
+    &__about2{
+        padding-top: 1.5rem;
+        padding-left: 2%;
+        @include tablet-and-desktop{
+            padding-top: 0;
+        }
+    }
+    &__about3{
+        padding-top: 2rem;
+        font-size: 1.2rem;
+        width: 60%;
+        margin: auto;
+        @include tablet-and-desktop{
+            padding-top: 5rem;
+            font-size: 1.6rem;
+        }
+    }
+    &__about4{
+        color: white;
+        font-size: 0.9rem;
+        width: 60%;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        margin: auto;
+        text-align: center;
+        @include tablet-and-desktop{
+            padding-top: 1rem;
+            padding-bottom: 0.5rem;
+        }
     }
     &__image{
         width: 100%;
@@ -15,33 +75,39 @@
     }
     &__parent{
         display: flex;
-        flex-direction: row;
-        margin-top: 2.5rem;
-        width: 100%;
+        flex-direction: column;
+        @include tablet-and-desktop{
+            display: flex;
+            flex-direction: row;
+            margin-top: 2.5rem;
+            width: 100%;
+        }
     }
     &__child1{
         background-color: rgb(44, 43, 43);
-        padding: 3rem 3rem 2rem 3rem;
-        height: 600px;
-        width: 30%;
+        @include tablet-and-desktop{
+            background-color: rgb(44, 43, 43);
+            padding: 3rem 3rem 2rem 3rem;
+            height: 600px;
+            width: 30%;
+        }
     }
     &__child2{
-        background-image: url('../../assets/images/Hero.png'); // Adjust the path as needed
-        background-size: contain;
-        background-position: center;
-        object-fit: contain;
-        background-repeat: no-repeat;
-        background-attachment: fixed; // This makes the background fixed during scroll
-        height: 600px; // Adjust as needed
-        width: 3500px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 70%;
-    }
-    &__about4{
-        color: white;
-        padding-top: 1rem;
+        display: none;
+        @include tablet-and-desktop{
+            background-image: url('../../assets/images/Hero.png'); // Adjust the path as needed
+            background-size: contain;
+            background-position: center;
+            object-fit: contain;
+            background-repeat: no-repeat;
+            background-attachment: fixed; // This makes the background fixed during scroll
+            height: 600px; // Adjust as needed
+            width: 3500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+        }
     }
     &__about1{
         padding-top: 0.5rem;
@@ -50,7 +116,30 @@
         padding-bottom: 0.2rem;
     }
     &__form{
-        // background-color: gold;
+        padding-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin: auto;
+        // @include tablet-and-desktop{
+        // }
+        &--name, &--email, &--phone{
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 6px;
+            border: none;
+            font-family: Nexa;
+            font-weight: 400;
+            background-color: rgb(235, 234, 234);
+        }
+        &--button{
+            border-radius: 6px;
+            height: 2rem;
+            background-color: rgb(106, 106, 106);
+            color: white;
+        }
     }
     &__brandname{
         font-size: 2rem;
@@ -59,9 +148,5 @@
     &__brandname, &__about1, &__about2, &__about3 {
         color: white;
         text-align: center;
-    }
-    &__about3{
-        padding-top: 5rem;
-        font-size: 1.6rem;
     }
 }
