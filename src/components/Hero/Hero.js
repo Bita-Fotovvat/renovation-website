@@ -15,13 +15,16 @@ export default function Hero(){
                 <img className="hero__logo" src={Logo} alt="renontario logo" />
                 <p className="hero__about2">Renovation & Remodeling Company</p>
             </section>
-            <p className="hero__about3">Need a Quote or Consultation?</p>
-            <p className="hero__about4">Enter your contact information to get a quotation</p>
+            {/* <p className="hero__about3">Schedule a Consultation</p> */}
+            {/* <p className="hero__about4">Enter your contact information to get a quotation</p> */}
             <form className="hero__form">
-                <input className="hero__form--name"  type="name" placeholder="Name" />
+                {/* <input className="hero__form--name"  type="name" placeholder="Name" />
+                <input className="hero__form--city" type="city"  placeholder="City" />
                 <input className="hero__form--email" type="email"  placeholder="Email" />
                 <input className="hero__form--phone" type="phone"  placeholder="Phone Number" />
-                <button className="hero__form--button">Get Quotation</button>
+                <textarea className="hero__form--message" name="message" rows="4" cols="50">Message (optional)</textarea>
+                {/* <input className="hero__form--message" type="phone"  placeholder="Message (optional)" /> */}
+                <button className="hero__form--button">Schedule a Consultation</button>
             </form>
         </section>
         <section className="hero__child2">

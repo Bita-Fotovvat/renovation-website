@@ -17,7 +17,7 @@ export default function Header(){
                 <li className={`header__list--item ${activeLink === '/services' ? 'active':''}`} onClick={()=>{
                     navigate("/services");
                     setActiveLink('/services')}}>Our Portfolio</li>
-                {/* <li className="header__list--item">About Us</li> */}
+                <li className="header__list--item">About Us</li>
                 <li className="header__list--item">Contact Us</li>
                 {/* <li className="header__list--item">Log In</li>
                 <li className="header__list--item">Get a Quote</li>

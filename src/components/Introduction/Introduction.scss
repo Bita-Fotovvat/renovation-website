@@ -5,7 +5,8 @@
 
 .intro{
     &__header{
-        padding: 0.5rem;
+        padding-top: 1rem;
+        padding-left: 1rem;
         font-size: 1.2rem;
         @include tablet-and-desktop{
             font-weight: 400;

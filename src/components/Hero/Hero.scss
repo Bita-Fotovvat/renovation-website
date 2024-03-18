@@ -82,6 +82,7 @@
         display: flex;
         flex-direction: column;
         @include tablet-and-desktop{
+            align-items: stretch;
             display: flex;
             flex-direction: row;
             margin-top: 2.2rem;
@@ -92,8 +93,10 @@
         background-color: rgb(44, 43, 43);
         @include tablet-and-desktop{
             background-color: rgb(44, 43, 43);
-            height: 540px;
+            height: 25rem;
             width: 35%;
+            padding-right: 1rem;
+            padding-left: 1rem;
         }
         @include desktop{
             height: 600px;
@@ -105,21 +108,34 @@
         display: none;
         @include tablet-and-desktop{
             background-image: url('../../assets/images/Hero.png');
-            background-size: cover;
-            background-position: center;
+            background-size: contain;
+            // background-position: left;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-position-x: 3rem;
-            height: 540px;
-            width: 3500px;
+            // background-position-x: 3rem;
+            height: 25rem;
+            // width: 100%;
             display: flex;
             justify-content: center;
-            align-items: center;
-            width: 70%;
+            // align-items: center;
+            aspect-ratio: 16/6.2;
+            // max-height: 540px;
         }
         @include desktop{
             height: 600px;
             width: 77%;
+            background-image: url('../../assets/images/Hero.png');
+            background-size: contain;
+            background-position: right;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            // background-position-x: 3rem;
+            // height: 540px;
+            // width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 16/6.2;
         }
     }
     &__about1{
@@ -129,14 +145,14 @@
         padding-bottom: 0.2rem;
     }
     &__form{
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
         display: flex;
         flex-direction: column;
         width: 60%;
         margin: auto;
         // @include tablet-and-desktop{
         // }
-        &--name, &--email, &--phone{
+        &--name, &--email, &--phone, &--city {
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
             padding-left: 1rem;
@@ -150,10 +166,25 @@
                 height: 1.8rem;
             }
         }
-        &--button{
+        &--message{
+            padding-top: 0.5rem;
+            padding-bottom: 2rem;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
             border-radius: 6px;
-            height: 2rem;
-            background-color: rgb(106, 106, 106);
+            border: none;
+            font-family: Nexa;
+            font-weight: 400;
+            color: gray;
+            background-color: rgb(235, 234, 234);
+        }
+        &--button{
+            font-family: Nexa;
+            margin-top: 2rem;
+            border-radius: 6px;
+            height: 7vh;
+            width: 100%;
+            background-color: rgb(180, 133, 63);
             color: white;
         }
     }

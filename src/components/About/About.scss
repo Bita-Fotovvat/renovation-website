@@ -4,30 +4,111 @@
 @use "../../styles/partials/_global" as *;
 
 .about{
+    &__parentmobile{
+        padding-bottom: 2rem;
+        border-bottom: 1px solid lightgray;
+    }
     &__photo{
-        height: 15rem;
-        margin-top: 3rem;
+        border-radius: 4px;
+        height: 11rem;
+        // width: 15%;
+        // aspect-ratio: 16/9;
+        margin-top: 2rem;
+        margin-left: 2rem;
     //     background-image: url('../../assets/images/about.jpg'); // Adjust the path as needed
     //     background-size: contain;
     //     background-repeat: no-repeat;
     //     background-attachment: fixed;
     //     height: 40vh;
     //     width: 40%;
+    @include desktop{
+        margin-top: 4rem;
+        height: 20rem;
+        // aspect-ratio: 16 /;
+    }
+    }
+    &__wrappermobile{
+        @include tablet-and-desktop{
+            display: none;
+        }
+    }
+    &__maintitlemobile{
+        font-size: 1.3rem;
+        padding: 1rem 1rem 0 1rem;
+        text-align: center;
+    }
+    &__titlemobile{
+        font-size: 1rem;
+        font-weight: 400;
+        padding-top: 0.4rem;
+        padding-bottom: 0.8rem;
+        text-align: center;
+    }
+    &__contentmobile{
+        padding-right: 1rem;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        text-align: center;
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+    }
+    &__buttonmobile{
+        margin-top: 2rem;
+        display: block;
+        margin: auto;
+    }
+    &__photomobile{
+        width: 70%;
+        border-radius: 4px;
+        display: block;
+        margin: auto;
     }
     &__wrapper{
-        display: flex;
-        padding: 3rem;
-        padding-top: 4rem;
+        display: none;
+        @include tablet-and-desktop{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // padding: 3rem;
+            // padding-top: 4rem;
+        }
     }
     &__maintitle{
         font-size: 2rem;
     }
     &__parent{
         // background-color: $website-darkgray;
-        padding: 3rem 2rem;
+        padding: 2rem 2rem;
         width: 70%;
         margin: auto;
         font-size: 1.3rem;
         line-height: 2rem;
+        max-width: 1000px;
     }
+    &__title{
+        font-weight: 400;
+        padding-top: 1rem;
+        font-size: 1.5rem;
+    }
+    &__content{
+        display: none;
+        @include tablet-and-desktop{
+            display: flex;
+            padding-top: 1rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            max-width: 1000px;
+            margin: auto;
+        }
+        @include desktop{
+            padding-top: 2rem;
+            font-size: 1.3rem;
+            padding-left: 1rem;
+        }
+    }
+    // &__photodesktop{
+    //     border-radius: 4px;
+    //     display: block;
+    //     margin: auto;
+    // }
 }
