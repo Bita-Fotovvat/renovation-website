@@ -9,8 +9,9 @@
         padding-left: 1rem;
         font-size: 1.2rem;
         @include tablet-and-desktop{
-            font-weight: 400;
-            padding: 2rem 0 1rem 3rem;
+            font-weight: 600;
+            font-size: 2rem;
+            padding: 1rem 0 1rem 2rem;
             // font-weight: 700;
         }
     }
@@ -27,6 +28,9 @@
         font-size: 0.9rem;
         padding-left: 1rem;
         padding-right: 0.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        background-color: $website-border-lightgray;
         &:hover{
             background-color: white;
             transform: scale(1.02);
@@ -35,17 +39,19 @@
             font-weight: 600;
         }
         @include tablet-and-desktop{
-            width: 30rem;
-            padding: 2.4rem;
+            font-size: 1rem;
+            padding: 0.5rem 2rem;
+            // width: 30rem;
+            // padding: 2.4rem;
             // color: white
-            background-color: lightgray;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            // background-color: $website-border-lightgray;
+            // box-shadow: 0 4px 8px rgba(0,0,0,0.5);
             &:hover{
                 background-color: white;
                 transform: scale(1.02);
                 text-align: center;
-                font-size: 1.3rem;
-                // font-weight: 700;
+
+                font-weight: 600;
             }
         }
     }
@@ -53,32 +59,52 @@
         background-color: white;
         box-shadow: 0 4px 8px rgba(0,0,0,0.5);
         border-radius: 4px;
+        @include big-mobile-screen{
+            width: 50%;
+        }
         @include tablet-and-desktop{
-            height: 30rem;
-            width: 63rem;
+            display: flex;
+            // height: 30rem;
+            width: 60%;
             border-radius: 4px;
         }
         &--content{
-
-            padding-left: 1rem;
-            padding-bottom: 1rem;
+            padding: 0.5rem 0.5rem 1rem 0.5rem;
             @include tablet-and-desktop{
                 padding: 2rem;
+                width: 40%;
             }
         }
         &--image{
             width: 10rem;
             border-radius: 4px;
-            margin: 0.5rem;
+            display: block;
+            // padding-top: 0.5rem;
+            // margin-right: 0.5ren;
+            // margin-left: 0.5ren;
+            margin: auto;
+            @include big-mobile-screen{
+                width: 90%;
+            }
             @include tablet-and-desktop{
-                padding: 1rem;
-                width: 40rem;
+                // padding: 1rem;
+                width: 50%;
+                border-radius: 4px;
             }
 
             // position: fixed;
             // top: 20px; /* Adjust as needed */
             // left: 20px; /* Adjust as needed */
             // z-index: 10; /* Ensure it's above the content; adjust as needed */
+        }
+        &--li{
+            padding: 0.25rem 0.25rem;
+            list-style-type: none;
+            font-size: 0.9rem;
+            border-bottom: 1px solid $website-border-lightgray;
+            @include desktop{
+                font-size: 1rem;
+            }
         }
     }
     &__labels{
@@ -89,7 +115,7 @@
     background-color: white;
     transform: scale(1.02);
     text-align: center;
-    // font-size: 1rem;
+    font-size: 1rem;
     font-weight: 600;
     position: relative;
     z-index: 10;
@@ -98,7 +124,7 @@
         background-color: white;
         // font-weight: 700;
 
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         &:hover{
             background-color: white;
         }

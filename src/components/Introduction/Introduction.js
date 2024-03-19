@@ -1,11 +1,8 @@
 import { useState } from "react";
 import { TabsData } from "../../data/TabsData";
 import "./Introduction.scss";
-import useMediaQuery from '@mui/material/useMediaQuery';
-
 
 export default function Introduction(){
-    // const isBigMobile = useMediaQuery('(min-width:500px)');
     const [activeTab, setActiveTab] = useState(0);
     const handleClick = (index) =>{
         setActiveTab(index);
@@ -20,7 +17,7 @@ export default function Introduction(){
 
     const renderContentAsList = (content) => {
         if (Array.isArray(content)) {
-            return content.map((item, index) => <li key={index}>{item}</li>);
+            return content.map((item, index) => <li className="intro__card--li" key={index}>{item}</li>);
         } else {
             return content.split(' ').map((word, index) => <li key={index}>{word}</li>);
         }

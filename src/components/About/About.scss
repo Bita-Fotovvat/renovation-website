@@ -6,7 +6,7 @@
 .about{
     &__parentmobile{
         padding-bottom: 2rem;
-        border-bottom: 1px solid lightgray;
+        border-bottom: 1px solid $website-border-lightgray;
     }
     &__photo{
         border-radius: 4px;
@@ -51,6 +51,10 @@
         text-align: center;
         font-size: 0.8rem;
         line-height: 1.3rem;
+        @include big-mobile-screen{
+            width: 90%;
+            margin: auto
+        }
     }
     &__buttonmobile{
         margin-top: 2rem;
@@ -94,11 +98,13 @@
         display: none;
         @include tablet-and-desktop{
             display: flex;
-            padding-top: 1rem;
+            padding-top: 2rem;
             padding-left: 2rem;
             padding-right: 2rem;
+            padding: 2rem 2rem 3rem 2rem;
             max-width: 1000px;
             margin: auto;
+            border-bottom: 1px solid $website-border-lightgray;
         }
         @include desktop{
             padding-top: 2rem;

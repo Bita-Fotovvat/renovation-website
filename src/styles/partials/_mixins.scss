@@ -10,3 +10,9 @@
         @content;
     }
 }
+
+@mixin big-mobile-screen {
+    @media (min-width: 450px) {
+        @content;
+    }
+}
