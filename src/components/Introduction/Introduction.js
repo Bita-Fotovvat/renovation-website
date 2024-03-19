@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { TabsData } from "../../data/TabsData";
 import "./Introduction.scss";
-import InteriorReno from "../../assets/images/renovation.jpeg"
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 
 export default function Introduction(){
+    // const isBigMobile = useMediaQuery('(min-width:500px)');
     const [activeTab, setActiveTab] = useState(0);
     const handleClick = (index) =>{
         setActiveTab(index);
@@ -15,6 +16,14 @@ export default function Introduction(){
         setTimeout(() => {
             card.classList.add('intro__card--animate');
         }, 10);
+    };
+
+    const renderContentAsList = (content) => {
+        if (Array.isArray(content)) {
+            return content.map((item, index) => <li key={index}>{item}</li>);
+        } else {
+            return content.split(' ').map((word, index) => <li key={index}>{word}</li>);
+        }
     };
 
     return(
@@ -44,8 +53,8 @@ export default function Introduction(){
             }
         </div>
         <section className="intro__card">
-            <div className="intro__card--content">{TabsData[activeTab].content}</div>
-            <img className="intro__card--image" src={TabsData[activeTab].image} alt={TabsData[activeTab].tag}/>
+        <img className="intro__card--image" src={TabsData[activeTab].image} alt={TabsData[activeTab].tag}/>
+            <div className="intro__card--content">{renderContentAsList(TabsData[activeTab].content)}</div>
         </section>
 
         </main>

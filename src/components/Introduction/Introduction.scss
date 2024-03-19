@@ -19,34 +19,62 @@
         flex-direction: row;
         padding-top: 1rem;
         padding-bottom: 2rem;
+        margin-right: 0.5rem;
     }
     &__tab{
-        width: 30rem;
-        padding: 2.4rem;
-        // color: white;
-        background-color: lightgray;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        border-bottom: solid 1px lightgray;
         transition: all 0.3s ease;
+        font-size: 0.9rem;
+        padding-left: 1rem;
+        padding-right: 0.5rem;
         &:hover{
             background-color: white;
             transform: scale(1.02);
             text-align: center;
-            font-size: 1.3rem;
-            // font-weight: 700;
+            // font-size: 1rem;
+            font-weight: 600;
+        }
+        @include tablet-and-desktop{
+            width: 30rem;
+            padding: 2.4rem;
+            // color: white
+            background-color: lightgray;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            &:hover{
+                background-color: white;
+                transform: scale(1.02);
+                text-align: center;
+                font-size: 1.3rem;
+                // font-weight: 700;
+            }
         }
     }
     &__card{
         background-color: white;
         box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-        height: 30rem;
-        width: 63rem;
         border-radius: 4px;
+        @include tablet-and-desktop{
+            height: 30rem;
+            width: 63rem;
+            border-radius: 4px;
+        }
         &--content{
-            padding: 2rem;
+
+            padding-left: 1rem;
+            padding-bottom: 1rem;
+            @include tablet-and-desktop{
+                padding: 2rem;
+            }
         }
         &--image{
-            padding: 1rem;
-            width: 40rem;
+            width: 10rem;
+            border-radius: 4px;
+            margin: 0.5rem;
+            @include tablet-and-desktop{
+                padding: 1rem;
+                width: 40rem;
+            }
+
             // position: fixed;
             // top: 20px; /* Adjust as needed */
             // left: 20px; /* Adjust as needed */
@@ -59,11 +87,21 @@
 }
 .active{
     background-color: white;
-    // font-weight: 700;
+    transform: scale(1.02);
     text-align: center;
-    font-size: 1.3rem;
-    &:hover{
+    // font-size: 1rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 2px 0 rgba(233, 232, 232, 0.5);
+    @include tablet-and-desktop{
         background-color: white;
+        // font-weight: 700;
+
+        font-size: 1.3rem;
+        &:hover{
+            background-color: white;
+        }
     }
 }
 @keyframes slideIn {
