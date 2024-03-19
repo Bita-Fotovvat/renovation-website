@@ -54,6 +54,10 @@
                 font-weight: 600;
             }
         }
+        @include desktop{
+            padding: 1.5rem 3rem;
+            width:20rem;
+        }
     }
     &__card{
         background-color: white;
@@ -73,6 +77,9 @@
             @include tablet-and-desktop{
                 padding: 2rem;
                 width: 40%;
+            }
+            @include desktop{
+                align-self: center;
             }
         }
         &--image{
@@ -104,6 +111,7 @@
             border-bottom: 1px solid $website-border-lightgray;
             @include desktop{
                 font-size: 1rem;
+                padding: 1rem 1rem;
             }
         }
     }
