@@ -14,7 +14,6 @@
         background-attachment: fixed;
         background-position-y: 2rem;
         aspect-ratio: 16/6.2;
-        margin-top: 2rem;
         @include tablet-and-desktop{
             display: none;
         }
@@ -25,13 +24,14 @@
         max-width: 90%;
         margin: auto;
         padding-top: 1rem;
+        padding-bottom: 1rem;
         @include tablet-and-desktop{
             flex-direction: column;
             padding-top: 0;
         }
     }
     &__logo{
-        width: 27vw;
+        width: 35vw;
         margin: 0.5rem;
         @include tablet-and-desktop{
             width: 9rem;
@@ -47,6 +47,7 @@
         padding-top: 1.5rem;
         padding-left: 5%;
         align-self: center;
+        font-size: 0.9rem;
         @include tablet-and-desktop{
             padding-top: 0;
         }
@@ -148,13 +149,17 @@
         padding-bottom: 2rem;
         display: flex;
         flex-direction: column;
-        width: 60%;
+        width: 65%;
         margin: auto;
         // @include tablet-and-desktop{
         // }
+        &--parent{
+            display: flex;
+            flex-direction: row;
+        }
         &--name, &--email, &--phone, &--city {
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
             padding-left: 1rem;
             margin-bottom: 0.5rem;
             border-radius: 6px;
@@ -166,9 +171,15 @@
                 height: 1.8rem;
             }
         }
+        &--name{
+            margin-right: 0.5rem;
+        }
+        &--name, &--city {
+            width: 50%;
+        }
         &--message{
-            padding-top: 0.5rem;
-            padding-bottom: 2rem;
+            padding-top: 0.25rem;
+            padding-bottom: 0.1rem;
             padding-left: 1rem;
             margin-bottom: 0.5rem;
             border-radius: 6px;
@@ -180,11 +191,11 @@
         }
         &--button{
             font-family: Nexa;
-            margin-top: 2rem;
+            margin-top: 0.1rem;
             border-radius: 6px;
-            height: 7vh;
+            height: 5vh;
             width: 100%;
-            background-color: rgb(180, 133, 63);
+            background-color: rgb(181, 144, 88);
             color: white;
         }
     }

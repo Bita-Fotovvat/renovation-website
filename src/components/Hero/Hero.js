@@ -18,13 +18,15 @@ export default function Hero(){
             {/* <p className="hero__about3">Schedule a Consultation</p> */}
             {/* <p className="hero__about4">Enter your contact information to get a quotation</p> */}
             <form className="hero__form">
-                {/* <input className="hero__form--name"  type="name" placeholder="Name" />
-                <input className="hero__form--city" type="city"  placeholder="City" />
-                <input className="hero__form--email" type="email"  placeholder="Email" />
+                <section className="hero__form--parent">
+                    <input className="hero__form--name"  type="name" placeholder="Name" />
+                    <input className="hero__form--city" type="city"  placeholder="City" />
+                </section>
                 <input className="hero__form--phone" type="phone"  placeholder="Phone Number" />
+                <input className="hero__form--email" type="email"  placeholder="Email" />
                 <textarea className="hero__form--message" name="message" rows="4" cols="50">Message (optional)</textarea>
                 {/* <input className="hero__form--message" type="phone"  placeholder="Message (optional)" /> */}
-                <button className="hero__form--button">Schedule a Consultation</button>
+                <button className="hero__form--button">Submit</button>
             </form>
         </section>
         <section className="hero__child2">

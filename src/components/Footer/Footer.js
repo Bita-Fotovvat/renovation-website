@@ -12,7 +12,10 @@ export default function Footer(){
     return(
 <footer className="footer">
     <section className="footer__container">
-        <h3 className="footer__title">Connect with Us</h3>
+        <section className="footer__mobileparent">
+            <h3 className="footer__title">Connect with Us</h3>
+            <img  className="footer__mobilelogo" src={Logo} alt="company logo" onClick={()=> navigate("/")}/>
+        </section>
         <section className="footer__phoneparent">
             <img className="footer__icon" src={PhoneIcon} alt="phone icon" />
             <section className="footer__phoneparent--text">
@@ -24,7 +27,7 @@ export default function Footer(){
             <img className="footer__icon"  src={EmailIcon} alt="email icon" />
             <p className="footer__email">renontario@gmail.com</p>
         </section>
-        <img className="footer__icon" src={InstagramIcon} alt="email icon" />
+        <img className="footer__icon--insta" src={InstagramIcon} alt="email icon" />
         <img  className="footer__icon" src={FacebookIcon} alt="email icon" />
     </section>
     <section className="footer__container">

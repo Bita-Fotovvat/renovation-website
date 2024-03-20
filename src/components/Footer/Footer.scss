@@ -6,12 +6,34 @@
 .footer{
     background-color: $website-darkgray;
     padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 8rem;
-    display: flex;
-    flex-direction: row;
+    padding-top: 1rem;
+    padding-left: 1rem;
     // justify-content:space-around;
-    gap: 30vw;
+    // gap: 30vw;
+    @include tablet-and-desktop{
+        padding-left: 8rem;
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: row;
+    }
+    &__mobilelogo{
+        width: 25vw;
+        // padding-right: 1rem;
+        @include big-mobile-screen{
+            width: 8rem;
+        }
+    }
+    &__mobileparent{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // gap: 5vw;
+        padding-bottom: 1rem;
+        @include big-mobile-screen{
+            gap: 25vw;
+            margin: auto;
+        }
+    }
     &__phoneparent, &__emailparent{
         display: flex;
         flex-direction: row;
@@ -21,22 +43,50 @@
     }
     &__title{
         color: white;
-        font-size: 2rem;
-        font-weight: 400;
-        padding-bottom: 1rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        @include tablet-and-desktop{
+
+            font-size: 2rem;
+            font-weight: 400;
+            padding-bottom: 1rem;
+        }
     }
     &__phone, &__email{
         color: white;
-        font-size: 1rem;
+        font-size: 0.9rem;
+        @include tablet-and-desktop{
+            font-size: 1rem;
+        }
     }
-    &__icon{
-        width: 2rem;
-        height: 2rem;
-        margin-right: 1rem;
+    &__email{
         margin-bottom: 1rem;
     }
+    &__icon, &__icon--insta{
+        width: 1.3rem;
+        height: 1.3rem;
+        margin-right: 0.5rem;
+        @include tablet-and-desktop{
+            width: 2rem;
+            height: 2rem;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+    &__icon--insta{
+        margin-right: 1rem;
+        margin-top: 0.5rem;
+    }
     &__logo{
-        width: 20rem;
-        padding-right: 1rem;
+        display: none;
+        @include tablet-and-desktop{
+            width: 20rem;
+            padding-right: 1rem;
+        }
+    }
+    &__container{
+        padding: 0 1rem 1rem 0;
+        margin: auto;
+        max-width: 500px;
     }
 }

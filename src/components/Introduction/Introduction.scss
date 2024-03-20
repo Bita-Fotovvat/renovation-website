@@ -19,10 +19,11 @@
         display: flex;
         flex-direction: row;
         padding-top: 1rem;
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
         margin-right: 0.5rem;
     }
     &__tab{
+        margin-left: 1vw;
         border-bottom: solid 1px lightgray;
         transition: all 0.3s ease;
         font-size: 0.9rem;
@@ -31,6 +32,7 @@
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
         background-color: $website-border-lightgray;
+        width: 40vw;
         &:hover{
             background-color: white;
             transform: scale(1.02);
@@ -75,6 +77,7 @@
         &--content{
             padding: 0.5rem 0.5rem 1rem 0.5rem;
             @include tablet-and-desktop{
+                align-self: center;
                 padding: 2rem;
                 width: 40%;
             }
@@ -86,13 +89,17 @@
             width: 10rem;
             border-radius: 4px;
             display: block;
+            padding-top: 0.5rem;
+            // margin-top: 0.5rem !important;
             // padding-top: 0.5rem;
             // margin-right: 0.5ren;
             // margin-left: 0.5ren;
+            width: 90%;
             margin: auto;
-            @include big-mobile-screen{
-                width: 90%;
-            }
+            // @include big-mobile-screen{
+            //     width: 90%;
+            //     margin: auto;
+            // }
             @include tablet-and-desktop{
                 // padding: 1rem;
                 width: 50%;

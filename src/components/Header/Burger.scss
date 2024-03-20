@@ -1,0 +1,24 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/_global" as *;
+
+.burger{
+    &__parent{
+        position: fixed;
+        right: -1rem;
+        top: 0.5rem;
+        width: 6rem;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        // padding-top: 0.5rem;
+    }
+    &__div1, &__div2, &__div3{
+        width: 2rem;
+        height: 0.2rem;
+        background-color: rgb(40, 37, 37);
+        margin-bottom: 0.25rem;
+        border-radius: 10px;
+    }
+}
