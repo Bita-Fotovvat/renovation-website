@@ -1,16 +1,14 @@
 import "./Navbar.scss";
-import Burger from "../Header/Burger";
-import Brand from "./Brand";
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
-export default function Navbar(){
+export default function Navbar({open}){
     const navigate = useNavigate();
     const [activeLink, setActiveLink] = useState("/");
 
     return(
         <>
-        <nav className="navbar">
+        <nav className={`navbar ${open ? 'open' : 'closed'}`}>
             <ul className="navbar__list">
                 <li className={`navbar__list--item ${activeLink === '/' ? 'headeractive':''}`} onClick={()=> {
                     navigate("/"); 

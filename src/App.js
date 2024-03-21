@@ -10,8 +10,6 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <Navbar />
-      <Burger />
         <Routes>
         <Route path="/" element={<HomePage />} />
         {/* <Route path="/services" element={<ServicesPage/>} />

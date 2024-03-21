@@ -4,10 +4,8 @@
 @use "../../styles/partials/_global" as *;
 
 .header{
-    display: none;
-    @include tablet-and-desktop{
         display: inline;
-        padding-top: 0.5rem;
+        padding-top: 1.5rem;
         padding-bottom: 0.5rem;
         position: fixed;
         top: 0;
@@ -16,13 +14,16 @@
         // z-index: 1000;
         background-color: #fff;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    
         &__list{
+            display: none;
+            @include tablet-and-desktop{
             display: flex;
             flex-direction: row;
             padding-left: 1.5rem;
             gap: 10%;
+            }
             &--item{
+                @include tablet-and-desktop{
                 list-style-type: none;
                 font-size: 1rem;
                 &:hover{
@@ -34,6 +35,5 @@
                 }
             }
         }
-    
     }
-    }
+}

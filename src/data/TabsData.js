@@ -24,15 +24,15 @@ export const TabsData = [
     },
     {
         id:3,
-        title: "Washroom Renovation",
-        content:["DETAILS SHOULD BE ADDED"],
+        title: "Bathroom Renovation",
+        content:["Bathroom Remodeling", "Flooring Installation", "Tile Installation", "Countertop Resurfacing", "Bathtub Replacement"],
         image: Washroom,
         tag: "washroom renovation"
     },
     {
         id:4,
         title: "Kitchen Renovation",
-        content:["Kitchen", "Bathroom", "Basement", "Home Remodeling"],
+        content:["Kitchen Remodeling", "Cabinet Replacement", "Flooring Installation", "Tile Installation"],
         image: Kitchen,
         tag: "kitchen renovation"
     },

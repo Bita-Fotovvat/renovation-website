@@ -1,4 +1,5 @@
 import "./Header.scss";
+import Burger from "./Burger";
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
@@ -7,6 +8,7 @@ export default function Header(){
     const [activeLink, setActiveLink] = useState("/");
 
     return(
+    <>
     <header className="header">
         <nav className="header__nav">
             <ul className="header__list">
@@ -25,5 +27,7 @@ export default function Header(){
             </ul>
         </nav>
     </header>
+    <Burger />
+    </>
     )
 }

@@ -8,11 +8,13 @@
         position: fixed;
         right: -1rem;
         top: 0.5rem;
-        width: 6rem;
+        width: 4rem;
         display: flex;
         flex-direction: column;
         background-color: white;
-        // padding-top: 0.5rem;
+        @include tablet-and-desktop{
+            display: none;
+        }
     }
     &__div1, &__div2, &__div3{
         width: 2rem;
@@ -20,5 +22,20 @@
         background-color: rgb(40, 37, 37);
         margin-bottom: 0.25rem;
         border-radius: 10px;
+        transition: 0.3s linear;
+    }
+    &__div1.open{
+        transform: rotate(45deg) translateY(-2px);
+        opacity: 0.5;
+        transform-origin: 0px;
+    }
+    &__div2.open{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    &__div3.open{
+        transform: rotate(-45deg) translateX(-1px) translateY(-1px);
+        opacity: 0.5;
+        transform-origin: 10px;
     }
 }
