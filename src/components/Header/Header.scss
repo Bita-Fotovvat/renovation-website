@@ -4,8 +4,7 @@
 @use "../../styles/partials/_global" as *;
 
 .header{
-        display: inline;
-        padding-top: 1.5rem;
+        padding-top: 0.5rem;
         padding-bottom: 0.5rem;
         position: fixed;
         top: 0;
@@ -15,15 +14,22 @@
         background-color: #fff;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         &__list{
-            display: none;
             @include tablet-and-desktop{
             display: flex;
             flex-direction: row;
             padding-left: 1.5rem;
             gap: 10%;
             }
+            &--brandname{
+                list-style-type: none;
+                font-weight: 600;
+                color: #847508;
+                font-size: 1.2rem;
+            }
             &--item{
+                display: none;
                 @include tablet-and-desktop{
+                display: inline;
                 list-style-type: none;
                 font-size: 1rem;
                 &:hover{
