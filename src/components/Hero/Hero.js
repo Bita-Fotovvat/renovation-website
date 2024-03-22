@@ -1,8 +1,8 @@
 import "./Hero.scss";
-import HeroImage from "../../assets/images/Hero.png";
 import Logo from "../../assets/logo/logo.png";
 import axios from "axios";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 export default function Hero(){
     const [formData, setFormData] = useState({
@@ -16,21 +16,26 @@ export default function Hero(){
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (!formData.name.trim()) {
+            return toast("Please enter your name.", {className: 'toast'});
+        }
+        if (!formData.phone.trim() && !formData.email.trim()) {
+            return toast("Please enter at least a phone number or an email address.", {className: 'toast'});
+        }
         try {
             const response = await axios.post(`http://localhost:8080/requests`, formData);
             if (response.status === 201) {
-                alert("Success! You will be contacted soon.");
+                toast("Success! You will be contacted soon.", {className: 'toast'});
                 setFormData({ name: '', city: '', phone: '', email: '', message: '' });
             } else {
                 console.error('Failed to submit:', response);
-                alert('Failed to submit your request. Please try again.');
+                toast('Failed to submit your request. Please try again.', {className: 'toast'});
             }
         } catch (error) {
             console.error('Error saving to requests:', error);
-            alert('An error occurred while submitting your request. Please try again.');
+            toast('An error occurred while submitting your request. Please try again.', {className: 'toast'});
         }
     };
     

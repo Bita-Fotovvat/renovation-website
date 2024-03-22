@@ -1,14 +1,25 @@
 import './App.scss';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "../src/components/Header/Header";
-import Navbar from "../src/components/Header/Navbar";
-import Burger from './components/Header/Burger';
 import HomePage from './pages/HomePage/HomePage';
 import Footer from "./components/Footer/Footer";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <BrowserRouter>
+      <ToastContainer
+      position="top-left"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        />
       <Header />
         <Routes>
         <Route path="/" element={<HomePage />} />
