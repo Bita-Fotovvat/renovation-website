@@ -50,6 +50,7 @@ export default function Hero(){
                 <img className="hero__logo" src={Logo} alt="renontario logo" />
                 <p className="hero__about2">Renovation & Remodeling Company</p>
             </section>
+            <h3 className="hero__formtitle">Get a Free Consultaion/ Quote</h3>
             {/* <p className="hero__about3">Schedule a Consultation</p> */}
             {/* <p className="hero__about4">Enter your contact information to get a quotation</p> */}
             <form className="hero__form" onSubmit={handleSubmit}>

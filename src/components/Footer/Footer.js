@@ -11,7 +11,7 @@ export default function Footer(){
     const navigate = useNavigate();
     return(
 <footer className="footer">
-    <section className="footer__container">
+    <section className="footer__container1">
         <section className="footer__mobileparent">
             <h3 className="footer__title">Connect with Us</h3>
             <img  className="footer__mobilelogo" src={Logo} alt="company logo" onClick={()=> navigate("/")}/>
@@ -30,7 +30,7 @@ export default function Footer(){
         <img className="footer__icon--insta" src={InstagramIcon} alt="email icon" />
         <img  className="footer__icon" src={FacebookIcon} alt="email icon" />
     </section>
-    <section className="footer__container">
+    <section className="footer__container2">
         <img  className="footer__logo" src={Logo} alt="company logo" onClick={()=> navigate("/")}/>
     </section> 
 </footer>

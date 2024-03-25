@@ -5,33 +5,33 @@
 
 .footer{
     background-color: $website-darkgray;
-    padding-top: 2rem;
     padding-top: 1rem;
     padding-left: 1rem;
-    // justify-content:space-around;
-    // gap: 30vw;
     @include tablet-and-desktop{
-        padding-left: 8rem;
-        padding-bottom: 2rem;
+        padding-top: 0;
+        padding-left: 0;
+        padding-bottom: 1rem;
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
     }
     &__mobilelogo{
         width: 25vw;
-        // padding-right: 1rem;
         @include big-mobile-screen{
-            width: 8rem;
+            width: 35%;
         }
     }
     &__mobileparent{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        // gap: 5vw;
         padding-bottom: 1rem;
         @include big-mobile-screen{
-            gap: 25vw;
+            gap: 25%;
             margin: auto;
+        }
+        @include tablet-and-desktop{
+            gap: 50%;
         }
     }
     &__phoneparent, &__emailparent{
@@ -84,9 +84,12 @@
             padding-right: 1rem;
         }
     }
-    &__container{
+    &__container1{
         padding: 0 1rem 1rem 0;
         margin: auto;
         max-width: 500px;
+        @include tablet-and-desktop{
+            max-width: 85%;
+        }
     }
 }

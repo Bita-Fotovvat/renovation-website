@@ -18,7 +18,18 @@ export const TabsData = [
     {
         id:2,
         title: "Basement Renovation",
-        content:["DETAILS SHOULD BE ADDED"],
+        content:["Basement Design Consultation",
+            "Waterproofing",
+            "Foundation Repair",
+            "Insulation Installation",
+            "Egress Window Installation",
+            "Flooring Installation (including subflooring)",
+            "Lighting Solutions",
+            "Home Theater Installation",
+            "Custom Shelving and Storage Solutions",
+            // "Basement Bar Construction",
+            // "Gym or Workout Space Creation"
+        ],
         image: Basement,
         tag: "basement renovation"
     },
@@ -46,7 +57,7 @@ export const TabsData = [
     {
         id:6,
         title: "Plumbing Services",
-        content: ["Vanity Changing", "Faucet Changing"],
+        content: ["Vanity Changing", "Faucet Changing", "Leak Detection & Repair", "Pipe Installation & Repair", "Faucet & Fixture Installation"],
         image: Plumbing,
         tag: "plumbing services"
     },

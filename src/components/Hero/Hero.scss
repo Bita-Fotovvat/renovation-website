@@ -56,7 +56,7 @@
         width: 35vw;
         margin: 0.5rem;
         @include tablet-and-desktop{
-            width: 9rem;
+            width: 8rem;
             display: block;
             margin: auto;
             padding-top: 1rem;
@@ -64,6 +64,7 @@
             animation-delay: 0.5s;
         }
         @include desktop{
+            width: 12rem;
             padding-bottom: 1rem;  
         }
     }
@@ -72,8 +73,15 @@
         padding-left: 5%;
         align-self: center;
         font-size: 0.9rem;
+        @include big-mobile-screen{
+            font-size: 1rem;
+        }
         @include tablet-and-desktop{
             padding-top: 0;
+            font-size: 0.9rem;
+        }
+        @include desktop{
+            font-size: 1rem;
         }
     }
     &__about3{
@@ -127,7 +135,7 @@
         @include desktop{
             height: 600px;
             padding: 1rem 3rem 2rem 3rem;
-            width: 23%;
+            width: 30%;
         }
     }
     &__child2{
@@ -137,24 +145,50 @@
             // animation: zoomOutEffect 3s ease-out forwards;
             background-image: url('../../assets/images/Hero.png');
             background-size: contain;
-            // background-position: left;
+            // background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            // background-position-x: 3rem;
+            background-position-x: 7rem;
+            background-position-y: 1rem;
             height: 25rem;
-            // width: 100%;
+            width: 70%;
             display: flex;
             justify-content: center;
             // align-items: center;
             aspect-ratio: 16/6.2;
             // max-height: 540px;
         }
+        @media (min-width: 920px) {
+            background-position-y: -3rem;            
+        }
+        @media (min-width: 1000px) {
+            background-position-y: 0rem;
+            background-position-x: 15rem;
+            background-size: 80%;            
+        }
+        @media (min-width: 1100px) {
+            background-position-y: -3rem;
+            background-position-x: 18rem;
+            background-size: 80%;            
+        }
+        @media (min-width: 1130px) {
+            background-position-y: -3rem;
+            background-position-x: 18rem;
+            background-size: 80%;            
+        }
+        @media (min-width: 1240px) {
+            background-position-y: -3rem;
+            background-position-x: 20rem;
+            background-size: 77%;            
+        }
         @include desktop{
+            width: 70%;
             height: 600px;
-            width: 77%;
+            background-size: 85%; 
+            background-position-y: 2rem;
+            background-position-x: 20rem; 
             background-image: url('../../assets/images/Hero.png');
-            background-size: contain;
-            background-position: right;
+            // background-position-x: 12rem;
             background-repeat: no-repeat;
             background-attachment: fixed;
             // background-position-x: 3rem;
@@ -163,7 +197,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            aspect-ratio: 16/6.2;
+        }
+        @media (min-width: 1290px) {
+            background-position-y: 2rem;
+            background-position-x: 24rem;
+            background-size: 75%;            
         }
     }
     &__about1{
@@ -172,14 +210,35 @@
         word-spacing: 30px;
         padding-bottom: 0.2rem;
     }
+    &__formtitle{
+        color: white;
+        font-weight: 400;
+        font-size: 1.1rem;
+        text-align: center;
+        padding-bottom: 1rem;
+        @include big-mobile-screen{
+            font-size: 170%;
+            padding-bottom: 1.5rem;
+        }
+        @include tablet-and-desktop{
+            font-size: 0.9rem;
+            padding-bottom: 0.9rem;
+        }
+        @include desktop{
+            padding-top: 1rem;
+            font-size: 1.3rem;
+        }
+    }
     &__form{
         padding-bottom: 2rem;
         display: flex;
         flex-direction: column;
         width: 65%;
         margin: auto;
-        // @include tablet-and-desktop{
-        // }
+        max-width: 400px;
+        @include tablet-and-desktop{
+            width: 90%;
+        }
         &--parent{
             display: flex;
             flex-direction: row;
@@ -194,8 +253,20 @@
             font-family: Nexa;
             font-weight: 400;
             background-color: rgb(235, 234, 234);
+            @include big-mobile-screen{
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                font-size: 0.9rem;
+            }
             @include tablet-and-desktop{
-                height: 1.8rem;
+                height: 3.5vh;
+                // padding-top: 0.4rem;
+                // padding-bottom: 0.4rem;
+            }
+            @include desktop{
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                font-size: 0.9rem;
             }
         }
         &--name{
@@ -215,6 +286,12 @@
             font-weight: 400;
             color: gray;
             background-color: rgb(235, 234, 234);
+            @include tablet-and-desktop{
+                padding-bottom: 1rem;
+            }
+            @include desktop{
+                padding-bottom: 3rem;
+            }
         }
         &--button{
             font-family: Nexa;
@@ -224,6 +301,14 @@
             width: 100%;
             background-color: rgb(181, 144, 88);
             color: white;
+            @include tablet-and-desktop{
+                height: 4vh;
+            }
+            @include desktop{
+                height: 5vh;
+                text-align: center;
+                font-size: 0.9rem;
+            }
         }
     }
     &__brandname{
