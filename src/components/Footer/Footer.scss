@@ -5,33 +5,33 @@
 
 .footer{
     background-color: $website-darkgray;
-    padding-top: 1rem;
-    padding-left: 1rem;
-    @include tablet-and-desktop{
-        padding-top: 0;
-        padding-left: 0;
-        padding-bottom: 1rem;
+    &__parent{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-    }
-    &__mobilelogo{
-        width: 25vw;
-        @include big-mobile-screen{
-            width: 35%;
-        }
-    }
-    &__mobileparent{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-bottom: 1rem;
-        @include big-mobile-screen{
-            gap: 25%;
-            margin: auto;
+        padding: 1rem;
+        max-width: 600px;
+        margin: auto;
+        @media (min-width: 500px) {
+            padding: 1rem 2rem;
+            max-width: 700px;      
         }
         @include tablet-and-desktop{
-            gap: 50%;
+            padding: 2rem 0 1rem 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        @media (min-width: 900px) {
+            padding: 1rem 2rem;
+            max-width: 800px;      
+        }
+        @media (min-width: 1000px) {
+            padding: 1rem 2rem;
+            max-width: 900px;      
+        }
+        @include desktop{
+            max-width: 1200px;    
         }
     }
     &__phoneparent, &__emailparent{
@@ -46,9 +46,9 @@
         font-size: 1.2rem;
         font-weight: 600;
         @include tablet-and-desktop{
-
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 400;
+            padding-top: 1rem;
             padding-bottom: 1rem;
         }
     }
@@ -78,18 +78,28 @@
         margin-top: 0.5rem;
     }
     &__logo{
-        display: none;
+        // display: none;
+        width: 90%;
+        margin-left: 1rem;
+        @media (min-width: 400px) {
+            padding-left: 1rem;
+            width: 10rem;       
+        }
         @include tablet-and-desktop{
-            width: 20rem;
-            padding-right: 1rem;
+            width: 13rem;
         }
     }
     &__container1{
-        padding: 0 1rem 1rem 0;
-        margin: auto;
+        padding: 0;
+        // margin: auto;
         max-width: 500px;
         @include tablet-and-desktop{
             max-width: 85%;
         }
+    }
+    &__copyright{
+        color: white;
+        font-size: 0.8rem;
+        padding-top: 1rem;
     }
 }

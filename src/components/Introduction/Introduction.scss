@@ -12,7 +12,10 @@
             font-weight: 600;
             font-size: 2rem;
             padding: 1rem 0 1rem 2rem;
-            // font-weight: 700;
+        @include desktop{
+            padding-top: 3rem;
+            margin-left: 3rem;
+        }
         }
     }
     &__tabsparent{
@@ -21,6 +24,9 @@
         padding-top: 1rem;
         padding-bottom: 1rem;
         margin-right: 0.5rem;
+        @include desktop{
+            margin-left: 4rem;
+        }
     }
     &__tab{
         margin-left: 1vw;
@@ -121,9 +127,6 @@
                 padding: 1rem 1rem;
             }
         }
-    }
-    &__labels{
-
     }
 }
 .active{

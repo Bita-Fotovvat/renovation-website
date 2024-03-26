@@ -1,0 +1,36 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/_global" as *;
+
+.aboutus{
+
+    &__heroimage{
+        // height: 25vh;
+        // position: relative;
+        background-image: url("../../assets/images/aboutushero.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+        background-position-y: 1rem;
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+    &__title{
+        text-align: center;
+        color: white;
+        font-weight: 400;
+        font-size: 1.6rem;
+        padding-top: 5.5rem;
+        text-shadow: 2px 2px 4px black;
+        position: relative;
+    }
+    &__subcontent1{
+        text-align: center;
+        padding-top: 2rem;
+    }
+    &__subcontent2{
+        text-align: center;
+        padding-top: 1rem;
+    }
+}

@@ -1,0 +1,227 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/_global" as *;
+
+.mainparent{
+    display: flex;
+    flex-direction: column;
+    background-color: $website-darkgray;
+    padding-bottom: 2rem;
+}
+.contact{
+    &__image{
+        background-image: url('../../assets/images/Image.png');
+        height: 25vh;
+        aspect-ratio: 16/9;
+        margin-top: 2.5rem;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position-x: 0%;
+        background-position-y: -2.5rem;
+        background-attachment: fixed;
+    }
+    &__parent{
+        margin-top: 4rem;
+        display: flex;
+    }
+    &__child1{
+        // padding-top: 4rem;
+        margin-top: 2rem;
+        margin: auto;
+    }
+    &__formtitle{
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-align: center;
+        padding-bottom: 1rem;
+        @include desktop{
+            font-size: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+    }
+    &__form{
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+        max-width: 400px;
+        @include tablet-and-desktop{
+            width: 90%;
+        }
+        &--parent{
+            display: flex;
+            flex-direction: row;
+        }
+        &--name, &--email, &--phone, &--city {
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 6px;
+            border: none;
+            font-family: Nexa;
+            font-weight: 400;
+            background-color: rgb(235, 234, 234);
+            @include tablet-and-desktop{
+                height: 5vh;
+            }
+        }
+        &--name{
+            margin-right: 0.5rem;
+        }
+        &--name, &--city {
+            width: 50%;
+        }
+        &--message{
+            padding-top: 0.25rem;
+            padding-bottom: 4rem;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 6px;
+            border: none;
+            font-family: Nexa;
+            font-weight: 400;
+            color: gray;
+            background-color: rgb(235, 234, 234);
+            // @include tablet-and-desktop{
+            //     padding-bottom: 1rem;
+            // }
+            // @include desktop{
+            //     padding-bottom: 3rem;
+            // }
+        }
+        &--button{
+            font-family: Nexa;
+            font-weight: 600;
+            margin-top: 0.1rem;
+            border-radius: 6px;
+            height: 5vh;
+            width: 100%;
+            background-color: rgb(181, 144, 88);
+            color: $website-darkgray;
+            @include tablet-and-desktop{
+                height: 4vh;
+            }
+            @include desktop{
+                height: 5vh;
+                text-align: center;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+.contactinfo{
+    &__parent{
+        width: 100%;
+    }
+    &__container1{
+        background-image: url('../../assets/images/background.jpg');
+        padding: 0;
+        margin: auto;
+        // margin-bottom: 2rem;
+        // @include tablet-and-desktop{
+        //     max-width: 85%;
+        // }
+    }
+    &__emailparent{
+        padding-left: 2.2rem;
+    }
+    &__phoneparent, &__emailparent{
+        display: flex;
+        flex-direction: row;
+        // padding-left: 30%;
+        align-items: center;
+        justify-content: center;
+        &--text{
+            padding-bottom: 1rem;
+        }
+    }
+    &__title{
+        color: white;
+        font-size: 1.3rem;
+        font-weight: 600;
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        @include tablet-and-desktop{
+            // font-size: 1.5rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        @include desktop{
+            font-size: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+    }
+    &__phone, &__email{
+        color: white;
+        font-size: 1rem;
+        font-weight: 400;
+        @include tablet-and-desktop{
+            font-size: 1rem;
+        }
+    }
+    &__email{
+        margin-bottom: 1rem;
+    }
+    &__icon{
+        align-self: baseline;
+    }
+    &__icon, &__icon--insta{
+        width: 1.3rem;
+        height: 1.3rem;
+        margin-right: 0.5rem;
+        @include tablet-and-desktop{
+            width: 2rem;
+            height: 2rem;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+    &__icon--insta{
+        margin-right: 1rem;
+        margin-top: 0.5rem;
+    }
+    &__logo{
+        // display: none;
+        width: 60%;
+        display: block;
+        margin: auto;
+        @media (min-width: 400px) {
+            padding-left: 1rem;
+            width: 10rem;       
+        }
+        @include tablet-and-desktop{
+            width: 13rem;
+        }
+    }
+    &__operationhours{
+        &--title{
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+            text-align: center;
+            font-size: 1.2rem;
+            color: white;
+            @include desktop{
+                font-size: 1.5rem;
+                padding-bottom: 1.5rem;
+            }
+        }
+        &--text{
+            color: white;
+            text-align: center;
+            font-size: 1rem;
+            padding-bottom: 1rem;
+            line-height: 1.5rem;
+        }
+    }
+    &__copyright{
+        color: white;
+        font-size: 0.8rem;
+        padding-top: 1rem;
+        padding-left: 1rem;
+    }
+}

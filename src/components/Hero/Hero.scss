@@ -3,26 +3,26 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/_global" as *;
 
-//for the logo
-@keyframes zoomOutLogo {
-    0% {
-      transform: scale(10); /* Start zoomed in */
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1); /* Transition to normal size */
-      opacity: 1;
-    }
-  }  
-//for the hero image
-@keyframes zoomOutEffect {
-    from {
-      transform: scale(1.2); /* Start zoomed in */
-    }
-    to {
-      transform: scale(1); /* End at the natural size */
-    }
-  }
+// //for the logo
+// @keyframes zoomOutLogo {
+//     0% {
+//       transform: scale(10); /* Start zoomed in */
+//       opacity: 1;
+//     }
+//     100% {
+//       transform: scale(1); /* Transition to normal size */
+//       opacity: 1;
+//     }
+//   }  
+// //for the hero image
+// @keyframes zoomOutEffect {
+//     from {
+//       transform: scale(1.2); /* Start zoomed in */
+//     }
+//     to {
+//       transform: scale(1); /* End at the natural size */
+//     }
+//   }
 
 .hero{
     &__childmobile{
