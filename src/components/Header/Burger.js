@@ -1,5 +1,5 @@
 import "./Burger.scss";
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Navbar from "./Navbar";
 
 export default function Burger(){

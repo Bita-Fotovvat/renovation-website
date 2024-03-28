@@ -1,4 +1,5 @@
 import './App.scss';
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Header from "../src/components/Header/Header";
 import HomePage from './pages/HomePage/HomePage';
@@ -16,9 +17,16 @@ function App() {
     }
     return null;
   };
+  const ScrollToTop = () => {
+    const location = useLocation();
+    useEffect(() => {
+      window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+    }, [location]);
+  };
 
   return (
     <BrowserRouter>
+      <ScrollToTop></ScrollToTop>
       <ToastContainer
       position="top-left"
         autoClose={5000}

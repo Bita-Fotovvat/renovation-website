@@ -4,6 +4,7 @@
 @use "../../styles/partials/_global" as *;
 
 .burger{
+    // z-index: 993;
     &__parent{
         position: fixed;
         right: -1rem;

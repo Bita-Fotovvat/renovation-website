@@ -26,6 +26,7 @@
   }
 
 .navbar{
+  // z-index: 100;
     @include tablet-and-desktop{
         display: none;
     }

@@ -6,8 +6,7 @@ export default function Navbar({open}){
     const navigate = useNavigate();
     const [activeLink, setActiveLink] = useState("/");
 
-    return(
-        <>
+    return open ? (
         <nav className={`navbar ${open ? 'open' : 'closed'}`}>
             <ul className="navbar__list">
                 <li className={`navbar__list--item ${activeLink === '/' ? 'headeractive':''}`} onClick={()=> {
@@ -28,6 +27,5 @@ export default function Navbar({open}){
                 <li className="header__list--item">Request an Appointment</li> */}
             </ul>
         </nav>
-        </>
-    )
+    ) : null;
 }
