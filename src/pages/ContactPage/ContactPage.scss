@@ -36,10 +36,16 @@
         font-weight: 600;
         text-align: center;
         padding-bottom: 1rem;
-        @include desktop{
-            font-size: 1.5rem;
-            padding-bottom: 1.5rem;
+        @include tablet-and-desktop{
+            padding-top: 2rem;
+            padding-bottom: 1.6rem;
+            font-size: 2rem;
+            font-weight: 400;
         }
+        // @include desktop{
+        //     font-size: 1.5rem;
+        //     padding-bottom: 1.5rem;
+        // }
     }
     &__form{
         padding-bottom: 2rem;
@@ -66,7 +72,8 @@
             font-weight: 400;
             background-color: rgb(235, 234, 234);
             @include tablet-and-desktop{
-                height: 5vh;
+                height: 6vh;
+                font-size: 1rem;
             }
         }
         &--name{
@@ -86,9 +93,10 @@
             font-weight: 400;
             color: gray;
             background-color: rgb(235, 234, 234);
-            // @include tablet-and-desktop{
-            //     padding-bottom: 1rem;
-            // }
+            @include tablet-and-desktop{
+                padding-top: 1rem;
+                font-size: 1rem;
+            }
             // @include desktop{
             //     padding-bottom: 3rem;
             // }
@@ -103,12 +111,8 @@
             background-color: rgb(181, 144, 88);
             color: $website-darkgray;
             @include tablet-and-desktop{
-                height: 4vh;
-            }
-            @include desktop{
                 height: 5vh;
-                text-align: center;
-                font-size: 0.9rem;
+                font-size: 1.1rem;
             }
         }
     }
@@ -121,10 +125,10 @@
         background-image: url('../../assets/images/background.jpg');
         padding: 0;
         margin: auto;
-        // margin-bottom: 2rem;
-        // @include tablet-and-desktop{
-        //     max-width: 85%;
-        // }
+        @include tablet-and-desktop{
+            margin-top: 2rem;
+            height: 35vh;
+        }
     }
     &__emailparent{
         padding-left: 2.2rem;
@@ -132,7 +136,6 @@
     &__phoneparent, &__emailparent{
         display: flex;
         flex-direction: row;
-        // padding-left: 30%;
         align-items: center;
         justify-content: center;
         &--text{
@@ -147,21 +150,19 @@
         padding-top: 1rem;
         padding-bottom: 1rem;
         @include tablet-and-desktop{
-            // font-size: 1.5rem;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-        }
-        @include desktop{
-            font-size: 1.5rem;
-            padding-bottom: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: 400;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
         }
     }
     &__phone, &__email{
         color: white;
         font-size: 1rem;
         font-weight: 400;
+        text-shadow:  2px 2px 4px black;
         @include tablet-and-desktop{
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
     }
     &__email{
@@ -186,7 +187,6 @@
         margin-top: 0.5rem;
     }
     &__logo{
-        // display: none;
         width: 60%;
         display: block;
         margin: auto;
@@ -196,6 +196,8 @@
         }
         @include tablet-and-desktop{
             width: 13rem;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
         }
     }
     &__operationhours{
@@ -205,9 +207,11 @@
             text-align: center;
             font-size: 1.2rem;
             color: white;
-            @include desktop{
-                font-size: 1.5rem;
-                padding-bottom: 1.5rem;
+            @include tablet-and-desktop{
+                font-weight: 400;
+                font-size: 1.8rem;
+                padding-top: 3rem;
+                padding-bottom: 2rem;
             }
         }
         &--text{
@@ -216,6 +220,10 @@
             font-size: 1rem;
             padding-bottom: 1rem;
             line-height: 1.5rem;
+            @include tablet-and-desktop{
+                font-size: 1.2rem;
+                padding-bottom: 1.5rem;
+            }
         }
     }
     &__copyright{

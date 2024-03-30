@@ -53,13 +53,16 @@
         }
     }
     &__logo{
-        width: 35vw;
-        margin: 0.5rem;
+        width: 48vw;
+        // margin: 0.5rem;
+        @media (min-width: 450px) {
+            max-width: 250px;
+        }
         @include tablet-and-desktop{
-            width: 8rem;
+            width: 9rem;
             display: block;
             margin: auto;
-            padding-top: 1rem;
+            padding-top: 0.5rem;
             // animation: zoomOutLogo 6s ease forwards; /* Adjust timing as needed */
             animation-delay: 0.5s;
         }
@@ -68,6 +71,21 @@
             padding-bottom: 1rem;  
         }
     }
+    // &__logoparent{
+
+    // }
+    &__slogan{
+        color: rgb(242, 211, 164);
+        text-align: center;
+        font-size: 0.9rem;
+        @media (min-width: 450px) {
+            font-size: 1rem;
+            padding-bottom: 1rem;
+        }
+        @include tablet-and-desktop{
+            font-size: 0.8rem;
+        }
+            }
     &__about2{
         padding-top: 1.5rem;
         padding-left: 5%;
@@ -76,9 +94,12 @@
         @include big-mobile-screen{
             font-size: 1rem;
         }
+        @media (min-width: 600px) {
+            font-size: 1.2rem
+        }
         @include tablet-and-desktop{
             padding-top: 0;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
         @include desktop{
             font-size: 1rem;
@@ -221,7 +242,7 @@
             padding-bottom: 1.5rem;
         }
         @include tablet-and-desktop{
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             padding-bottom: 0.9rem;
         }
         @include desktop{
@@ -320,8 +341,6 @@
         text-align: center;
     }
 }
-// .toast{
-//     font-family: Nexa;
-//     color: black;
-//     // font-weight: 600;
-// }
+.Toastify__progress-bar--bg.Toastify__progress-bar-theme--dark.Toastify__progress-bar--default {
+    background-color: white;
+}

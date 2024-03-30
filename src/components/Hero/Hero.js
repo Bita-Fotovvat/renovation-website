@@ -3,6 +3,7 @@ import Logo from "../../assets/logo/logo.png";
 import axios from "axios";
 import { useState } from 'react';
 import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Hero(){
     const [formData, setFormData] = useState({
@@ -19,23 +20,68 @@ export default function Hero(){
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!formData.name.trim()) {
-            return toast("Please enter your name.", {className: 'toast'});
+            return toast.warn('Please enter your name.', {
+                position: "top-left",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                });
         }
         if (!formData.phone.trim() && !formData.email.trim()) {
-            return toast("Please enter at least a phone number or an email address.", {className: 'toast'});
+            return  toast.warn('Please enter at least a phone number or an email address.', {
+                position: "top-left",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                });
         }
         try {
             const response = await axios.post(`http://localhost:8080/requests`, formData);
             if (response.status === 201) {
-                toast("Success! You will be contacted soon.", {className: 'toast'});
+                toast.success('Success! You will be contacted soon.', {
+                    position: "top-left",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                    });
                 setFormData({ name: '', city: '', phone: '', email: '', message: '' });
             } else {
                 console.error('Failed to submit:', response);
-                toast('Failed to submit your request. Please try again.', {className: 'toast'});
+                toast.error('Failed to submit your request. Please try again.', {
+                    position: "top-left",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                    });
             }
         } catch (error) {
             console.error('Error saving to requests:', error);
-            toast('An error occurred while submitting your request. Please try again.', {className: 'toast'});
+            toast.error('An error occurred while submitting your request. Please try again.', {
+                position: "top-left",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                });
         }
     };
     
@@ -47,7 +93,10 @@ export default function Hero(){
             <section className="hero__branding">
                 {/* <h1 className="hero__brandname">Renontario</h1> */}
                 {/* <p className="hero__about1">slogan</p> */}
-                <img className="hero__logo" src={Logo} alt="renontario logo" />
+                <section className="hero__logoparent">
+                    <img className="hero__logo" src={Logo} alt="renontario logo" />
+                    <p className="hero__slogan">A Step to Your Dream Home</p>
+                </section>
                 <p className="hero__about2">Renovation & Remodeling Company</p>
             </section>
             <h3 className="hero__formtitle">Get a Free Consultaion/ Quote</h3>

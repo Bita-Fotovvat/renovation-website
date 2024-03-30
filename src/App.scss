@@ -3,21 +3,6 @@
 @use "./styles/partials/mixins" as *;
 @use "./styles/partials/global" as *;
 
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -28,7 +13,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
   color: #61dafb;
 }
@@ -41,24 +25,3 @@
     transform: rotate(360deg);
   }
 }
-// .Toastify__toast-container {
-//   background-color: rgb(218, 182, 128);
-//   border-radius: 6px;
-//   font-family: Nexa;
-// }
-// .Toastify__progress-bar--animated.Toastify__progress-bar-theme--light {
-//   color: red;
-//   background-color: red;
-// }
-
-// .Toastify__toast 
-// .Toastify__progress-bar {
-//   background: rgb(126, 8, 28);
-// }
-// .Toastify__toast--success .Toastify__progress-bar {
-//   background: green;
-// }
-
-// .Toastify__toast--error .Toastify__progress-bar {
-//   background: red;
-// }

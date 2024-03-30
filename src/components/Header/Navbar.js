@@ -13,9 +13,9 @@ export default function Navbar({open}){
                     navigate("/"); 
                     setActiveLink('/'); 
                     }}>Home</li>
-                <li className={`navbar__list--item ${activeLink === '/our-projects' ? 'headeractive':''}`} onClick={()=>{
+                {/* <li className={`navbar__list--item ${activeLink === '/our-projects' ? 'headeractive':''}`} onClick={()=>{
                     navigate("/our-projects");
-                    setActiveLink('/our-projects')}}>Our Projects</li>
+                    setActiveLink('/our-projects')}}>Our Projects</li> */}
                 <li className={`navbar__list--item ${activeLink === '/about-us' ? 'headeractive':''}`} onClick={()=>{
                     navigate("/about-us");
                     setActiveLink('/about-us')}}>About Us</li>

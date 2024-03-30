@@ -37,6 +37,7 @@ function App() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
+        theme="dark"
         />
       <Header />
         <Routes>
