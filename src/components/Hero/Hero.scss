@@ -56,6 +56,7 @@
         width: 48vw;
         // margin: 0.5rem;
         @media (min-width: 450px) {
+            width: 40vw;
             max-width: 250px;
         }
         @include tablet-and-desktop{
@@ -83,7 +84,7 @@
             padding-bottom: 1rem;
         }
         @include tablet-and-desktop{
-            font-size: 0.8rem;
+            font-size: 0.9rem;
         }
             }
     &__about2{
@@ -163,21 +164,17 @@
         display: none;
         @include tablet-and-desktop{
             z-index: -99;
-            // animation: zoomOutEffect 3s ease-out forwards;
             background-image: url('../../assets/images/Hero.png');
             background-size: contain;
-            // background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position-x: 7rem;
             background-position-y: 1rem;
             height: 25rem;
-            width: 70%;
+            width: 65%;
             display: flex;
             justify-content: center;
-            // align-items: center;
             aspect-ratio: 16/6.2;
-            // max-height: 540px;
         }
         @media (min-width: 920px) {
             background-position-y: -3rem;            
@@ -242,7 +239,7 @@
             padding-bottom: 1.5rem;
         }
         @include tablet-and-desktop{
-            font-size: 0.8rem;
+            font-size: 1.1rem;
             padding-bottom: 0.9rem;
         }
         @include desktop{
