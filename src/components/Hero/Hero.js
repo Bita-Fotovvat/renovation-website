@@ -44,7 +44,7 @@ export default function Hero(){
                 });
         }
         try {
-            const response = await axios.post(`http://localhost:8080/requests`, formData);
+            const response = await axios.post(`https://renontario-website-16ef122b792b.herokuapp.com/requests`, formData);
             if (response.status === 201) {
                 toast.success('Success! You will be contacted soon.', {
                     position: "top-left",
