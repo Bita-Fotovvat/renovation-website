@@ -60,7 +60,7 @@
             max-width: 250px;
         }
         @include tablet-and-desktop{
-            width: 9rem;
+            width: 10rem;
             display: block;
             margin: auto;
             padding-top: 0.5rem;
@@ -85,6 +85,9 @@
         }
         @include tablet-and-desktop{
             font-size: 0.9rem;
+        }
+        @include desktop{
+            font-size: 1.18rem;
         }
             }
     &__about2{

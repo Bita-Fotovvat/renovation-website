@@ -79,7 +79,10 @@
         }
     }
     &__maintitle{
-        font-size: 2rem;
+        font-size: 1.6rem;
+        @include desktop{
+            font-size: 2rem;
+        }
     }
     &__parent{
         // background-color: $website-darkgray;
