@@ -5,8 +5,6 @@
 
 .aboutus{
     &__heroimage{
-        // height: 25vh;
-        // position: relative;
         background-image: url("../../assets/images/aboutushero.jpg");
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -130,7 +128,6 @@
     }
     &__image{
         &--ourteam{
-            // height: 12rem;
             display: block;
             margin: auto;
             margin-top: 1rem;
@@ -139,7 +136,6 @@
             max-width: 500px;
         }
         &--whyhireus{
-            // height: 12rem;
             display: block;
             margin: auto;
             margin-top: 1rem;
@@ -234,17 +230,11 @@
             font-weight: 600;
             height: 8vh;
         }
-        // @include desktop{
-        //     height: 5vh;
-        //     text-align: center;
-        //     font-size: 0.9rem;
-        // }
     }
     &__contactwrapper{
         margin: auto;
         width: 85%;
         border-radius: 6px;
-        // background-color: $website-darkgray;
         background-image: url('../../assets/images/background.jpg');
         padding-bottom: 4rem;
         margin-bottom: 1rem;

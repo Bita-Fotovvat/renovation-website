@@ -26,7 +26,6 @@
         display: flex;
     }
     &__child1{
-        // padding-top: 4rem;
         margin-top: 2rem;
         margin: auto;
     }
@@ -42,10 +41,6 @@
             font-size: 2rem;
             font-weight: 400;
         }
-        // @include desktop{
-        //     font-size: 1.5rem;
-        //     padding-bottom: 1.5rem;
-        // }
     }
     &__form{
         padding-bottom: 2rem;
@@ -97,9 +92,6 @@
                 padding-top: 1rem;
                 font-size: 1rem;
             }
-            // @include desktop{
-            //     padding-bottom: 3rem;
-            // }
         }
         &--button{
             font-family: Nexa;

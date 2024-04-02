@@ -43,17 +43,11 @@
             background-color: white;
             transform: scale(1.02);
             text-align: center;
-            // font-size: 1rem;
             font-weight: 600;
         }
         @include tablet-and-desktop{
             font-size: 1rem;
             padding: 0.5rem 2rem;
-            // width: 30rem;
-            // padding: 2.4rem;
-            // color: white
-            // background-color: $website-border-lightgray;
-            // box-shadow: 0 4px 8px rgba(0,0,0,0.5);
             &:hover{
                 background-color: white;
                 transform: scale(1.02);
