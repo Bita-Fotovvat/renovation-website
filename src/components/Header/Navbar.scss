@@ -46,6 +46,9 @@
             padding: 0.8rem 0.5rem;
             flex-flow: column nowrap;
             width: 9rem;
+            &:hover{
+              font-weight: 700;
+            }
         }
     }
     &.open{
@@ -55,7 +58,7 @@
         animation: slideUp 0.5s ease forwards;
     }
 }
-.headeractive{
+.navbaractive{
     font-weight: 700;
     font-size: 1rem;
 }

@@ -18,9 +18,9 @@ export default function Header(){
                     setActiveLink('/'); 
                     }}>Home
                 </li>
-                {/* <li className={`header__list--item ${activeLink === '/our-projects' ? 'headeractive':''}`} onClick={()=>{
+                <li className={`header__list--item ${activeLink === '/our-projects' ? 'headeractive':''}`} onClick={()=>{
                     navigate("/our-projects");
-                    setActiveLink('/our-projects')}}>Our Projects</li> */}
+                    setActiveLink('/our-projects')}}>Our Projects</li>
                 <li className={`header__list--item ${activeLink === '/about-us' ? 'headeractive':''}`} onClick={()=>{
                     navigate("/about-us");
                     setActiveLink('/about-us')}}>About Us

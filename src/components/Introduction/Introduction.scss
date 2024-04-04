@@ -131,7 +131,8 @@
     font-weight: 600;
     position: relative;
     z-index: 10;
-    box-shadow: 0 2px 0 rgba(233, 232, 232, 0.5);
+    box-shadow: -10px 3px 8px rgba(0, 0, 0, 0.5);
+    // box-shadow: 0 2px 0 rgba(233, 232, 232, 0.5);
     @include tablet-and-desktop{
         background-color: white;
         // font-weight: 700;

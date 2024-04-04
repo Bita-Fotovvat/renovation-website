@@ -9,19 +9,19 @@ export default function Navbar({open}){
     return open ? (
         <nav className={`navbar ${open ? 'open' : 'closed'}`}>
             <ul className="navbar__list">
-                <li className={`navbar__list--item ${activeLink === '/' ? 'headeractive':''}`} onClick={()=> {
+                <li className={`navbar__list--item ${activeLink === '/' ? 'navbaractive':''}`} onClick={()=> {
                     navigate("/"); 
                     setActiveLink('/'); 
                     }}>Home
                 </li>
-                {/* <li className={`navbar__list--item ${activeLink === '/our-projects' ? 'headeractive':''}`} onClick={()=>{
+                <li className={`navbar__list--item ${activeLink === '/our-projects' ? 'navbaractive':''}`} onClick={()=>{
                     navigate("/our-projects");
-                    setActiveLink('/our-projects')}}>Our Projects</li> */}
-                <li className={`navbar__list--item ${activeLink === '/about-us' ? 'headeractive':''}`} onClick={()=>{
+                    setActiveLink('/our-projects')}}>Our Projects</li>
+                <li className={`navbar__list--item ${activeLink === '/about-us' ? 'navbaractive':''}`} onClick={()=>{
                     navigate("/about-us");
                     setActiveLink('/about-us')}}>About Us
                 </li>
-                <li className={`navbar__list--item ${activeLink === '/contact-us' ? 'headeractive':''}`} onClick={()=>{
+                <li className={`navbar__list--item ${activeLink === '/contact-us' ? 'navbaractive':''}`} onClick={()=>{
                     navigate("/contact-us");
                     setActiveLink('/contact-us')}}>Contact Us
                 </li>

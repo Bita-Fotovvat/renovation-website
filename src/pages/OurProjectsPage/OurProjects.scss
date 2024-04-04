@@ -1,0 +1,88 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/_global" as *;
+
+.projects{
+    &__maintitle{
+        font-size: 1.3rem;
+        padding-top: 4rem;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    &__niagaraone{
+        &--title{
+            font-size: 1rem;
+            text-align: center;
+            padding-top: 0.7rem;
+            padding-bottom: 2rem;
+        }
+        &--image{
+            display: block;
+            width: 60vw;
+            aspect-ratio: 16/9;
+            margin: auto;
+            border-radius: 4px;
+        }
+    }
+    &__ancasterone {
+        &--title{
+            font-size: 1rem;
+            text-align: center;
+            padding-top: 0.7rem;
+            padding-bottom: 2rem;
+        }
+        &--image{
+            display: block;
+            width: 60vw;
+            aspect-ratio: 16/9;
+            margin: auto;
+            border-radius: 4px;
+        }
+    }
+    &__oakvillebath{
+        &--title{
+            font-size: 1rem;
+            text-align: center;
+            padding-top: 0.7rem;
+            padding-bottom: 2rem;
+        }
+        &--image{
+            display: block;
+            width: 60vw;
+            aspect-ratio: 16/9;
+            margin: auto;
+            border-radius: 4px;
+        }
+    }
+    &__burligntonone{
+        &--title{
+            font-size: 1rem;
+            text-align: center;
+            padding-top: 0.7rem;
+            padding-bottom: 2rem;
+        }
+        &--image{
+            display: block;
+            width: 60vw;
+            aspect-ratio: 16/9;
+            margin: auto;
+            border-radius: 4px;
+        }
+    }
+    &__mississaugastore{
+        &--title{
+            font-size: 1rem;
+            text-align: center;
+            padding-top: 0.7rem;
+            padding-bottom: 2rem;
+        }
+        &--image{
+            display: block;
+            width: 60vw;
+            aspect-ratio: 16/9;
+            margin: auto;
+            border-radius: 4px;
+        }
+    }
+}
