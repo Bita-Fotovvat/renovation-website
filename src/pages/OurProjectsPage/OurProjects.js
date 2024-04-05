@@ -10,6 +10,7 @@ import ColborneOneMain from "../../assets/images/8-colborne-project-1/main.png";
 import MississaugaTwoMain from "../../assets/images/9-Mississauga-project-2/main.jpg";
 import TorontoOneMain from "../../assets/images/10-toronto-shelby's Project-1/main.jpg";
 import OakvilleTwoMain from "../../assets/images/11-oakville-project-2/main.jpg";
+import TorontoTwoMain from "../../assets/images/12-toronto-shelby's Project-2/main.jpg";
 import { useNavigate } from "react-router-dom";
 
 export default function OurProjectsPage(){
@@ -78,9 +79,9 @@ export default function OurProjectsPage(){
                     <img className="projects__oakvilletwo--image" src={OakvilleTwoMain} alt="oakville basement renovation"  onClick={()=> {navigate("/our-projects/oakville-project-no.2");}}/>
                     <h2 className="projects__oakvilletwo--title" onClick={()=> {navigate("/our-projects/oakville-project-no.2");}}>Oakville Project No. 2</h2>
                 </section>
-                <section className="projects__torontoshelbysone">
-                    <img className="projects__torontoshelbysone--image" src={TorontoOneMain} alt="toronto shelby's renovation project"  onClick={()=> {navigate("/our-projects/toronto-project-no.1");}}/>
-                    <h2 className="projects__torontoshelbysone--title" onClick={()=> {navigate("/our-projects/toronto-project-no.1");}}>Toronto Restaurant Project No. 1</h2>
+                <section className="projects__torontoshelbystwo">
+                    <img className="projects__torontoshelbystwo--image" src={TorontoTwoMain} alt="toronto shelby's second renovation project"  onClick={()=> {navigate("/our-projects/toronto-project-no.2");}}/>
+                    <h2 className="projects__torontoshelbystwo--title" onClick={()=> {navigate("/our-projects/toronto-project-no.2");}}>Toronto Restaurant Project No. 2</h2>
                 </section>
             </section>
         </section>

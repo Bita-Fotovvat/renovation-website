@@ -18,6 +18,7 @@ import ColborneOneProjPage from "./pages/ColborneOneProjPage/ColborneOneProjPage
 import MississaugaTwoProjPage from "./pages/MississaugaTwoProjPage/MississaugaTwoProjPage";
 import TorontoShelbysOnePage from './pages/TorontoShelbysOnePage/TorontoShelbysOnePage';
 import OakvilleTwoProjPage from './pages/OakvilleTwoProjPage/OakvilleTwoProjPage';
+import TorontoShelbysTwoProjPage from './pages/TorontoShelbysTwoProjPage/TorontoShelbysTwoProjPage';
 import Footer from "./components/Footer/Footer";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -67,6 +68,7 @@ function App() {
         <Route path="/our-projects/mississauga-project-no.2" element={<MississaugaTwoProjPage/>} />
         <Route path="/our-projects/toronto-project-no.1" element={<TorontoShelbysOnePage/>} />
         <Route path="/our-projects/oakville-project-no.2" element={<OakvilleTwoProjPage/>} />
+        <Route path="/our-projects/toronto-project-no.2" element={<TorontoShelbysTwoProjPage/>} />
         {/* <Route path="/services" element={<ServicesPage/>} /> */}
         <Route path="/about-us" element={<AboutUsPage/>} /> 
         <Route path="/contact-us" element={<ContactPage/>} /> 

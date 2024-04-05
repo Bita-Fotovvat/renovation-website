@@ -2,3 +2,34 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/_global" as *;
+
+.torontoproject1{
+    &__maintitle{
+        padding-top: 4rem;
+        font-size: 1.5rem;
+        text-align: center;
+        padding-bottom: 1.5rem;
+    }
+    &__imageparent{
+        @include tablet-and-desktop{
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__image{
+        &--1, &--2, &--3, &--4, &--5{
+            display: block;
+            margin: auto;
+            width: 70vw;
+            padding-bottom: 1rem;
+            @include tablet-and-desktop{
+                display: inline;
+                width: 40vw;
+                padding: 1rem 1rem;
+            }
+        }
+    }
+}
