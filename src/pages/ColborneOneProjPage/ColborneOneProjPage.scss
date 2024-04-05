@@ -30,6 +30,10 @@
                 width: 40vw;
                 padding: 1rem 1rem;
             }
+            @include desktop{
+                width: 30vw; 
+                height: 90vh;
+            }
         }
     }
 }

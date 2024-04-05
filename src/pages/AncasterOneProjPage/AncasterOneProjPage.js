@@ -17,7 +17,7 @@ import AncasterOneProj14 from "../../assets/images/3-Ancaster-1-Project/14.jpg";
 export default function AncasterOneProjPage(){
     return(
         <main>
-            <h1 className="ancasterproject1__maintitle">Niagara Project</h1>
+            <h1 className="ancasterproject1__maintitle">Ancaster Project</h1>
             <section className="ancasterproject1__imageparent">
                 <section className="ancasterproject1__imageparent1">
                     <img className="ancasterproject1__image--1" src={AncasterOneProj1} alt="kitchen renovation" />

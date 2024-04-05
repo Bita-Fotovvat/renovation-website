@@ -12,7 +12,7 @@ import OakvilleTwoProj9 from "../../assets/images/11-oakville-project-2/9.jpg";
 export default function OakvilleTwoProjPage(){
     return(
         <main>
-            <h1 className="oakvilleproject2__maintitle">Niagara Project</h1>
+            <h1 className="oakvilleproject2__maintitle">Oakville Project No. 2</h1>
             <section className="oakvilleproject2__imageparent">
                 <section className="oakvilleproject2__imageparent1">
                     <img className="oakvilleproject2__image--1" src={OakvilleTwoProj1} alt="kitchen renovation" />
