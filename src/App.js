@@ -11,7 +11,12 @@ import OakvilleOneProjPage from './pages/OakvilleOneProPage/OakvilleOneProjPage'
 import AncasterOneProjPage from './pages/AncasterOneProjPage/AncasterOneProjPage';
 import BurlingtonOneProjPage from "./pages/BurlingtonOneProjPage/BurlingtonOneProjPage";
 import MississaugaStoreProjPage from "./pages/MississaugaStoreProjPage/MississaugaStoreProjPage";
+
 import MiltonOneProjectPage from "./pages/MiltonOneProjectPage/MiltonOneProjectPage";
+import BurlingtonTwoProjPage from "./pages/BurlingtonTwoProjPage/BurlingtonTwoProjPage";
+import ColborneOneProjPage from "./pages/ColborneOneProjPage/ColborneOneProjPage";
+import MississaugaTwoProjPage from "./pages/MississaugaTwoProjPage/MississaugaTwoProjPage";
+import TorontoShelbysOnePage from './pages/TorontoShelbysOnePage/TorontoShelbysOnePage';
 import Footer from "./components/Footer/Footer";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -56,6 +61,10 @@ function App() {
         <Route path="/our-projects/burlington-project-no.1" element={<BurlingtonOneProjPage/>} />
         <Route path="/our-projects/mississauga-store-project-no.1" element={<MississaugaStoreProjPage/>} />
         <Route path="/our-projects/milton-project-no.1" element={<MiltonOneProjectPage/>} />
+        <Route path="/our-projects/burlington-project-no.2" element={<BurlingtonTwoProjPage/>} />
+        <Route path="/our-projects/colborne-project-no.1" element={<ColborneOneProjPage/>} />
+        <Route path="/our-projects/mississauga-project-no.2" element={<MississaugaTwoProjPage/>} />
+        <Route path="/our-projects/toronto-project-no.1" element={<TorontoShelbysOnePage/>} />
         {/* <Route path="/services" element={<ServicesPage/>} /> */}
         <Route path="/about-us" element={<AboutUsPage/>} /> 
         <Route path="/contact-us" element={<ContactPage/>} /> 

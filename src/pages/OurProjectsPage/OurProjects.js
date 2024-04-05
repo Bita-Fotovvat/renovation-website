@@ -5,6 +5,10 @@ import BurlingtonOneMain from "../../assets/images/4-burlington-1-project/Burlin
 import OakvilleBath from "../../assets/images/2-oakville-bath-project/oakville-1-main2.jpg";
 import MississaugaStore from "../../assets/images/5-mississauga-store-project/mississauga-1-main2.jpg";
 import MiltonProjectMain from "../../assets/images/6-milton-project-1/main.jpg";
+import BurlingtonTwoMain from "../../assets/images/7- burlington-project-2/main.jpg";
+import ColborneOneMain from "../../assets/images/8-colborne-project-1/main.png";
+import MississaugaTwoMain from "../../assets/images/9-Mississauga-project-2/main.jpg";
+import TorontoOneMain from "../../assets/images/10-toronto-shelby's Project-1/main.jpg";
 import { useNavigate } from "react-router-dom";
 
 export default function OurProjectsPage(){
@@ -46,6 +50,26 @@ export default function OurProjectsPage(){
                 <section className="projects__miltoneone">
                     <img className="projects__miltoneone--image" src={MiltonProjectMain} alt="milton renovation project"  onClick={()=> {navigate("/our-projects/milton-project-no.1");}}/>
                     <h2 className="projects__miltoneone--title" onClick={()=> {navigate("/our-projects/milton-project-no.1");}}>Milton Project</h2>
+                </section>
+            </section>
+            <section className="projects__parent">
+                <section className="projects__burligntontwo">
+                    <img className="projects__burligntontwo--image" src={BurlingtonTwoMain} alt="burlington home & basement renovation"  onClick={()=> {navigate("/our-projects/burlington-project-no.2");}}/>
+                    <h2 className="projects__burligntontwo--title" onClick={()=> {navigate("/our-projects/burlington-project-no.2");}}>Burlington Project No. 2</h2>
+                </section>
+                <section className="projects__colborneone">
+                    <img className="projects__colborneone--image" src={ColborneOneMain} alt="colborne renovation project"  onClick={()=> {navigate("/our-projects/colborne-project-no.1");}}/>
+                    <h2 className="projects__colborneone--title" onClick={()=> {navigate("/our-projects/colborne-project-no.1");}}>Colborne Project</h2>
+                </section>
+            </section>
+            <section className="projects__parent">
+                <section className="projects__mississaugatwo">
+                    <img className="projects__mississaugatwo--image" src={MississaugaTwoMain} alt="mississauga renovation"  onClick={()=> {navigate("/our-projects/mississauga-project-no.2");}}/>
+                    <h2 className="projects__mississaugatwo--title" onClick={()=> {navigate("/our-projects/mississauga-project-no.2");}}>Mississauga Project No. 2</h2>
+                </section>
+                <section className="projects__torontoshelbysone">
+                    <img className="projects__torontoshelbysone--image" src={TorontoOneMain} alt="toronto shelby's renovation project"  onClick={()=> {navigate("/our-projects/toronto-project-no.1");}}/>
+                    <h2 className="projects__torontoshelbysone--title" onClick={()=> {navigate("/our-projects/toronto-project-no.1");}}>Toronto Restaurant Project No. 1</h2>
                 </section>
             </section>
         </section>
