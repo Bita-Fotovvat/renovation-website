@@ -7,7 +7,7 @@ import MississaugaTwoProj4 from "../../assets/images/9-Mississauga-project-2/4.j
 export default function MississaugaTwoProjPage(){
     return(
         <main>
-            <h1 className="mississaugaproject2__maintitle">Niagara Project</h1>
+            <h1 className="mississaugaproject2__maintitle">Mississauga Project No. 2</h1>
             <section className="mississaugaproject2__imageparent">
                 <section className="mississaugaproject2__imageparent1">
                     <img className="mississaugaproject2__image--1" src={MississaugaTwoProj1} alt="kitchen renovation" />
