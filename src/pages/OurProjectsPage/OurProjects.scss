@@ -15,9 +15,22 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: center;
+            padding-top: 0.7rem;
+            padding-bottom: 2rem;
         }
     }
-    &__niagaraone{
+    &__parent{
+        @include tablet-and-desktop{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+    }
+    &__niagaraone, &__ancasterone, &__oakvillebath, &__burligntonone, &__mississaugastore, &__miltoneone, &__burligntontwo, &__colborneone, &__mississaugatwo, &__torontoshelbysone, &__oakvilletwo, &__torontoshelbystwo{
+        // overflow: hidden;
+
         &--title{
             font-size: 1rem;
             text-align: center;
@@ -30,69 +43,15 @@
             aspect-ratio: 16/9;
             margin: auto;
             border-radius: 4px;
-            // @include tablet-and-desktop{
-            //     width: 30vw;
-            // }
+            transition: transform 1s ease, box-shadow 0.3s ease;;
+            @include tablet-and-desktop{
+                width: 30vw;
+            }
+            &:hover{
+                transform: scale(1.05);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+            }
         }
     }
-    &__ancasterone {
-        &--title{
-            font-size: 1rem;
-            text-align: center;
-            padding-top: 0.7rem;
-            padding-bottom: 2rem;
-        }
-        &--image{
-            display: block;
-            width: 60vw;
-            aspect-ratio: 16/9;
-            margin: auto;
-            border-radius: 4px;
-        }
-    }
-    &__oakvillebath{
-        &--title{
-            font-size: 1rem;
-            text-align: center;
-            padding-top: 0.7rem;
-            padding-bottom: 2rem;
-        }
-        &--image{
-            display: block;
-            width: 60vw;
-            aspect-ratio: 16/9;
-            margin: auto;
-            border-radius: 4px;
-        }
-    }
-    &__burligntonone{
-        &--title{
-            font-size: 1rem;
-            text-align: center;
-            padding-top: 0.7rem;
-            padding-bottom: 2rem;
-        }
-        &--image{
-            display: block;
-            width: 60vw;
-            aspect-ratio: 16/9;
-            margin: auto;
-            border-radius: 4px;
-        }
-    }
-    &__mississaugastore{
-        &--title{
-            font-size: 1rem;
-            text-align: center;
-            padding-top: 0.7rem;
-            padding-bottom: 2rem;
-        }
-        &--image{
-            display: block;
-            width: 60vw;
-            aspect-ratio: 16/9;
-            margin: auto;
-            border-radius: 4px;
-        }
-    }
+
 }
