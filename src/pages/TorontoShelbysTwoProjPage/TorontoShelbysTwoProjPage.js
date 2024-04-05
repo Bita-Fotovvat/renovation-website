@@ -12,7 +12,7 @@ import TorontoTwoProj9 from "../../assets/images/12-toronto-shelby's Project-2/9
 export default function TorontoShelbysTwoProjPage(){
     return(
         <main>
-            <h1 className="torontoproject2__maintitle">Niagara Project</h1>
+            <h1 className="torontoproject2__maintitle">Toronto Restaurant Project No. 2</h1>
             <section className="torontoproject2__imageparent">
                 <section className="torontoproject2__imageparent1">
                     <img className="torontoproject2__image--1" src={TorontoTwoProj1} alt="kitchen renovation" />

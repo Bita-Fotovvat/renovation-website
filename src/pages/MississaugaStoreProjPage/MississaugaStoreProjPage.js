@@ -17,7 +17,7 @@ import MississaugaStoreProj13 from "../../assets/images/5-mississauga-store-proj
 export default function MississaugaStoreProjPage(){
     return(
         <main>
-            <h1 className="mississaugastoreproj__maintitle">Burlington Project</h1>
+            <h1 className="mississaugastoreproj__maintitle">Mississauga Store Project</h1>
             <section className="mississaugastoreproj__imageparent">
                 <section className="mississaugastoreproj__imageparent1">
                     <img className="mississaugastoreproj__image--1" src={MississaugaStoreProj1} alt="living room renovation drywall and framing" />
