@@ -9,6 +9,7 @@ import BurlingtonTwoMain from "../../assets/images/7- burlington-project-2/main.
 import ColborneOneMain from "../../assets/images/8-colborne-project-1/main.png";
 import MississaugaTwoMain from "../../assets/images/9-Mississauga-project-2/main.jpg";
 import TorontoOneMain from "../../assets/images/10-toronto-shelby's Project-1/main.jpg";
+import OakvilleTwoMain from "../../assets/images/11-oakville-project-2/main.jpg";
 import { useNavigate } from "react-router-dom";
 
 export default function OurProjectsPage(){
@@ -66,6 +67,16 @@ export default function OurProjectsPage(){
                 <section className="projects__mississaugatwo">
                     <img className="projects__mississaugatwo--image" src={MississaugaTwoMain} alt="mississauga renovation"  onClick={()=> {navigate("/our-projects/mississauga-project-no.2");}}/>
                     <h2 className="projects__mississaugatwo--title" onClick={()=> {navigate("/our-projects/mississauga-project-no.2");}}>Mississauga Project No. 2</h2>
+                </section>
+                <section className="projects__torontoshelbysone">
+                    <img className="projects__torontoshelbysone--image" src={TorontoOneMain} alt="toronto shelby's renovation project"  onClick={()=> {navigate("/our-projects/toronto-project-no.1");}}/>
+                    <h2 className="projects__torontoshelbysone--title" onClick={()=> {navigate("/our-projects/toronto-project-no.1");}}>Toronto Restaurant Project No. 1</h2>
+                </section>
+            </section>
+            <section className="projects__parent">
+                <section className="projects__oakvilletwo">
+                    <img className="projects__oakvilletwo--image" src={OakvilleTwoMain} alt="oakville basement renovation"  onClick={()=> {navigate("/our-projects/oakville-project-no.2");}}/>
+                    <h2 className="projects__oakvilletwo--title" onClick={()=> {navigate("/our-projects/oakville-project-no.2");}}>Oakville Project No. 2</h2>
                 </section>
                 <section className="projects__torontoshelbysone">
                     <img className="projects__torontoshelbysone--image" src={TorontoOneMain} alt="toronto shelby's renovation project"  onClick={()=> {navigate("/our-projects/toronto-project-no.1");}}/>
