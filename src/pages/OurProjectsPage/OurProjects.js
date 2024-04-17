@@ -41,7 +41,7 @@ export default function OurProjectsPage(){
                 </section>
                 <section className="projects__burligntonone">
                     <img className="projects__burligntonone--image" src={BurlingtonOneMain} alt="burlington renovation project"  onClick={()=> {navigate("/our-projects/burlington-project-no.1");}}/>
-                    <h2 className="projects__burligntonone--title" onClick={()=> {navigate("/our-projects/burlington-project-no.1");}}>Bulington Project</h2>
+                    <h2 className="projects__burligntonone--title" onClick={()=> {navigate("/our-projects/burlington-project-no.1");}}>Burlington Project</h2>
                 </section>
             </section>
             <section className="projects__parent">
