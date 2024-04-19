@@ -84,8 +84,8 @@ export default function ContactPage(){
                 <section className="contactinfo__container2">
                     <article className="contactinfo__operationhours">
                         <h2 className="contactinfo__operationhours--title">Hours of Operation</h2>
-                        <p className="contactinfo__operationhours--text">Monday - Friday:<br/> 9:00AM - 5:00PM</p>
-                        <p className="contactinfo__operationhours--text">Saturday - Sunday:<br/> By Appointment Only</p>
+                        <p className="contactinfo__operationhours--text">Monday - Friday:<br/>8:30AM - 6:30PM</p>
+                        <p className="contactinfo__operationhours--text">Saturday - Sunday:<br/>8:30AM - 6:30PM <br/>(By Appointment Only)</p>
                     </article>
                     <img  className="contactinfo__logo" src={Logo} alt="company logo" onClick={()=> navigate("/")}/>
                     <p className="contactinfo__copyright">Copyright © Renontario Ltd. 2024</p>
