@@ -37,7 +37,8 @@ export default function Footer(){
                     </a>
                 </section>
                 
-                <p className="footer__copyright">Copyright © Renontario Ltd. 2024</p>
+                <p className="footer__copyright">Copyright © Renontario Ltd. 2024 All Rights Reserved.</p>
+                <p className="footer__copyright">Designed and Developed by Bita Fotovvat</p>
             </section>
             <section className="footer__container2">
                 <img  className="footer__logo" src={Logo} alt="company logo" onClick={()=> navigate("/")}/>
