@@ -31,19 +31,21 @@ export default function Footer(){
                         <p className="footer__icon--instatext">instagram.com/renontario</p>
                     </a>
                 {/* </section> */}
-                <section className="footer__icon--instaparent">
-                    <a href="https://www.facebook.com/profile.php?id=61559220082147&mibextid=LQQJ4d" target="_blank">
-                        <img  className="footer__icon" src={FacebookIcon} alt="facebook icon" />
+                {/* <section className="footer__icon--fbparent"> */}
+                    <a className="footer__icon--fbparent" href="https://www.facebook.com/profile.php?id=61559220082147&mibextid=LQQJ4d" target="_blank">
+                        <img  className="footer__icon--insta" src={FacebookIcon} alt="facebook icon" />
+                        <p className="footer__icon--instatext">facebook.com/renontario</p>
                     </a>
-                </section>
-                
-                <p className="footer__copyright">Copyright © Renontario Ltd. 2024 All Rights Reserved.</p>
-                <p className="footer__copyright">Designed and Developed by Bita Fotovvat</p>
+                {/* </section> */}
             </section>
             <section className="footer__container2">
                 <img  className="footer__logo" src={Logo} alt="company logo" onClick={()=> navigate("/")}/>
             </section>         
         </section>
+        <section className="footer__copyrightparent">
+                <p className="footer__copyright">Copyright © Renontario Ltd. 2024<br/>All Rights Reserved.</p>
+                <p className="footer__copyright">Designed and Developed by Bita Fotovvat</p>
+            </section>
 </footer>
     )
 }

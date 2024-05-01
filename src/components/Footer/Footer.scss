@@ -79,18 +79,26 @@
     }
     &__icon{
         &--insta{
-            margin-right: 1rem;
+            margin-right: 0.5rem;
             margin-top: 0.5rem;
+            margin-bottom: 1rem;
         }
         &--instatext{
             color: white;
-            text-decoration: none;
-            border-bottom: none;
             padding-bottom: 0.5rem;
-            text-decoration: none;
+            font-size: 0.77rem;
+            @include tablet-and-desktop{
+                padding-bottom: 0.5rem;
+            }
+
         }
         &--instaparent{
             display: flex;
+            align-items:center;
+        }
+        &--fbparent{
+            display: flex;
+            flex-direction: row;
             align-items: center;
         }
     }
@@ -117,5 +125,9 @@
         color: white;
         font-size: 0.8rem;
         padding-top: 1rem;
+    }
+    &__copyrightparent{
+        padding-bottom: 1rem;
+        padding-left: 1rem;
     }
 }
