@@ -11,7 +11,7 @@ export default function Footer(){
     const navigate = useNavigate();
     return(
     <footer className="footer">
-        <section className="footer__parent">
+        <section className="footer__parent">            
             <section className="footer__container1">
                 <h3 className="footer__title">Connect with Us</h3>
                 <section className="footer__phoneparent">
@@ -25,8 +25,18 @@ export default function Footer(){
                     <img className="footer__icon"  src={EmailIcon} alt="email icon" />
                     <p className="footer__email">renontario@gmail.com</p>
                 </section>
-                <img className="footer__icon--insta" src={InstagramIcon} alt="email icon" />
-                <img  className="footer__icon" src={FacebookIcon} alt="email icon" />
+                {/* <section className="footer__icon--instaparent"> */}
+                    <a className="footer__icon--instaparent" href="https://www.instagram.com/renontario?igsh=aWxsOHFnenp6Y3lr&utm_source=qr" target="_blank">
+                        <img className="footer__icon--insta" src={InstagramIcon} alt="instagram icon"/>
+                        <p className="footer__icon--instatext">instagram.com/renontario</p>
+                    </a>
+                {/* </section> */}
+                <section className="footer__icon--instaparent">
+                    <a href="https://www.facebook.com/profile.php?id=61559220082147&mibextid=LQQJ4d" target="_blank">
+                        <img  className="footer__icon" src={FacebookIcon} alt="facebook icon" />
+                    </a>
+                </section>
+                
                 <p className="footer__copyright">Copyright © Renontario Ltd. 2024</p>
             </section>
             <section className="footer__container2">
