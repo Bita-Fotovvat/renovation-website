@@ -77,11 +77,33 @@
             margin-bottom: 1rem;
         }
     }
-    &__icon--insta{
-        margin-right: 1rem;
-        margin-top: 0.5rem;
+    &__icon{
+        &--insta{
+            margin-right: 0.5rem;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        &--instatext{
+            color: white;
+            padding-bottom: 0.5rem;
+            font-size: 0.77rem;
+            @include tablet-and-desktop{
+                padding-bottom: 0.5rem;
+            }
+
+        }
+        &--instaparent{
+            display: flex;
+            align-items:center;
+        }
+        &--fbparent{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
     }
     &__logo{
+        cursor: pointer;
         width: 90%;
         margin-left: 1rem;
         @media (min-width: 400px) {
@@ -103,5 +125,9 @@
         color: white;
         font-size: 0.8rem;
         padding-top: 1rem;
+    }
+    &__copyrightparent{
+        padding-bottom: 1rem;
+        padding-left: 1rem;
     }
 }

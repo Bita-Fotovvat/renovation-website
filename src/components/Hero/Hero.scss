@@ -24,7 +24,7 @@
         max-width: 90%;
         margin: auto;
         padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding-bottom: 0.5rem;
         @include tablet-and-desktop{
             flex-direction: column;
             padding-top: 0;
@@ -37,12 +37,16 @@
             max-width: 250px;
         }
         @include tablet-and-desktop{
-            width: 10rem;
+            width: 8rem;
             display: block;
             margin: auto;
             padding-top: 0.5rem;
             animation-delay: 0.5s;
         }
+        // @media (min-width: 830px) {
+        //     width: 40vw;
+        //     max-width: 250px;
+        // }
         @include desktop{
             width: 12rem;
             padding-bottom: 1rem;  
@@ -57,7 +61,7 @@
             padding-bottom: 1rem;
         }
         @include tablet-and-desktop{
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
         @include desktop{
             font-size: 1.18rem;
@@ -211,7 +215,7 @@
             padding-bottom: 1.5rem;
         }
         @include tablet-and-desktop{
-            font-size: 1.1rem;
+            font-size: 1rem;
             padding-bottom: 0.9rem;
         }
         @include desktop{
