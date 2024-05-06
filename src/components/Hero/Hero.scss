@@ -194,7 +194,17 @@
         }
         @media (min-width: 1290px) {
             background-position-y: 2rem;
-            background-position-x: 24rem;
+            background-position-x: 20rem;
+            background-size: 85%;            
+        }
+        @media (min-width: 1350px) {
+            background-position-y: 1rem;
+            background-position-x: 20rem;
+            background-size: 80%;            
+        }
+        @media (min-width: 1550px) {
+            background-position-y: -5rem;
+            background-position-x: 28rem;
             background-size: 75%;            
         }
     }
