@@ -20,7 +20,7 @@ import TorontoShelbysOnePage from './pages/TorontoShelbysOnePage/TorontoShelbysO
 import OakvilleTwoProjPage from './pages/OakvilleTwoProjPage/OakvilleTwoProjPage';
 import TorontoShelbysTwoProjPage from './pages/TorontoShelbysTwoProjPage/TorontoShelbysTwoProjPage';
 import Footer from "./components/Footer/Footer";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
