@@ -46,6 +46,15 @@ export default function Footer(){
                 <p className="footer__copyright">Copyright © Renontario Ltd. 2024<br/>All Rights Reserved.</p>
                 <p className="footer__copyright">Designed and Developed by Bita Fotovvat</p>
             </section>
+            {/* <section className="footer__container3">
+                <h3 className="footer__area--title">Service Area</h3>
+                <section className="footer__area--parent">
+                        <p className="footer__area--item">Greater Toronto Area</p>
+                        <p className="footer__area--item">Greater Hamilton Area</p>
+                        <p className="footer__area--item">Niagara Region</p>
+                </section>
+            </section> */}
+
 </footer>
     )
 }
