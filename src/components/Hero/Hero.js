@@ -18,6 +18,7 @@ export default function Hero(){
     const yourServiceId = process.env.REACT_APP_YOUR_SERVICE_ID;
     const yourTemplateId = process.env.REACT_APP_YOUR_TEMPLATE_ID;
     const yourPublicKey = process.env.REACT_APP_YOUR_PUBLIC_KEY;
+    console.log(yourServiceId);
     const sendEmail = (e) => {
         e.preventDefault();
                if (!formData.name.trim()) {
