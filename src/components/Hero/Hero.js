@@ -1,4 +1,5 @@
 import "./Hero.scss";
+// require('dotenv').config();
 import Logo from "../../assets/logo/logo.png";
 import axios from "axios";
 import { useState } from 'react';
@@ -21,13 +22,36 @@ export default function Hero(){
     // };
     
     const form = useRef();
-    const yourServiceId = process.env.YOUR_SERVICE_ID;
-    const yourTemplateId = process.env.YOUR_TEMPLATE_ID;
-    const yourPublicKey = process.env.YOUR_PUBLIC_KEY;
-    console.log(yourServiceId, yourTemplateId, yourPublicKey);
+    const yourServiceId = process.env.REACT_APP_YOUR_SERVICE_ID;
+    const yourTemplateId = process.env.REACT_APP_YOUR_TEMPLATE_ID;
+    const yourPublicKey = process.env.REACT_APP_YOUR_PUBLIC_KEY;
+    // console.log(yourServiceId, yourTemplateId, yourPublicKey);
     const sendEmail = (e) => {
         e.preventDefault();
-        
+               if (!formData.name.trim()) {
+            return toast.warn('Please enter your name.', {
+                position: "top-left",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                });
+        }
+        if (!formData.phone.trim() && !formData.email.trim()) {
+            return  toast.warn('Please enter at least a phone number or an email address.', {
+                position: "top-left",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                });
+        }
         emailjs
           .sendForm(yourServiceId, yourTemplateId, form.current, {
             publicKey: yourPublicKey,
@@ -35,9 +59,29 @@ export default function Hero(){
           .then(
             () => {
               console.log('SUCCESS!');
+                    toast.success('Success! You will be contacted soon.', {
+                    position: "top-left",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                    });
             },
             (error) => {
               console.log('FAILED...', error.text);
+                    toast.error('Failed to submit your request. Please try again.', {
+                    position: "top-left",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                    });
             },
           );
           setFormData({
@@ -137,7 +181,7 @@ export default function Hero(){
                     <section className="hero__form--parent">
                         <input 
                         className="hero__form--name" 
-                        name="user_name" 
+                        name="from_name" 
                         type="text" 
                         placeholder="Name"  
                         value={formData.name ? formData.name:''} 
@@ -145,7 +189,7 @@ export default function Hero(){
                         />
                         <input 
                         className="hero__form--city" 
-                        name="user_city" 
+                        name="from_city" 
                         type="text" 
                         placeholder="City"  
                         value={formData.city ? formData.city:''} 
@@ -154,7 +198,7 @@ export default function Hero(){
                     </section>
                     <input 
                     className="hero__form--phone" 
-                    name="user_phone" 
+                    name="from_phone" 
                     type="text" 
                     placeholder="Phone Number" 
                     value={formData.phone ? formData.phone: ''} 
@@ -162,7 +206,7 @@ export default function Hero(){
                     />
                     <input 
                     className="hero__form--email" 
-                    name="user_email" 
+                    name="from_email" 
                     type="email"  
                     placeholder="Email" 
                     value={formData.email ? formData.email:''} 
