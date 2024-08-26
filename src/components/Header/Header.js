@@ -12,7 +12,7 @@ export default function Header(){
     <header className="header">
         <nav className="header__nav">
             <ul className="header__list">
-                <li className= "header__list--brandname" onClick={()=> navigate("/")}>Renontario</li>
+                <li className= "header__list--brandname" onClick={()=> navigate("/")}>Xeus Home</li>
                 <li className={`header__list--item ${activeLink === '/' ? 'headeractive':''}`} onClick={()=> {
                     navigate("/"); 
                     setActiveLink('/'); 
