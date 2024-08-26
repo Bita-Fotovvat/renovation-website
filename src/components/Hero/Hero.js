@@ -1,5 +1,5 @@
 import "./Hero.scss";
-import Logo from "../../assets/logo/logo.png";
+// import Logo from "../../assets/logo/logo.png";
 import { useState , useRef } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -91,8 +91,9 @@ export default function Hero(){
             <section className="hero__child1">
                 <section className="hero__branding">
                     <section className="hero__logoparent">
-                        <img className="hero__logo" src={Logo} alt="renontario logo" />
-                        <p className="hero__slogan">A Step to Your Dream Home</p>
+                        <h1 className="hero__logoreplacement">Xeus Home</h1>
+                        {/* <img className="hero__logo" src={Logo} alt="renontario logo" /> */}
+                        <p className="hero__slogan">The home solution you deserve</p>
                     </section>
                     <p className="hero__about2">Renovation & Remodeling Company</p>
                 </section>

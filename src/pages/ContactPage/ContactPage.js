@@ -4,7 +4,7 @@ import { useState , useRef } from 'react';
 import { toast } from 'react-toastify';
 import PhoneIcon from "../../assets/icons/phone.png";
 import EmailIcon from "../../assets/icons/email.png";
-import Logo from "../../assets/logo/logo.png";
+// import Logo from "../../assets/logo/logo.png";
 import { useNavigate } from "react-router";
 import emailjs from '@emailjs/browser';
 
@@ -146,13 +146,12 @@ export default function ContactPage(){
                     <section className="contactinfo__phoneparent">
                         <img className="contactinfo__icon" src={PhoneIcon} alt="phone icon" />
                         <section className="contactinfo__phoneparent--text">
-                            <p className="contactinfo__phone">(289) 489-9689</p>
                             <p className="contactinfo__phone">(437) 599-1717</p>
                         </section>
                     </section>
                     <section className="contactinfo__emailparent">
                         <img className="contactinfo__icon"  src={EmailIcon} alt="email icon" />
-                        <p className="contactinfo__email">renontario@gmail.com</p>
+                        <p className="contactinfo__email">xeushome@gmail.com</p>
                     </section>
                 </section>
                 <section className="contactinfo__container2">
@@ -161,8 +160,8 @@ export default function ContactPage(){
                         <p className="contactinfo__operationhours--text">Monday - Friday:<br/>8:30AM - 6:30PM</p>
                         <p className="contactinfo__operationhours--text">Saturday - Sunday:<br/>8:30AM - 6:30PM <br/>(By Appointment Only)</p>
                     </article>
-                    <img  className="contactinfo__logo" src={Logo} alt="company logo" onClick={()=> navigate("/")}/>
-                    <p className="contactinfo__copyright">Copyright © Renontario Ltd. 2024</p>
+                    {/* <img  className="contactinfo__logo" src={Logo} alt="company logo" onClick={()=> navigate("/")}/> */}
+                    <p className="contactinfo__copyright">Copyright © Xeus Home Ltd. 2024</p>
                 </section>         
             </section>
         </main>

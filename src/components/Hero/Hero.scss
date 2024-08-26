@@ -4,6 +4,12 @@
 @use "../../styles/partials/_global" as *;
 
 .hero{
+    &__logoreplacement{
+        font-size: 2.5rem;
+        color: white;
+        font-family: Nexa;
+        padding: 3rem 1rem 3rem 1.5rem;
+    }
     &__childmobile{
         margin-top: 2rem;
         background-image: url('../../assets/images/Heromobile.jpg'); // Adjust the path as needed
