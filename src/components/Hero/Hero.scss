@@ -5,10 +5,11 @@
 
 .hero{
     &__logoreplacement{
-        font-size: 2rem;
+        font-size: 2.5rem;
         color: white;
-        font-family: Nexa;
-        padding: 2rem 0rem 3rem 1.5rem;
+        font-family: Bruney, sans-serif;
+        font-weight: 300;
+        padding: 2rem 0rem 3rem 2.5rem;
     }
     &__childmobile{
         margin-top: 2rem;
@@ -59,7 +60,8 @@
         }
     }
     &__slogan{
-        color: rgb(242, 211, 164);
+        font-family: Cormorant, sans-serif;
+        color: $xeus-lightbeige;
         text-align: center;
         font-size: 0.9rem;
         @media (min-width: 450px) {
@@ -74,6 +76,8 @@
         }
             }
     &__about2{
+        font-family: GeneralSans, sans-serif;
+        font-weight: 400;
         padding-top: 1.5rem;
         padding-left: 5%;
         align-self: center;
@@ -134,7 +138,7 @@
     &__child1{
         background-color: rgb(44, 43, 43);
         @include tablet-and-desktop{
-            background-color: rgb(44, 43, 43);
+            background-color: $xeus-darkmaroon;
             height: 25rem;
             width: 35%;
             padding-right: 1rem;
@@ -222,6 +226,7 @@
     }
     &__formtitle{
         color: white;
+        font-family: GeneralSans, sans-serif;
         font-weight: 400;
         font-size: 1.1rem;
         text-align: center;
@@ -260,7 +265,7 @@
             margin-bottom: 0.5rem;
             border-radius: 6px;
             border: none;
-            font-family: Nexa;
+            font-family: Nexa, sans-serif;
             font-weight: 400;
             background-color: rgb(235, 234, 234);
             @include big-mobile-screen{
@@ -290,7 +295,7 @@
             margin-bottom: 0.5rem;
             border-radius: 6px;
             border: none;
-            font-family: Nexa;
+            font-family: Nexa, sans-serif;
             font-weight: 400;
             color: gray;
             background-color: rgb(235, 234, 234);
@@ -302,13 +307,15 @@
             }
         }
         &--button{
-            font-family: Nexa;
+            font-family: GeneralSans, sans-serif;
+            font-weight: 600;
             margin-top: 0.1rem;
             border-radius: 6px;
             height: 5vh;
             width: 100%;
-            background-color: rgb(181, 144, 88);
-            color: white;
+            background-color: $xeus-mediumbeige;
+            border: none;
+            color: $xeus-darkmaroon;
             @include tablet-and-desktop{
                 height: 4vh;
             }

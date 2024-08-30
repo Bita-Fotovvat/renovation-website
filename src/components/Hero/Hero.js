@@ -93,9 +93,9 @@ export default function Hero(){
                     <section className="hero__logoparent">
                         <h1 className="hero__logoreplacement">Xeus Home</h1>
                         {/* <img className="hero__logo" src={Logo} alt="renontario logo" /> */}
-                        <p className="hero__slogan">The home solution you deserve</p>
+                        <p className="hero__slogan">THE HOME SOLUTION YOU DESERVE</p>
                     </section>
-                    <p className="hero__about2">Renovation & Remodeling Company</p>
+                    <p className="hero__about2">Renovation & Remodeling</p>
                 </section>
                 <h3 className="hero__formtitle">Get a Free Consultaion/ Quote</h3>
                 <form ref={form} className="hero__form" onSubmit={sendEmail}>
