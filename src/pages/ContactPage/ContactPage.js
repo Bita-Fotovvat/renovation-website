@@ -151,7 +151,7 @@ export default function ContactPage(){
                     </section>
                     <section className="contactinfo__emailparent">
                         <img className="contactinfo__icon"  src={EmailIcon} alt="email icon" />
-                        <p className="contactinfo__email">xeushome@gmail.com</p>
+                        <p className="contactinfo__email">contact@xeushome.ca</p>
                     </section>
                 </section>
                 <section className="contactinfo__container2">
