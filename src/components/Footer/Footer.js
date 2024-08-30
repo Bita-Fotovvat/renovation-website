@@ -22,7 +22,7 @@ export default function Footer(){
                 </section>
                 <section className="footer__emailparent">
                     <img className="footer__icon"  src={EmailIcon} alt="email icon" />
-                    <p className="footer__email">xeushome@gmail.com</p>
+                    <p className="footer__email">contact@xeushome.ca</p>
                 </section>
                 {/* <section className="footer__icon--instaparent"> */}
                     {/* <a className="footer__icon--instaparent" href="https://www.instagram.com/renontario?igsh=aWxsOHFnenp6Y3lr&utm_source=qr" target="_blank">
