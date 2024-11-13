@@ -1,5 +1,4 @@
 import "./Hero.scss";
-// import Logo from "../../assets/logo/logo.png";
 import { useState , useRef, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -45,10 +44,8 @@ export default function Hero(){
                 });
         }
         emailjs
-          .sendForm(yourServiceId, yourTemplateId, form.current, {
-            publicKey: yourPublicKey,
-          })
-          .then(
+        .sendForm(yourServiceId, yourTemplateId, form.current, yourPublicKey)
+        .then(
             () => {
               console.log('SUCCESS!');
                     toast.success('Success! You will be contacted soon.', {
@@ -92,7 +89,6 @@ export default function Hero(){
             const interval = setInterval(()=>{
                 setCurrentImageIndex((currentImageIndex + 1) % totalImagesNumber);
             }, 5000);
-            console.log(currentImageIndex);
             return ()=> clearInterval(interval);
         });
 
