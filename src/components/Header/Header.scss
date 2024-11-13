@@ -13,6 +13,10 @@
         z-index: 20;
         background-color: #fff;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        @include tablet-and-desktop{
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            }
         &__list{
             @include tablet-and-desktop{
             display: flex;
@@ -32,7 +36,8 @@
                 cursor: pointer;
                 display: none;
                 @include tablet-and-desktop{
-                display: inline;
+                display: flex;
+                width: 6.5rem;
                 list-style-type: none;
                 font-size: 1rem;
                 &:hover{

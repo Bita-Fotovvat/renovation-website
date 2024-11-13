@@ -1,6 +1,6 @@
 import "./Hero.scss";
 // import Logo from "../../assets/logo/logo.png";
-import { useState , useRef } from 'react';
+import { useState , useRef, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import emailjs from '@emailjs/browser';
@@ -85,14 +85,24 @@ export default function Hero(){
           })
         }
 
+        const totalImagesNumber = 3;
+        const [currentImageIndex, setCurrentImageIndex] = useState(0);
+        
+        useEffect(()=>{
+            const interval = setInterval(()=>{
+                setCurrentImageIndex((currentImageIndex + 1) % totalImagesNumber);
+            }, 5000);
+            console.log(currentImageIndex);
+            return ()=> clearInterval(interval);
+        });
+
     return(
     <section className="hero__parent">
-        <section className="hero__childmobile"></section>
+        <section className={`hero__childmobile hero__image${currentImageIndex}`}></section>
             <section className="hero__child1">
                 <section className="hero__branding">
                     <section className="hero__logoparent">
                         <h1 className="hero__logoreplacement">Xeus Home</h1>
-                        {/* <img className="hero__logo" src={Logo} alt="renontario logo" /> */}
                         <p className="hero__slogan">The home solution you deserve</p>
                     </section>
                     <p className="hero__about2">Renovation & Remodeling Company</p>
@@ -144,8 +154,7 @@ export default function Hero(){
                     <button className="hero__form--button" type="submit">Submit</button>
                 </form>
             </section>
-            <section className="hero__child2">
-        </section>
+            <section className={`hero__child2 hero__image${currentImageIndex}`}></section>
     </section>
     )
 }

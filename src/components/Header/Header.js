@@ -29,9 +29,6 @@ export default function Header(){
                     navigate("/contact-us");
                     setActiveLink('/contact-us')}}>Contact Us
                 </li>
-                {/* <li className="header__list--item">Log In</li>
-                <li className="header__list--item">Get a Quote</li>
-                <li className="header__list--item">Request an Appointment</li> */}
             </ul>
         </nav>
     </header>
