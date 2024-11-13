@@ -5,11 +5,25 @@
 
 .hero{
     &__logoreplacement{
-        margin: auto;
-        font-family: Bruney;
-        font-size: 2rem;
+        text-align: center;
+        font-family: Bruney, sans-serif;
+        font-size: 1.6rem;
         color: $xeus-lightbeige;
-        padding: 2rem 0rem 1rem 1.5rem;
+        padding: 1.3rem 0 0 0;
+        @media (min-width: 450px) {
+            font-size: 2.2rem;
+        }
+        @include tablet-and-desktop{
+            padding: 2.2rem 0 0 0;
+            font-size: 1.9rem;
+        }
+        @include desktop{
+            font-size: 2.5rem;
+            padding: 3.5rem 0 0 0;
+        }
+    }
+    &__logoparent{
+        padding-bottom: 1rem;
     }
     &__childmobile{
         margin-top: 2rem;
@@ -27,11 +41,11 @@
     }
     &__branding{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         max-width: 90%;
         margin: auto;
         padding-top: 1rem;
-        padding-bottom: 0.5rem;
+        padding-bottom: 1.5rem;
         @include tablet-and-desktop{
             flex-direction: column;
             padding-top: 0;
@@ -58,7 +72,7 @@
     &__slogan{
         color: rgb(242, 211, 164);
         text-align: center;
-        font-size: 0.9rem;
+        font-size: 0.7rem;
         @media (min-width: 450px) {
             font-size: 1rem;
             padding-bottom: 1rem;
@@ -71,7 +85,6 @@
         }
             }
     &__about2{
-        padding-top: 1.5rem;
         padding-left: 5%;
         align-self: center;
         font-size: 0.9rem;
@@ -195,7 +208,6 @@
             background-size: 85%; 
             background-position-y: 2rem;
             background-position-x: 20rem; 
-            background-image: url('../../assets/images/Hero.png');
             background-repeat: no-repeat;
             background-attachment: fixed;
             display: flex;
