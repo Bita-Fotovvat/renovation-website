@@ -13,14 +13,14 @@
     }
     &__childmobile{
         margin-top: 2rem;
-        background-image: url('../../assets/images/Heromobile.jpg'); // Adjust the path as needed
         background-size: contain;
         background-position: top;
         height: 70%;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position-y: 2rem;
-        aspect-ratio: 16/6.2;
+        transition: background-image 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+        aspect-ratio: 19/10;
         @include tablet-and-desktop{
             display: none;
         }
@@ -154,7 +154,7 @@
     &__child2{
         display: none;
         @include tablet-and-desktop{
-            transition: background-image 1s ease-out;
+            transition: background-image 1s cubic-bezier(0.39, 0.575, 0.565, 1);
             z-index: -99;
             background-size: contain;
             background-repeat: no-repeat;
@@ -165,7 +165,6 @@
             width: 65%;
             display: flex;
             justify-content: center;
-            // aspect-ratio: 16/6.2;
         }
         @media (min-width: 920px) {
             background-position-y: -3rem;            
