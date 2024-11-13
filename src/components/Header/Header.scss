@@ -31,6 +31,9 @@
                 font-weight: 600;
                 color: #847508;
                 font-size: 1.2rem;
+                @include desktop{
+                    font-size: 1.4rem;
+                }
             }
             &--item{
                 cursor: pointer;
@@ -43,15 +46,18 @@
                 &:hover{
                     font-weight: 700;
                 }
-                &.active{
-                    font-weight: 700;
-                    font-size: 1rem;
+                @include desktop{
+                    width: 8.5rem;
+                    font-size: 1.2rem;
                 }
-            }
+                }
         }
     }
 }
 .headeractive{
     font-weight: 700;
     font-size: 1rem;
+    @include desktop{
+        font-size: 1.2rem;
+    }
 }
