@@ -66,11 +66,18 @@
             justify-content: center;
             align-items: center;
         }
+        @include desktop{
+            margin: auto;
+            max-width: 79rem;
+        }
     }
     &__maintitle{
+        color: $xeus-darkmaroon;
         font-size: 1.6rem;
+        font-family: "bruney";
+        padding-left: 5rem;
         @include desktop{
-            font-size: 2rem;
+            font-size: 3rem;
         }
     }
     &__parent{
@@ -80,11 +87,19 @@
         font-size: 1.3rem;
         line-height: 2rem;
         max-width: 1000px;
+        @include desktop{
+            padding-top: 6rem;
+        }
     }
     &__title{
+        color: $xeus-darkmaroon;
+        font-family: 'cormorant';
         font-weight: 400;
-        padding-top: 1rem;
-        font-size: 1.5rem;
+        padding-top: 1.5rem;
+        font-size: 1.7rem;
+        @include desktop{
+            padding-left: 4.5rem;
+        }
     }
     &__content{
         display: none;

@@ -8,6 +8,10 @@
     overflow: hidden;
     // max-width: 1000px;
     padding-bottom: 1rem;
+    @include desktop{
+      width: 50rem;
+      padding-top: 2rem;
+    }
   } 
   .slideshowSlider {
     white-space: nowrap;
@@ -25,9 +29,6 @@
     background-repeat: no-repeat;
     @include tablet-and-desktop{
       height: 26rem;
-    }
-    @include desktop{
-      height: 39rem;
     }
   }
   .slideshowDots {
