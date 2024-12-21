@@ -13,6 +13,10 @@
         z-index: 20;
         background-color: #fff;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        @include tablet-and-desktop{
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            }
         &__list{
             @include tablet-and-desktop{
             display: flex;
@@ -27,26 +31,33 @@
                 font-weight: 600;
                 color: #847508;
                 font-size: 1.2rem;
+                @include desktop{
+                    font-size: 1.4rem;
+                }
             }
             &--item{
                 cursor: pointer;
                 display: none;
                 @include tablet-and-desktop{
-                display: inline;
+                display: flex;
+                width: 6.5rem;
                 list-style-type: none;
                 font-size: 1rem;
                 &:hover{
                     font-weight: 700;
                 }
-                &.active{
-                    font-weight: 700;
-                    font-size: 1rem;
+                @include desktop{
+                    width: 8.5rem;
+                    font-size: 1.2rem;
                 }
-            }
+                }
         }
     }
 }
 .headeractive{
     font-weight: 700;
     font-size: 1rem;
+    @include desktop{
+        font-size: 1.2rem;
+    }
 }

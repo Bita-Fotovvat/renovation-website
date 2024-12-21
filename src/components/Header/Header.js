@@ -14,8 +14,8 @@ export default function Header(){
             <ul className="header__list">
                 <li className= "header__list--brandname" onClick={()=> navigate("/")}>Xeus Home</li>
                 <li className={`header__list--item ${activeLink === '/' ? 'headeractive':''}`} onClick={()=> {
-                    navigate("/"); 
-                    setActiveLink('/'); 
+                    navigate("/");
+                    setActiveLink('/');
                     }}>Home
                 </li>
                 <li className={`header__list--item ${activeLink === '/our-projects' ? 'headeractive':''}`} onClick={()=>{
@@ -29,9 +29,6 @@ export default function Header(){
                     navigate("/contact-us");
                     setActiveLink('/contact-us')}}>Contact Us
                 </li>
-                {/* <li className="header__list--item">Log In</li>
-                <li className="header__list--item">Get a Quote</li>
-                <li className="header__list--item">Request an Appointment</li> */}
             </ul>
         </nav>
     </header>

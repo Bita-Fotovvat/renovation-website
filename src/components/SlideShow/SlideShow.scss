@@ -6,9 +6,13 @@
 .slideshow {
     margin: 0 auto;
     overflow: hidden;
-    // max-width: 1000px;
     padding-bottom: 1rem;
-  } 
+    @include desktop{
+      // height: 30rem;
+      width: 45rem;
+      padding-top: 2rem;
+    }
+  }
   .slideshowSlider {
     white-space: nowrap;
     transition: ease 1000ms;
@@ -27,7 +31,7 @@
       height: 26rem;
     }
     @include desktop{
-      height: 39rem;
+      // height: 39rem;
     }
   }
   .slideshowDots {

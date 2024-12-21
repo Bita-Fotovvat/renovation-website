@@ -11,7 +11,6 @@ import OakvilleOneProjPage from './pages/OakvilleOneProPage/OakvilleOneProjPage'
 import AncasterOneProjPage from './pages/AncasterOneProjPage/AncasterOneProjPage';
 import BurlingtonOneProjPage from "./pages/BurlingtonOneProjPage/BurlingtonOneProjPage";
 import MississaugaStoreProjPage from "./pages/MississaugaStoreProjPage/MississaugaStoreProjPage";
-
 import MiltonOneProjectPage from "./pages/MiltonOneProjectPage/MiltonOneProjectPage";
 import BurlingtonTwoProjPage from "./pages/BurlingtonTwoProjPage/BurlingtonTwoProjPage";
 import ColborneOneProjPage from "./pages/ColborneOneProjPage/ColborneOneProjPage";
@@ -69,11 +68,8 @@ function App() {
         <Route path="/our-projects/toronto-project-no.1" element={<TorontoShelbysOnePage/>} />
         <Route path="/our-projects/oakville-project-no.2" element={<OakvilleTwoProjPage/>} />
         <Route path="/our-projects/toronto-project-no.2" element={<TorontoShelbysTwoProjPage/>} />
-        {/* <Route path="/services" element={<ServicesPage/>} /> */}
         <Route path="/about-us" element={<AboutUsPage/>} /> 
-        <Route path="/contact-us" element={<ContactPage/>} /> 
-        {/* <Route path="/get-a-quote" element={<QuotePage/>} /> 
-        <Route path="/login" element={<LoginPage/>} />  */}
+        <Route path="/contact-us" element={<ContactPage/>} />
         </Routes>
       <FooterWithCondition/>
     </BrowserRouter>

@@ -4,7 +4,7 @@
 @use "../../styles/partials/_global" as *;
 
 .footer{
-    background-color: $website-darkgray;
+    background-color: $xeus-darkmaroon;
     &__parent{
         display: flex;
         flex-direction: row;
@@ -132,8 +132,7 @@
     }
     &__logoreplacement{
         font-size: 2.5rem;
-        color: white;
-        font-family: Nexa;
-        // padding: 3rem 1rem 3rem 1.5rem;
+        color: $xeus-lightbeige;
+        font-family: Bruney;
     }
 }

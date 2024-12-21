@@ -5,33 +5,55 @@
 
 .hero{
     &__logoreplacement{
+<<<<<<< HEAD
         font-size: 2.5rem;
         color: white;
         font-family: Bruney, sans-serif;
         font-weight: 300;
         padding: 2rem 0rem 3rem 2.5rem;
+=======
+        text-align: center;
+        font-family: Bruney, sans-serif;
+        font-size: 1.6rem;
+        color: $xeus-lightbeige;
+        padding: 1.3rem 0 0 0;
+        @media (min-width: 450px) {
+            font-size: 2.2rem;
+        }
+        @include tablet-and-desktop{
+            padding: 2.2rem 0 0 0;
+            font-size: 1.9rem;
+        }
+        @include desktop{
+            font-size: 2.5rem;
+            padding: 3.5rem 0 0 0;
+        }
+    }
+    &__logoparent{
+        padding-bottom: 1rem;
+>>>>>>> main
     }
     &__childmobile{
         margin-top: 2rem;
-        background-image: url('../../assets/images/Heromobile.jpg'); // Adjust the path as needed
         background-size: contain;
         background-position: top;
         height: 70%;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position-y: 2rem;
-        aspect-ratio: 16/6.2;
+        transition: background-image 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+        aspect-ratio: 19/10;
         @include tablet-and-desktop{
             display: none;
         }
     }
     &__branding{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         max-width: 90%;
         margin: auto;
         padding-top: 1rem;
-        padding-bottom: 0.5rem;
+        padding-bottom: 1.5rem;
         @include tablet-and-desktop{
             flex-direction: column;
             padding-top: 0;
@@ -50,10 +72,6 @@
             padding-top: 0.5rem;
             animation-delay: 0.5s;
         }
-        // @media (min-width: 830px) {
-        //     width: 40vw;
-        //     max-width: 250px;
-        // }
         @include desktop{
             width: 12rem;
             padding-bottom: 1rem;  
@@ -63,7 +81,7 @@
         font-family: Cormorant, sans-serif;
         color: $xeus-lightbeige;
         text-align: center;
-        font-size: 0.9rem;
+        font-size: 0.7rem;
         @media (min-width: 450px) {
             font-size: 1rem;
             padding-bottom: 1rem;
@@ -76,9 +94,12 @@
         }
             }
     &__about2{
+<<<<<<< HEAD
         font-family: GeneralSans, sans-serif;
         font-weight: 400;
         padding-top: 1.5rem;
+=======
+>>>>>>> main
         padding-left: 5%;
         align-self: center;
         font-size: 0.9rem;
@@ -136,9 +157,12 @@
         }
     }
     &__child1{
-        background-color: rgb(44, 43, 43);
+        background-color: $xeus-darkmaroon;
         @include tablet-and-desktop{
+<<<<<<< HEAD
             background-color: $xeus-darkmaroon;
+=======
+>>>>>>> main
             height: 25rem;
             width: 35%;
             padding-right: 1rem;
@@ -150,11 +174,20 @@
             width: 30%;
         }
     }
+    &__image0{
+        background-image: url('../../assets/images/Hero.png');
+    }
+    &__image1{
+        background-image: url('../../assets/images/heroSlideshowImages/2.jpg');
+    }
+    &__image2{
+        background-image: url('../../assets/images/heroSlideshowImages/3.jpg');
+    }
     &__child2{
         display: none;
         @include tablet-and-desktop{
+            transition: background-image 1s cubic-bezier(0.39, 0.575, 0.565, 1);
             z-index: -99;
-            background-image: url('../../assets/images/Hero.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -164,7 +197,6 @@
             width: 65%;
             display: flex;
             justify-content: center;
-            aspect-ratio: 16/6.2;
         }
         @media (min-width: 920px) {
             background-position-y: -3rem;            
@@ -195,7 +227,6 @@
             background-size: 85%; 
             background-position-y: 2rem;
             background-position-x: 20rem; 
-            background-image: url('../../assets/images/Hero.png');
             background-repeat: no-repeat;
             background-attachment: fixed;
             display: flex;
