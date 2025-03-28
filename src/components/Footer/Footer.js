@@ -43,7 +43,7 @@ export default function Footer(){
             </section>         
         </section>
         <section className="footer__copyrightparent">
-                <p className="footer__copyright">Copyright © Xeus Home Ltd. 2024<br/>All Rights Reserved.</p>
+                <p className="footer__copyright">Copyright © Xeus Home Ltd. 2025<br/>All Rights Reserved.</p>
                 <p className="footer__copyright">Designed and Developed by Bita Fotovvat</p>
             </section>
 </footer>
