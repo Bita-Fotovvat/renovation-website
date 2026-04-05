@@ -86,6 +86,13 @@ export default function ProjectDetailPage() {
       <Helmet>
         <title>{project.title} | Xeus Home</title>
         <meta name="description" content={project.description || `${project.title} - A ${project.category} project by Xeus Home.`} />
+        <meta property="og:title" content={`${project.title} | Xeus Home`} />
+        <meta property="og:description" content={project.description || `${project.title} - A ${project.category} project by Xeus Home.`} />
+        <meta property="og:image" content={getImageUrl(project.cover_image)} />
+        <meta property="og:url" content={`https://xeushome.ca/our-projects/${projectSlug}`} />
+        <meta name="twitter:title" content={`${project.title} | Xeus Home`} />
+        <meta name="twitter:description" content={project.description || `${project.title} - A ${project.category} project by Xeus Home.`} />
+        <meta name="twitter:image" content={getImageUrl(project.cover_image)} />
       </Helmet>
       {/* Hero */}
       <section className="project-detail__hero">
