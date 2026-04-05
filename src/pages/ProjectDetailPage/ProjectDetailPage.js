@@ -22,7 +22,7 @@ export default function ProjectDetailPage() {
     try {
       setLoading(true);
       const baseUrl =
-        process.env.NODE_ENV === "production" ? "" : "http://localhost:5001";
+        process.env.NODE_ENV === "production" ? "https://renovation-website-pdnn.onrender.com" : "http://localhost:5001";
       const res = await fetch(`${baseUrl}/api/projects/${projectSlug}`);
       if (!res.ok) throw new Error("Project not found");
       const data = await res.json();
@@ -38,8 +38,7 @@ export default function ProjectDetailPage() {
   const getImageUrl = (url) => {
     if (!url) return "";
     if (url.startsWith("http")) return url;
-    const baseUrl =
-      process.env.NODE_ENV === "production" ? "" : "http://localhost:5001";
+    const baseUrl = process.env.NODE_ENV === "production" ? "https://renovation-website-pdnn.onrender.com" : "http://localhost:5001";
     return `${baseUrl}${url}`;
   };
 

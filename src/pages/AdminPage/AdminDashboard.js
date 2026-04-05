@@ -12,7 +12,7 @@ const CATEGORIES = [
 ];
 
 const BASE_URL =
-  process.env.NODE_ENV === "production" ? "" : "http://localhost:5001";
+  process.env.NODE_ENV === "production" ? "https://renovation-website-pdnn.onrender.com" : "http://localhost:5001";
 
 export default function AdminDashboard() {
   const navigate = useNavigate();

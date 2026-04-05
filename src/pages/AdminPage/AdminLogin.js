@@ -16,7 +16,7 @@ export default function AdminLogin() {
 
     try {
       const baseUrl =
-        process.env.NODE_ENV === "production" ? "" : "http://localhost:5001";
+        process.env.NODE_ENV === "production" ? "https://renovation-website-pdnn.onrender.com" : "http://localhost:5001";
       const res = await fetch(`${baseUrl}/api/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },

@@ -58,7 +58,7 @@ export default function Lightbox({ images, initialIndex = 0, onClose }) {
   const getImageUrl = (url) => {
     if (!url) return '';
     if (url.startsWith('http')) return url;
-    const baseUrl = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:5001';
+    const baseUrl = process.env.NODE_ENV === 'production' ? 'https://renovation-website-pdnn.onrender.com' : 'http://localhost:5001';
     return `${baseUrl}${url}`;
   };
 

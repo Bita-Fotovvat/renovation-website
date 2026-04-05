@@ -34,7 +34,7 @@ export default function ContactPage() {
         setLoading(true);
 
         try {
-            const baseUrl = process.env.NODE_ENV === "production" ? "" : "http://localhost:5001";
+            const baseUrl = process.env.NODE_ENV === "production" ? "https://renovation-website-pdnn.onrender.com" : "http://localhost:5001";
             const response = await fetch(`${baseUrl}/api/messages`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },

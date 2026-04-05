@@ -25,7 +25,7 @@ export default function OurProjectsPage() {
   const fetchProjects = async () => {
     try {
       const baseUrl =
-        process.env.NODE_ENV === "production" ? "" : "http://localhost:5001";
+        process.env.NODE_ENV === "production" ? "https://renovation-website-pdnn.onrender.com" : "http://localhost:5001";
       const res = await fetch(`${baseUrl}/api/projects`);
       const data = await res.json();
       setProjects(data);

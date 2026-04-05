@@ -31,7 +31,7 @@ export default function ProjectCard({ project, index }) {
     if (!url) return '';
     if (url.startsWith('http')) return url;
     // In development, proxy handles /api, but static files need the server URL
-    const baseUrl = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:5001';
+    const baseUrl = process.env.NODE_ENV === 'production' ? 'https://renovation-website-pdnn.onrender.com' : 'http://localhost:5001';
     return `${baseUrl}${url}`;
   };
 
