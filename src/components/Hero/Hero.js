@@ -12,13 +12,17 @@ const backgrounds = [bg1, bg2, bg3, bg4];
 
 export default function Hero() {
     const navigate = useNavigate();
-    const [currentBg, setCurrentBg] = useState(0);
+    const [currentBg, setCurrentBg] = useState(-1);
 
     useEffect(() => {
+        const initialTimer = setTimeout(() => setCurrentBg(0), 50);
         const interval = setInterval(() => {
-            setCurrentBg((prev) => (prev + 1) % backgrounds.length);
+            setCurrentBg((prev) => prev === -1 ? 0 : (prev + 1) % backgrounds.length);
         }, 5000); // 5 second crossfade
-        return () => clearInterval(interval);
+        return () => {
+            clearTimeout(initialTimer);
+            clearInterval(interval);
+        }
     }, []);
 
     return (
