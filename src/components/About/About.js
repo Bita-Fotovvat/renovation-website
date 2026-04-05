@@ -1,45 +1,47 @@
+import { useNavigate } from "react-router-dom";
+import AboutPhoto from "../../assets/images/about.png";
 import "./About.scss";
-import AboutPhoto from "../../assets/images/about.jpg";
 
-export default function About(){
+export default function About() {
+    const navigate = useNavigate();
 
-    return(
-        <>
-        <section className="about__wrappermobile">
-        {/* <section className="about__photo"></section> */}
-            <article className="about__parentmobile">
-                <h1 className="about__maintitlemobile">Xeus Home</h1>
-                <h2 className="about__titlemobile">Your Renovation Company</h2>
-                <img className="about__photomobile" src={AboutPhoto} alt="renovation company about" />
-                <p className="about__contentmobile">
-                Welcome to Xeus Home, where we specialize in revitalizing spaces through
-                exceptional renovation services. With a focus on quality craftsmanship, 
-                efficiency, and affordability, we're committed to turning your vision 
-                into reality. Whether it's a residential upgrade or a commercial transformation,
-                Xeus Home is your trusted partner in achieving beautiful, fast, and 
-                cost-effective renovations.
-                </p>
-                {/* <button className="about__buttonmobile">Want to know more about us?</button> */}
-            </article>
-        </section> 
-        <section className="about__wrapper">
-            {/* <section className="about__photo"></section> */}
-            <img className="about__photo" src={AboutPhoto} alt="renovation company about" />
-            <article className="about__parent">
-                <h1 className="about__maintitle">Xeus Home</h1>
-                <h2 className="about__title">Your Renovation Company</h2>
-                {/* <button className="about__button">Want to know more about us?</button> */}
-            </article>
+    return (
+        <section className="home-about">
+            <div className="home-about__container">
+                
+                <div className="home-about__image-column">
+                    <div className="home-about__image-wrapper">
+                        <img src={AboutPhoto} alt="XeusHome Renovation completed interior" className="home-about__image" />
+                        <div className="home-about__experience-badge">
+                            <span className="home-about__years">10+</span>
+                            <span className="home-about__text">Years of<br/>Experience</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="home-about__content-column">
+                    <span className="home-about__label">We Are Xeus Home</span>
+                    <h2 className="home-about__title">Your Trusted Renovation Partner</h2>
+                    
+                    <p className="home-about__desc">
+                        Welcome to Xeus Home, where we specialize in revitalizing spaces through exceptional renovation services.
+                        With a focus on quality craftsmanship, efficiency, and affordability, we are committed to turning your vision into reality.
+                    </p>
+                    
+                    <p className="home-about__desc">
+                        Whether it's a residential upgrade or a commercial transformation, Xeus Home is your trusted partner 
+                        in achieving beautiful, fast, and cost-effective renovations across Ontario.
+                    </p>
+
+                    <button 
+                        className="home-about__btn"
+                        onClick={() => navigate('/about-us')}
+                    >
+                        Learn More About Us
+                    </button>
+                </div>
+                
+            </div>
         </section>
-        {/* <img className="about__photodesktop" src={AboutPhoto} alt="renovation company about" /> */}
-        <p className="about__content">
-            Welcome to Xeus Home, where we specialize in revitalizing spaces through
-            exceptional renovation services. With a focus on quality craftsmanship, 
-            efficiency, and affordability, we're committed to turning your vision 
-            into reality. Whether it's a residential upgrade or a commercial transformation,
-            Xeus Home is your trusted partner in achieving beautiful, fast, and 
-            cost-effective renovations.
-        </p>
-        </>
-    )
+    );
 }

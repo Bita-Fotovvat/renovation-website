@@ -1,227 +1,318 @@
 @use "../../styles/partials/variables" as *;
-@use "../../styles/partials/typography" as *;
 @use "../../styles/partials/mixins" as *;
-@use "../../styles/partials/_global" as *;
 
-.mainparent{
+.contact-page {
+  background-color: #faf8f5;
+  min-height: 100vh;
+  padding-bottom: 5rem;
+
+  /* Hero Section */
+  &__hero {
+    position: relative;
+    height: 40vh;
+    min-height: 320px;
+    max-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, $xeus-darkmaroon 0%, darken($xeus-darkmaroon, 8%) 100%);
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 50%, rgba(224, 196, 154, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+  }
+
+  &__hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 1.5rem;
+    animation: fadeInDown 0.8s ease-out;
+  }
+
+  &__label {
+    display: inline-block;
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: $xeus-mediumbeige;
+    margin-bottom: 0.75rem;
+  }
+
+  &__title {
+    font-family: Cormorant, serif;
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: $xeus-lightbeige;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+
+    @include tablet-and-desktop {
+      font-size: 3.8rem;
+    }
+  }
+
+  &__subtitle {
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: rgba(243, 226, 201, 0.7);
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  &__divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, $xeus-mediumbeige, transparent);
+    margin: 1.5rem auto 0;
+  }
+
+  /* Two Column Wrapper */
+  &__wrapper {
+    max-width: 1200px;
+    margin: -3rem auto 0;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    @include tablet-and-desktop {
+      grid-template-columns: 1.8fr 1fr;
+      gap: 3rem;
+      margin-top: -4rem;
+    }
+  }
+
+  /* Form Card */
+  &__form-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  }
+
+  &__form-title {
+    font-family: Cormorant, serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $xeus-darkmaroon;
+    margin-bottom: 2rem;
+  }
+
+  &__form {
     display: flex;
     flex-direction: column;
-    background-color: $xeus-darkmaroon;
-    padding-bottom: 2rem;
+    gap: 1.5rem;
+  }
+
+  &__form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    @include tablet-and-desktop {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__field {
+    label {
+      display: block;
+      font-family: GeneralSans, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #777;
+      margin-bottom: 8px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1.5px solid #eaeaea;
+      border-radius: 6px;
+      font-family: GeneralSans, sans-serif;
+      font-size: 0.95rem;
+      color: $text-darkgray;
+      background: #fafafa;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+
+      &:focus {
+        outline: none;
+        border-color: $xeus-mediumbeige;
+        background: #fff;
+        box-shadow: 0 0 0 4px rgba(224, 196, 154, 0.15);
+      }
+
+      &::placeholder {
+        color: #ccc;
+      }
+    }
+
+    textarea {
+      resize: vertical;
+    }
+  }
+
+  &__submit {
+    align-self: flex-start;
+    padding: 14px 32px;
+    background: $xeus-darkmaroon;
+    color: $xeus-lightbeige;
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+
+    &:hover {
+      background: lighten($xeus-darkmaroon, 5%);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(47, 2, 12, 0.2);
+    }
+
+    &:disabled {
+      background: #999;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+  }
+
+  /* Info Card */
+  &__info-card {
+    background: $xeus-darkmaroon;
+    border-radius: 12px;
+    padding: 2.5rem;
+    color: $xeus-lightbeige;
+    box-shadow: 0 10px 40px rgba(47, 2, 12, 0.2);
+  }
+
+  &__info-title {
+    font-family: Cormorant, serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: $xeus-mediumbeige;
+  }
+
+  &__info-desc {
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    color: rgba(243, 226, 201, 0.8);
+  }
+
+  &__info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__icon-wrapper {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(224, 196, 154, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 20px;
+      height: 20px;
+      filter: brightness(0) invert(1) sepia(1%) saturate(3015%) hue-rotate(334deg) brightness(101%) contrast(85%); 
+      /* Approximate gold/beige color filter */
+    }
+  }
+
+  &__info-text {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      font-family: GeneralSans, sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(243, 226, 201, 0.6);
+      margin-bottom: 4px;
+    }
+
+    strong {
+      font-family: GeneralSans, sans-serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+  }
+
+  &__separator {
+    border: none;
+    height: 1px;
+    background: rgba(224, 196, 154, 0.2);
+    margin: 2.5rem 0;
+  }
+
+  /* Hours Details */
+  &__hours-title {
+    font-family: Cormorant, serif;
+    font-size: 1.4rem;
+    color: $xeus-mediumbeige;
+    margin-bottom: 1.5rem;
+  }
+
+  &__hours-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+
+    span:first-child {
+      font-family: GeneralSans, sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+
+    span:last-child {
+      font-family: GeneralSans, sans-serif;
+      font-size: 0.9rem;
+      color: rgba(243, 226, 201, 0.8);
+      line-height: 1.5;
+    }
+
+    em {
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+  }
 }
-.contact{
-    &__image{
-        background-image: url('../../assets/images/Image.png');
-        height: 25vh;
-        aspect-ratio: 16/9;
-        margin-top: 2.5rem;
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background-position-x: 0%;
-        background-position-y: -2.5rem;
-        background-attachment: fixed;
-    }
-    &__parent{
-        margin-top: 4rem;
-        display: flex;
-    }
-    &__child1{
-        margin-top: 2rem;
-        margin: auto;
-    }
-    &__formtitle{
-        color: white;
-        font-size: 1.2rem;
-        font-weight: 600;
-        text-align: center;
-        padding-bottom: 1rem;
-        @include tablet-and-desktop{
-            padding-top: 2rem;
-            padding-bottom: 1.6rem;
-            font-size: 2rem;
-            font-weight: 400;
-        }
-    }
-    &__form{
-        padding-bottom: 2rem;
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        margin: auto;
-        max-width: 400px;
-        @include tablet-and-desktop{
-            width: 90%;
-        }
-        &--parent{
-            display: flex;
-            flex-direction: row;
-        }
-        &--name, &--email, &--phone, &--city {
-            padding-top: 0.25rem;
-            padding-bottom: 0.25rem;
-            padding-left: 1rem;
-            margin-bottom: 0.5rem;
-            border-radius: 6px;
-            border: none;
-            font-family: Nexa;
-            font-weight: 400;
-            background-color: rgb(235, 234, 234);
-            @include tablet-and-desktop{
-                height: 6vh;
-                font-size: 1rem;
-            }
-        }
-        &--name{
-            margin-right: 0.5rem;
-        }
-        &--name, &--city {
-            width: 50%;
-        }
-        &--message{
-            padding-top: 0.25rem;
-            padding-bottom: 4rem;
-            padding-left: 1rem;
-            margin-bottom: 0.5rem;
-            border-radius: 6px;
-            border: none;
-            font-family: Nexa;
-            font-weight: 400;
-            color: gray;
-            background-color: rgb(235, 234, 234);
-            @include tablet-and-desktop{
-                padding-top: 1rem;
-                font-size: 1rem;
-            }
-        }
-        &--button{
-            font-family: Nexa;
-            font-weight: 600;
-            margin-top: 0.1rem;
-            border-radius: 6px;
-            height: 5vh;
-            width: 100%;
-            background-color: rgb(181, 144, 88);
-            color: $website-darkgray;
-            @include tablet-and-desktop{
-                height: 5vh;
-                font-size: 1.1rem;
-            }
-        }
-    }
-}
-.contactinfo{
-    &__parent{
-        width: 100%;
-    }
-    &__container1{
-        background-image: url('../../assets/images/background.jpg');
-        padding: 0;
-        margin: auto;
-        @include tablet-and-desktop{
-            margin-top: 2rem;
-            height: 35vh;
-        }
-    }
-    &__emailparent{
-        padding-left: 2.2rem;
-    }
-    &__phoneparent, &__emailparent{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        &--text{
-            padding-bottom: 1rem;
-        }
-    }
-    &__title{
-        color: white;
-        font-size: 1.3rem;
-        font-weight: 600;
-        text-align: center;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        @include tablet-and-desktop{
-            font-size: 1.8rem;
-            font-weight: 400;
-            padding-top: 2rem;
-            padding-bottom: 2rem;
-        }
-    }
-    &__phone, &__email{
-        color: white;
-        font-size: 1rem;
-        font-weight: 400;
-        text-shadow:  2px 2px 4px black;
-        @include tablet-and-desktop{
-            font-size: 1.2rem;
-        }
-    }
-    &__email{
-        margin-bottom: 1rem;
-    }
-    &__icon{
-        align-self: baseline;
-    }
-    &__icon, &__icon--insta{
-        width: 1.3rem;
-        height: 1.3rem;
-        margin-right: 0.5rem;
-        @include tablet-and-desktop{
-            width: 2rem;
-            height: 2rem;
-            margin-right: 1rem;
-            margin-bottom: 1rem;
-        }
-    }
-    &__icon--insta{
-        margin-right: 1rem;
-        margin-top: 0.5rem;
-    }
-    &__logo{
-        width: 60%;
-        display: block;
-        margin: auto;
-        @media (min-width: 400px) {
-            padding-left: 1rem;
-            width: 10rem;       
-        }
-        @include tablet-and-desktop{
-            width: 13rem;
-            padding-top: 1.5rem;
-            padding-bottom: 1.5rem;
-        }
-    }
-    &__operationhours{
-        &--title{
-            padding-top: 2rem;
-            padding-bottom: 1rem;
-            text-align: center;
-            font-size: 1.2rem;
-            color: white;
-            @include tablet-and-desktop{
-                font-weight: 400;
-                font-size: 1.8rem;
-                padding-top: 3rem;
-                padding-bottom: 2rem;
-            }
-        }
-        &--text{
-            color: white;
-            text-align: center;
-            font-size: 1rem;
-            padding-bottom: 1rem;
-            line-height: 1.5rem;
-            @include tablet-and-desktop{
-                font-size: 1.2rem;
-                padding-bottom: 1.5rem;
-            }
-        }
-    }
-    &__copyright{
-        color: white;
-        font-size: 0.8rem;
-        padding-top: 1rem;
-        padding-left: 1rem;
-    }
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

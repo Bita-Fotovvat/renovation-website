@@ -1,156 +1,58 @@
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./Hero.scss";
-import { useState , useRef, useEffect } from 'react';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import emailjs from '@emailjs/browser';
 
-export default function Hero(){
-    const [formData, setFormData] = useState({
-        name: '',
-        city: '',
-        phone: '',
-        email: '',
-        message: ''
-    });
-    
-    const form = useRef();
-    const yourServiceId = process.env.REACT_APP_YOUR_SERVICE_ID;
-    const yourTemplateId = process.env.REACT_APP_YOUR_TEMPLATE_ID;
-    const yourPublicKey = process.env.REACT_APP_YOUR_PUBLIC_KEY;
-    const sendEmail = (e) => {
-        e.preventDefault();
-               if (!formData.name.trim()) {
-            return toast.warn('Please enter your name.', {
-                position: "top-left",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-                });
-        }
-        if (!formData.phone.trim() && !formData.email.trim()) {
-            return  toast.warn('Please enter at least a phone number or an email address.', {
-                position: "top-left",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-                });
-        }
-        emailjs
-        .sendForm(yourServiceId, yourTemplateId, form.current, yourPublicKey)
-        .then(
-            () => {
-              console.log('SUCCESS!');
-                    toast.success('Success! You will be contacted soon.', {
-                    position: "top-left",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "dark",
-                    });
-            },
-            (error) => {
-              console.log('FAILED...', error.text);
-                    toast.error('Failed to submit your request. Please try again.', {
-                    position: "top-left",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "dark",
-                    });
-            },
-          );
-          setFormData({
-            name:'',
-            city:'',
-            phone:'',
-            email:'',
-            message:''
-          })
-        }
+// We'll use the existing slideshow images to create a stunning crossfade background
+import bg1 from "../../assets/images/hero_1.png";
+import bg2 from "../../assets/images/Hero_2.png";
+import bg3 from "../../assets/images/Hero_3.png";
+import bg4 from "../../assets/images/Hero_4.png";
 
-        const totalImagesNumber = 3;
-        const [currentImageIndex, setCurrentImageIndex] = useState(0);
-        
-        useEffect(()=>{
-            const interval = setInterval(()=>{
-                setCurrentImageIndex((currentImageIndex + 1) % totalImagesNumber);
-            }, 5000);
-            return ()=> clearInterval(interval);
-        });
+const backgrounds = [bg1, bg2, bg3, bg4];
 
-    return(
-    <section className="hero__parent">
-        <section className={`hero__childmobile hero__image${currentImageIndex}`}></section>
-            <section className="hero__child1">
-                <section className="hero__branding">
-                    <section className="hero__logoparent">
-                        <h1 className="hero__logoreplacement">Xeus Home</h1>
-                        <p className="hero__slogan">The home solution you deserve</p>
-                    </section>
-                    <p className="hero__about2">Renovation & Remodeling Company</p>
-                </section>
-                <h3 className="hero__formtitle">Get a Free Consultaion/ Quote</h3>
-                <form ref={form} className="hero__form" onSubmit={sendEmail}>
-                    <section className="hero__form--parent">
-                        <input 
-                        className="hero__form--name" 
-                        name="from_name" 
-                        type="text" 
-                        placeholder="Name"  
-                        value={formData.name ? formData.name:''} 
-                        onChange={e=>setFormData({...formData, name:e.target.value})}
-                        />
-                        <input 
-                        className="hero__form--city" 
-                        name="from_city" 
-                        type="text" 
-                        placeholder="City"  
-                        value={formData.city ? formData.city:''} 
-                        onChange={e=>setFormData({...formData, city:e.target.value})} 
-                        />
-                    </section>
-                    <input 
-                    className="hero__form--phone" 
-                    name="from_phone" 
-                    type="text" 
-                    placeholder="Phone Number" 
-                    value={formData.phone ? formData.phone: ''} 
-                    onChange={e=>setFormData({...formData, phone:e.target.value})}
-                    />
-                    <input 
-                    className="hero__form--email" 
-                    name="from_email" 
-                    type="email"  
-                    placeholder="Email" 
-                    value={formData.email ? formData.email:''} 
-                    onChange={e=>setFormData({...formData, email:e.target.value})}
-                    />
-                    <input 
-                    className="hero__form--message" 
-                    name="message" 
-                    type="text"  
-                    placeholder="Message (optional)" 
-                    value={formData.message ? formData.message:''} 
-                    onChange={e=>setFormData({...formData, message:e.target.value})}
-                    />
-                    <button className="hero__form--button" type="submit">Submit</button>
-                </form>
-            </section>
-            <section className={`hero__child2 hero__image${currentImageIndex}`}></section>
-    </section>
-    )
+export default function Hero() {
+    const navigate = useNavigate();
+    const [currentBg, setCurrentBg] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentBg((prev) => (prev + 1) % backgrounds.length);
+        }, 5000); // 5 second crossfade
+        return () => clearInterval(interval);
+    }, []);
+
+    return (
+        <section className="home-hero">
+            {backgrounds.map((bg, idx) => (
+                <div 
+                    key={idx}
+                    className={`home-hero__bg ${idx === currentBg ? 'home-hero__bg--active' : ''}`}
+                    style={{ backgroundImage: `url(${bg})` }}
+                />
+            ))}
+            
+            <div className="home-hero__overlay"></div>
+
+            <div className="home-hero__content">
+                <span className="home-hero__label">Renovation & Remodeling Company</span>
+                <h1 className="home-hero__title">Xeus Home</h1>
+                <p className="home-hero__slogan">The home solution you deserve</p>
+                
+                <div className="home-hero__actions">
+                    <button 
+                        className="home-hero__btn home-hero__btn--primary" 
+                        onClick={() => navigate('/contact-us')}
+                    >
+                        Get a Free Quote
+                    </button>
+                    <button 
+                        className="home-hero__btn home-hero__btn--outline" 
+                        onClick={() => navigate('/our-projects')}
+                    >
+                        View Our Work
+                    </button>
+                </div>
+            </div>
+        </section>
+    );
 }

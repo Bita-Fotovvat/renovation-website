@@ -1,0 +1,112 @@
+@use "../../styles/partials/variables" as *;
+
+.admin-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a1a 0%, $xeus-darkmaroon 100%);
+  padding: 2rem;
+
+  &__card {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    border-radius: 16px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-family: Cormorant, serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $xeus-darkmaroon;
+    margin-bottom: 0.4rem;
+  }
+
+  &__subtitle {
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.85rem;
+    color: #999;
+  }
+
+  &__error {
+    background: #fee;
+    border: 1px solid #fcc;
+    color: #c33;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.82rem;
+    margin-bottom: 1rem;
+  }
+
+  &__field {
+    margin-bottom: 1.25rem;
+
+    label {
+      display: block;
+      font-family: GeneralSans, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #666;
+      margin-bottom: 6px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid #e0e0e0;
+      border-radius: 8px;
+      font-family: GeneralSans, sans-serif;
+      font-size: 0.9rem;
+      color: #333;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      outline: none;
+      box-sizing: border-box;
+
+      &:focus {
+        border-color: $xeus-darkmaroon;
+        box-shadow: 0 0 0 3px rgba(47, 2, 12, 0.08);
+      }
+
+      &::placeholder {
+        color: #bbb;
+      }
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    padding: 14px;
+    background: $xeus-darkmaroon;
+    color: $xeus-lightbeige;
+    border: none;
+    border-radius: 8px;
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 0.5rem;
+
+    &:hover {
+      background: darken(#2f020c, 5%);
+      transform: translateY(-1px);
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+  }
+}

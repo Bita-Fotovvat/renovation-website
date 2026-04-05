@@ -1,90 +1,115 @@
+import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import "./OurProjects.scss";
-import NaiagaraProject from "../../assets/images/1-Niagara-1-project/niagara-1-project2.jpg";
-import AncasterOneMain from "../../assets/images/3-Ancaster-1-Project/ancaster-1-main2.jpg";
-import BurlingtonOneMain from "../../assets/images/4-burlington-1-project/Burlington-1-main2.jpg";
-import OakvilleBath from "../../assets/images/2-oakville-bath-project/oakville-1-main2.jpg";
-import MississaugaStore from "../../assets/images/5-mississauga-store-project/mississauga-1-main2.jpg";
-import MiltonProjectMain from "../../assets/images/6-milton-project-1/main.jpg";
-import BurlingtonTwoMain from "../../assets/images/7- burlington-project-2/main.jpg";
-import ColborneOneMain from "../../assets/images/8-colborne-project-1/main.png";
-import MississaugaTwoMain from "../../assets/images/9-Mississauga-project-2/main.jpg";
-import TorontoOneMain from "../../assets/images/10-toronto-shelby's Project-1/main.jpg";
-import OakvilleTwoMain from "../../assets/images/11-oakville-project-2/main.jpg";
-import TorontoTwoMain from "../../assets/images/12-toronto-shelby's Project-2/main.jpg";
-import { useNavigate } from "react-router-dom";
 
-export default function OurProjectsPage(){
-    const navigate = useNavigate();
-    return(
-        <main>
-        <h1 className="projects__maintitle">Some of Our Projects</h1>
-        <section className="projects__wrapper">
-            <section className="projects__parent">
-                <section className="projects__niagaraone">
-                    {/* <section className="projects__niagaraone--image" ></section> */}
-                    <img className="projects__niagaraone--image" src={NaiagaraProject} alt="niagara renovation project" onClick={()=> {
-                    navigate("/our-projects/niagara-project-no.1"); 
-                    }}/>
-                    <h2 className="projects__niagaraone--title" onClick={()=> {navigate("/our-projects/niagara-project-no.1");}}>Niagara Project No.</h2>
-                </section>
-                <section className="projects__oakvillebath">
-                    <img className="projects__oakvillebath--image" src={OakvilleBath} alt="oakville renovation project"  onClick={()=> {navigate("/our-projects/oakville-project-no.1");}}/>
-                    <h2 className="projects__oakvillebath--title" onClick={()=> {navigate("/our-projects/oakville-project-no.1");}}>Oakville Project</h2>
-                </section>
-            </section>
-            <section className="projects__parent">
-                <section className="projects__ancasterone">
-                    <img className="projects__ancasterone--image" src={AncasterOneMain} alt="ancaster renovation project" onClick={()=> {
-                    navigate("/our-projects/ancaster-project-no.1"); 
-                    }}/>
-                    <h2 className="projects__ancasterone--title" onClick={()=> {navigate("/our-projects/ancaster-project-no.1");}}>Ancaster Project</h2>
-                </section>
-                <section className="projects__burligntonone">
-                    <img className="projects__burligntonone--image" src={BurlingtonOneMain} alt="burlington renovation project"  onClick={()=> {navigate("/our-projects/burlington-project-no.1");}}/>
-                    <h2 className="projects__burligntonone--title" onClick={()=> {navigate("/our-projects/burlington-project-no.1");}}>Burlington Project</h2>
-                </section>
-            </section>
-            <section className="projects__parent">
-                <section className="projects__mississaugastore">
-                    <img className="projects__mississaugastore--image" src={MississaugaStore} alt="mississauga store renovation"  onClick={()=> {navigate("/our-projects/mississauga-store-project-no.1");}}/>
-                    <h2 className="projects__mississaugastore--title" onClick={()=> {navigate("/our-projects/mississauga-store-project-no.1");}}>Mississauga Store Project</h2>
-                </section>
-                <section className="projects__miltoneone">
-                    <img className="projects__miltoneone--image" src={MiltonProjectMain} alt="milton renovation project"  onClick={()=> {navigate("/our-projects/milton-project-no.1");}}/>
-                    <h2 className="projects__miltoneone--title" onClick={()=> {navigate("/our-projects/milton-project-no.1");}}>Milton Project</h2>
-                </section>
-            </section>
-            <section className="projects__parent">
-                <section className="projects__burligntontwo">
-                    <img className="projects__burligntontwo--image" src={BurlingtonTwoMain} alt="burlington home & basement renovation"  onClick={()=> {navigate("/our-projects/burlington-project-no.2");}}/>
-                    <h2 className="projects__burligntontwo--title" onClick={()=> {navigate("/our-projects/burlington-project-no.2");}}>Burlington Project No. 2</h2>
-                </section>
-                <section className="projects__colborneone">
-                    <img className="projects__colborneone--image" src={ColborneOneMain} alt="colborne renovation project"  onClick={()=> {navigate("/our-projects/colborne-project-no.1");}}/>
-                    <h2 className="projects__colborneone--title" onClick={()=> {navigate("/our-projects/colborne-project-no.1");}}>Colborne Project</h2>
-                </section>
-            </section>
-            <section className="projects__parent">
-                <section className="projects__mississaugatwo">
-                    <img className="projects__mississaugatwo--image" src={MississaugaTwoMain} alt="mississauga renovation"  onClick={()=> {navigate("/our-projects/mississauga-project-no.2");}}/>
-                    <h2 className="projects__mississaugatwo--title" onClick={()=> {navigate("/our-projects/mississauga-project-no.2");}}>Mississauga Project No. 2</h2>
-                </section>
-                <section className="projects__torontoshelbysone">
-                    <img className="projects__torontoshelbysone--image" src={TorontoOneMain} alt="toronto shelby's renovation project"  onClick={()=> {navigate("/our-projects/toronto-project-no.1");}}/>
-                    <h2 className="projects__torontoshelbysone--title" onClick={()=> {navigate("/our-projects/toronto-project-no.1");}}>Toronto Restaurant Project No. 1</h2>
-                </section>
-            </section>
-            <section className="projects__parent">
-                <section className="projects__oakvilletwo">
-                    <img className="projects__oakvilletwo--image" src={OakvilleTwoMain} alt="oakville basement renovation"  onClick={()=> {navigate("/our-projects/oakville-project-no.2");}}/>
-                    <h2 className="projects__oakvilletwo--title" onClick={()=> {navigate("/our-projects/oakville-project-no.2");}}>Oakville Project No. 2</h2>
-                </section>
-                <section className="projects__torontoshelbystwo">
-                    <img className="projects__torontoshelbystwo--image" src={TorontoTwoMain} alt="toronto shelby's second renovation project"  onClick={()=> {navigate("/our-projects/toronto-project-no.2");}}/>
-                    <h2 className="projects__torontoshelbystwo--title" onClick={()=> {navigate("/our-projects/toronto-project-no.2");}}>Toronto Restaurant Project No. 2</h2>
-                </section>
-            </section>
-        </section>
-        </main>
-    )
+const CATEGORIES = [
+  "All",
+  "Full Home Renovation",
+  "Kitchen Renovation",
+  "Bathroom Renovation",
+  "Basement Renovation",
+  "Commercial/Store",
+  "Exterior",
+];
+
+export default function OurProjectsPage() {
+  const [projects, setProjects] = useState([]);
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchProjects();
+  }, []);
+
+  const fetchProjects = async () => {
+    try {
+      const baseUrl =
+        process.env.NODE_ENV === "production" ? "" : "http://localhost:5001";
+      const res = await fetch(`${baseUrl}/api/projects`);
+      const data = await res.json();
+      setProjects(data);
+    } catch (err) {
+      console.error("Failed to fetch projects:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const filteredProjects =
+    activeCategory === "All"
+      ? projects
+      : projects.filter((p) => p.category === activeCategory);
+
+  return (
+    <main className="projects-page">
+      <Helmet>
+        <title>Our Projects | Xeus Home</title>
+        <meta name="description" content="Explore our portfolio of premium full home, kitchen, bathroom, and basement renovations." />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="projects-hero">
+        <div className="projects-hero__overlay"></div>
+        <div className="projects-hero__content">
+          <span className="projects-hero__label">Our Work</span>
+          <h1 className="projects-hero__title">Our Portfolio</h1>
+          <p className="projects-hero__subtitle">
+            Explore our collection of carefully crafted renovation projects
+            across Ontario
+          </p>
+          <div className="projects-hero__divider"></div>
+        </div>
+      </section>
+
+      {/* Filter Bar */}
+      <section className="projects-filter">
+        <div className="projects-filter__container">
+          {CATEGORIES.map((cat) => (
+            <button
+              key={cat}
+              className={`projects-filter__btn ${activeCategory === cat ? "projects-filter__btn--active" : ""}`}
+              onClick={() => setActiveCategory(cat)}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+      </section>
+
+      {/* Projects Count */}
+      <div className="projects-count">
+        <p>
+          Showing <strong>{filteredProjects.length}</strong> of{" "}
+          <strong>{projects.length}</strong> projects
+        </p>
+      </div>
+
+      {/* Projects Grid */}
+      <section className="projects-grid">
+        {loading ? (
+          <div className="projects-loading">
+            <div className="projects-loading__spinner"></div>
+            <p>Loading projects...</p>
+          </div>
+        ) : filteredProjects.length === 0 ? (
+          <div className="projects-empty">
+            <p>No projects found in this category.</p>
+            <button
+              className="projects-empty__btn"
+              onClick={() => setActiveCategory("All")}
+            >
+              View All Projects
+            </button>
+          </div>
+        ) : (
+          <div className="projects-grid__container">
+            {filteredProjects.map((project, index) => (
+              <ProjectCard key={project.id} project={project} index={index} />
+            ))}
+          </div>
+        )}
+      </section>
+    </main>
+  );
 }

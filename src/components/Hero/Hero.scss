@@ -1,346 +1,150 @@
 @use "../../styles/partials/variables" as *;
-@use "../../styles/partials/typography" as *;
 @use "../../styles/partials/mixins" as *;
-@use "../../styles/partials/_global" as *;
 
-.hero{
-    &__logoreplacement{
-        text-align: center;
-        font-family: Bruney, sans-serif;
-        font-size: 1.6rem;
-        color: $xeus-lightbeige;
-        padding: 1.3rem 0 0 0;
-        @media (min-width: 450px) {
-            font-size: 2.2rem;
-        }
-        @include tablet-and-desktop{
-            padding: 2.2rem 0 0 0;
-            font-size: 1.9rem;
-        }
-        @include desktop{
-            font-size: 2.5rem;
-            padding: 3.5rem 0 0 0;
-        }
+.home-hero {
+  position: relative;
+  height: 90vh; /* Premium tall hero */
+  min-height: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out, transform 6s ease-in-out;
+    transform: scale(1.05);
+
+    &--active {
+      opacity: 1;
+      transform: scale(1);
     }
-    &__logoparent{
-        padding-bottom: 1rem;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(47, 2, 12, 0.7) 100%
+    );
+    z-index: 1;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 1.5rem;
+    max-width: 800px;
+    animation: slideUpFade 1s ease-out 0.2s both;
+  }
+
+  &__label {
+    display: inline-block;
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: $xeus-mediumbeige;
+    margin-bottom: 1.5rem;
+  }
+
+  &__title {
+    font-family: Cormorant, serif;
+    font-size: 4rem;
+    font-weight: 300;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+    @include tablet-and-desktop {
+      font-size: 5.5rem;
     }
-    &__childmobile{
-        margin-top: 2rem;
-        background-size: contain;
-        background-position: top;
-        height: 70%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position-y: 2rem;
-        transition: background-image 1s cubic-bezier(0.39, 0.575, 0.565, 1);
-        aspect-ratio: 19/10;
-        @include tablet-and-desktop{
-            display: none;
-        }
+  }
+
+  &__slogan {
+    font-family: GeneralSans, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+
+    @include tablet-and-desktop {
+      font-size: 1.3rem;
     }
-    &__branding{
-        display: flex;
-        flex-direction: column;
-        max-width: 90%;
-        margin: auto;
-        padding-top: 1rem;
-        padding-bottom: 1.5rem;
-        @include tablet-and-desktop{
-            flex-direction: column;
-            padding-top: 0;
-        }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet-and-desktop {
+      flex-direction: row;
+      gap: 1.5rem;
     }
-    &__logo{
-        width: 48vw;
-        @media (min-width: 450px) {
-            width: 40vw;
-            max-width: 250px;
-        }
-        @include tablet-and-desktop{
-            width: 8rem;
-            display: block;
-            margin: auto;
-            padding-top: 0.5rem;
-            animation-delay: 0.5s;
-        }
-        @include desktop{
-            width: 12rem;
-            padding-bottom: 1rem;  
-        }
+  }
+
+  &__btn {
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 16px 36px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 260px;
+
+    @include tablet-and-desktop {
+      width: auto;
     }
-    &__slogan{
-        color: rgb(242, 211, 164);
-        text-align: center;
-        font-size: 0.7rem;
-        @media (min-width: 450px) {
-            font-size: 1rem;
-            padding-bottom: 1rem;
-        }
-        @include tablet-and-desktop{
-            font-size: 0.8rem;
-        }
-        @include desktop{
-            font-size: 1.18rem;
-        }
-            }
-    &__about2{
-        padding-left: 5%;
-        align-self: center;
-        font-size: 0.9rem;
-        @include big-mobile-screen{
-            font-size: 1rem;
-        }
-        @media (min-width: 600px) {
-            font-size: 1.2rem
-        }
-        @include tablet-and-desktop{
-            padding-top: 0;
-            font-size: 0.8rem;
-        }
-        @include desktop{
-            font-size: 1rem;
-        }
+
+    &--primary {
+      background: $xeus-mediumbeige;
+      color: $xeus-darkmaroon;
+      border: 2px solid $xeus-mediumbeige;
+
+      &:hover {
+        background: transparent;
+        color: $xeus-mediumbeige;
+      }
     }
-    &__about3{
-        padding-top: 2rem;
-        font-size: 1.2rem;
-        width: 60%;
-        margin: auto;
-        @include tablet-and-desktop{
-            padding-top: 2rem;
-            font-size: 1.2rem;
-        }
+
+    &--outline {
+      background: rgba(0,0,0,0.3);
+      color: #ffffff;
+      border: 2px solid rgba(255,255,255,0.4);
+
+      &:hover {
+        background: rgba(255,255,255,0.1);
+        border-color: #ffffff;
+      }
     }
-    &__about4{
-        color: white;
-        font-size: 0.9rem;
-        width: 60%;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        margin: auto;
-        text-align: center;
-        @include tablet-and-desktop{
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-        }
-    }
-    &__image{
-        width: 100%;
-        height: 600px;
-    }
-    &__parent{
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        @include tablet-and-desktop{
-            align-items: stretch;
-            display: flex;
-            flex-direction: row;
-            margin-top: 2.2rem;
-            width: 100%;
-        }
-    }
-    &__child1{
-        background-color: $xeus-darkmaroon;
-        @include tablet-and-desktop{
-            height: 25rem;
-            width: 35%;
-            padding-right: 1rem;
-            padding-left: 1rem;
-        }
-        @include desktop{
-            height: 600px;
-            padding: 1rem 3rem 2rem 3rem;
-            width: 30%;
-        }
-    }
-    &__image0{
-        background-image: url('../../assets/images/Hero.png');
-    }
-    &__image1{
-        background-image: url('../../assets/images/heroSlideshowImages/2.jpg');
-    }
-    &__image2{
-        background-image: url('../../assets/images/heroSlideshowImages/3.jpg');
-    }
-    &__child2{
-        display: none;
-        @include tablet-and-desktop{
-            transition: background-image 1s cubic-bezier(0.39, 0.575, 0.565, 1);
-            z-index: -99;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position-x: 7rem;
-            background-position-y: 1rem;
-            height: 25rem;
-            width: 65%;
-            display: flex;
-            justify-content: center;
-        }
-        @media (min-width: 920px) {
-            background-position-y: -3rem;            
-        }
-        @media (min-width: 1000px) {
-            background-position-y: 0rem;
-            background-position-x: 15rem;
-            background-size: 80%;            
-        }
-        @media (min-width: 1100px) {
-            background-position-y: -3rem;
-            background-position-x: 18rem;
-            background-size: 80%;            
-        }
-        @media (min-width: 1130px) {
-            background-position-y: -3rem;
-            background-position-x: 18rem;
-            background-size: 80%;            
-        }
-        @media (min-width: 1240px) {
-            background-position-y: -3rem;
-            background-position-x: 20rem;
-            background-size: 77%;            
-        }
-        @include desktop{
-            width: 70%;
-            height: 600px;
-            background-size: 85%; 
-            background-position-y: 2rem;
-            background-position-x: 20rem; 
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        @media (min-width: 1290px) {
-            background-position-y: 2rem;
-            background-position-x: 20rem;
-            background-size: 85%;            
-        }
-        @media (min-width: 1350px) {
-            background-position-y: 1rem;
-            background-position-x: 20rem;
-            background-size: 80%;            
-        }
-        @media (min-width: 1550px) {
-            background-position-y: -5rem;
-            background-position-x: 28rem;
-            background-size: 75%;            
-        }
-    }
-    &__about1{
-        padding-top: 0.5rem;
-        line-height: 2rem;
-        word-spacing: 30px;
-        padding-bottom: 0.2rem;
-    }
-    &__formtitle{
-        color: white;
-        font-weight: 400;
-        font-size: 1.1rem;
-        text-align: center;
-        padding-bottom: 1rem;
-        @include big-mobile-screen{
-            font-size: 170%;
-            padding-bottom: 1.5rem;
-        }
-        @include tablet-and-desktop{
-            font-size: 1rem;
-            padding-bottom: 0.9rem;
-        }
-        @include desktop{
-            padding-top: 1rem;
-            font-size: 1.3rem;
-        }
-    }
-    &__form{
-        padding-bottom: 2rem;
-        display: flex;
-        flex-direction: column;
-        width: 65%;
-        margin: auto;
-        max-width: 400px;
-        @include tablet-and-desktop{
-            width: 90%;
-        }
-        &--parent{
-            display: flex;
-            flex-direction: row;
-        }
-        &--name, &--email, &--phone, &--city {
-            padding-top: 0.25rem;
-            padding-bottom: 0.25rem;
-            padding-left: 1rem;
-            margin-bottom: 0.5rem;
-            border-radius: 6px;
-            border: none;
-            font-family: Nexa;
-            font-weight: 400;
-            background-color: rgb(235, 234, 234);
-            @include big-mobile-screen{
-                padding-top: 0.5rem;
-                padding-bottom: 0.5rem;
-                font-size: 0.9rem;
-            }
-            @include tablet-and-desktop{
-                height: 3.5vh;
-            }
-            @include desktop{
-                padding-top: 1rem;
-                padding-bottom: 1rem;
-                font-size: 0.9rem;
-            }
-        }
-        &--name{
-            margin-right: 0.5rem;
-        }
-        &--name, &--city {
-            width: 50%;
-        }
-        &--message{
-            padding-top: 0.25rem;
-            padding-bottom: 4rem;
-            padding-left: 1rem;
-            margin-bottom: 0.5rem;
-            border-radius: 6px;
-            border: none;
-            font-family: Nexa;
-            font-weight: 400;
-            color: gray;
-            background-color: rgb(235, 234, 234);
-            @include tablet-and-desktop{
-                padding-bottom: 1rem;
-            }
-            @include desktop{
-                padding-bottom: 3rem;
-            }
-        }
-        &--button{
-            font-family: Nexa;
-            margin-top: 0.1rem;
-            border-radius: 6px;
-            height: 5vh;
-            width: 100%;
-            background-color: rgb(181, 144, 88);
-            color: white;
-            @include tablet-and-desktop{
-                height: 4vh;
-            }
-            @include desktop{
-                height: 5vh;
-                text-align: center;
-                font-size: 0.9rem;
-            }
-        }
-    }
-    &__brandname{
-        font-size: 2rem;
-        font-weight: 400;
-    }
-    &__brandname, &__about1, &__about2, &__about3 {
-        color: white;
-        text-align: center;
-    }
+  }
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

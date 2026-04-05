@@ -1,138 +1,108 @@
 @use "../../styles/partials/variables" as *;
-@use "../../styles/partials/typography" as *;
 @use "../../styles/partials/mixins" as *;
-@use "../../styles/partials/_global" as *;
 
-.footer{
-    background-color: $xeus-darkmaroon;
-    &__parent{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1rem;
-        max-width: 600px;
-        margin: auto;
-        @media (min-width: 500px) {
-            padding: 1rem 2rem;
-            max-width: 700px;      
-        }
-        @include tablet-and-desktop{
-            padding: 2rem 0 1rem 0;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        @media (min-width: 900px) {
-            padding: 1rem 2rem;
-            max-width: 800px;      
-        }
-        @media (min-width: 1000px) {
-            padding: 1rem 2rem;
-            max-width: 900px;      
-        }
-        @include desktop{
-            max-width: 1200px;    
-        }
-    }
-    &__phoneparent, &__emailparent{
-        display: flex;
-        flex-direction: row;
-        &--text{
-            padding-bottom: 1rem;
-        }
-    }
-    &__title{
-        padding-bottom: 1rem;
-        color: white;
-        font-size: 1.2rem;
-        font-weight: 600;
-        @include tablet-and-desktop{
-            font-size: 1.5rem;
-            font-weight: 400;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-        }
-    }
-    &__phone, &__email{
-        color: white;
-        font-size: 0.9rem;
-        @include tablet-and-desktop{
-            font-size: 1rem;
-        }
-    }
-    &__phone{
-        padding-bottom: 0.5rem;
-    }
-    &__email{
-        margin-bottom: 1rem;
-    }
-    &__icon, &__icon--insta{
-        width: 1.3rem;
-        height: 1.3rem;
-        margin-right: 0.5rem;
-        @include tablet-and-desktop{
-            width: 2rem;
-            height: 2rem;
-            margin-right: 1rem;
-            margin-bottom: 1rem;
-        }
-    }
-    &__icon{
-        &--insta{
-            margin-right: 0.5rem;
-            margin-top: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        &--instatext{
-            color: white;
-            padding-bottom: 0.5rem;
-            font-size: 0.77rem;
-            @include tablet-and-desktop{
-                padding-bottom: 0.5rem;
-            }
+.footer {
+  background-color: $xeus-darkmaroon;
+  color: #fff;
+  padding: 4rem 1.5rem 2rem;
+  font-family: GeneralSans, sans-serif;
 
-        }
-        &--instaparent{
-            display: flex;
-            align-items:center;
-        }
-        &--fbparent{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
+  @include tablet-and-desktop {
+    padding: 6rem 2rem 2rem;
+  }
+
+  &__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    @include tablet-and-desktop {
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 4rem;
     }
-    &__logo{
-        cursor: pointer;
-        width: 90%;
-        margin-left: 1rem;
-        @media (min-width: 400px) {
-            padding-left: 1rem;
-            width: 10rem;       
-        }
-        @include tablet-and-desktop{
-            width: 13rem;
-        }
+  }
+
+  &__logo-text {
+    font-family: Cormorant, serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: $xeus-lightbeige;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+  }
+
+  &__brand-sub {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1.5rem;
+  }
+
+  &__heading {
+    font-family: Cormorant, serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: $xeus-mediumbeige;
+    margin-bottom: 1.5rem;
+  }
+
+  &__info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 1rem;
+
+    p {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.5;
     }
-    &__container1{
-        padding: 0;
-        max-width: 500px;
-        @include tablet-and-desktop{
-            max-width: 85%;
-        }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    margin-top: 2px;
+  }
+
+  &__nav {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
-    &__copyright{
-        color: white;
-        font-size: 0.8rem;
-        padding-top: 1rem;
+
+    li {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 0.75rem;
+      cursor: pointer;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $xeus-mediumbeige;
+      }
     }
-    &__copyrightparent{
-        padding-bottom: 1rem;
-        padding-left: 1rem;
+  }
+
+  &__bottom {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+
+    @include tablet-and-desktop {
+      flex-direction: row;
+      text-align: left;
     }
-    &__logoreplacement{
-        font-size: 2.5rem;
-        color: $xeus-lightbeige;
-        font-family: Bruney;
-    }
-}
+  }
+}

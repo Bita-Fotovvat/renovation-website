@@ -3,55 +3,273 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/_global" as *;
 
-.projects{
-    &__maintitle{
-        font-size: 1.3rem;
-        padding-top: 4rem;
-        text-align: center;
-        padding-bottom: 1rem;
-    }
-    &__wrapper{
-        @include tablet-and-desktop{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding-top: 0.7rem;
-            padding-bottom: 2rem;
-        }
-    }
-    &__parent{
-        @include tablet-and-desktop{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            gap: 2rem;
-        }
-    }
-    &__niagaraone, &__ancasterone, &__oakvillebath, &__burligntonone, &__mississaugastore, &__miltoneone, &__burligntontwo, &__colborneone, &__mississaugatwo, &__torontoshelbysone, &__oakvilletwo, &__torontoshelbystwo{
-        // overflow: hidden;
+/* ========================================
+   Hero Section
+   ======================================== */
+.projects-hero {
+  position: relative;
+  height: 45vh;
+  min-height: 320px;
+  max-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(135deg, $xeus-darkmaroon 0%, darken($xeus-darkmaroon, 5%) 100%);
+  overflow: hidden;
 
-        &--title{
-            font-size: 1rem;
-            text-align: center;
-            padding-top: 0.7rem;
-            padding-bottom: 2rem;
-        }
-        &--image{
-            display: block;
-            width: 60vw;
-            aspect-ratio: 16/9;
-            margin: auto;
-            border-radius: 4px;
-            transition: transform 1s ease, box-shadow 0.3s ease;;
-            @include tablet-and-desktop{
-                width: 30vw;
-            }
-            &:hover{
-                transform: scale(1.05);
-                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-            }
-        }
+  // Decorative pattern
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(circle at 20% 50%, rgba(224, 196, 154, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(224, 196, 154, 0.05) 0%, transparent 40%);
+    pointer-events: none;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 1.5rem;
+    animation: heroFadeIn 1s ease-out;
+  }
+
+  &__label {
+    display: inline-block;
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: $xeus-mediumbeige;
+    margin-bottom: 0.75rem;
+    opacity: 0.9;
+  }
+
+  &__title {
+    font-family: Cormorant, serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: $xeus-lightbeige;
+    letter-spacing: 2px;
+    margin-bottom: 0.75rem;
+
+    @include tablet-and-desktop {
+      font-size: 4rem;
+    }
+  }
+
+  &__subtitle {
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: rgba(243, 226, 201, 0.7);
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  &__divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, $xeus-mediumbeige, transparent);
+    margin: 1.5rem auto 0;
+  }
+}
+
+/* ========================================
+   Filter Bar
+   ======================================== */
+.projects-filter {
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+  &__container {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0 1.5rem;
+    overflow-x: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
     }
 
+    @include tablet-and-desktop {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    padding: 8px 20px;
+    border: 1.5px solid rgba(47, 2, 12, 0.12);
+    border-radius: 100px;
+    background: transparent;
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: $text-darkgray;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+
+    &:hover {
+      border-color: $xeus-darkmaroon;
+      color: $xeus-darkmaroon;
+      background: rgba(47, 2, 12, 0.03);
+    }
+
+    &--active {
+      background: $xeus-darkmaroon;
+      color: $xeus-lightbeige;
+      border-color: $xeus-darkmaroon;
+
+      &:hover {
+        background: darken(#2f020c, 5%);
+        color: $xeus-lightbeige;
+      }
+    }
+  }
+}
+
+/* ========================================
+   Projects Count
+   ======================================== */
+.projects-count {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 0;
+
+  p {
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.82rem;
+    color: #999;
+    font-weight: 400;
+  }
+
+  strong {
+    color: $text-darkgray;
+  }
+}
+
+/* ========================================
+   Projects Grid
+   ======================================== */
+.projects-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  padding-bottom: 4rem;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    @include tablet-and-desktop {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+/* ========================================
+   Loading & Empty States
+   ======================================== */
+.projects-loading {
+  text-align: center;
+  padding: 4rem 0;
+
+  &__spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(47, 2, 12, 0.1);
+    border-top-color: $xeus-darkmaroon;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    animation: spin 0.8s linear infinite;
+  }
+
+  p {
+    font-family: GeneralSans, sans-serif;
+    color: #999;
+    font-size: 0.9rem;
+  }
+}
+
+.projects-empty {
+  text-align: center;
+  padding: 4rem 0;
+
+  p {
+    font-family: GeneralSans, sans-serif;
+    color: #999;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__btn {
+    padding: 10px 28px;
+    background: $xeus-darkmaroon;
+    color: $xeus-lightbeige;
+    border: none;
+    border-radius: 100px;
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: darken(#2f020c, 5%);
+    }
+  }
+}
+
+/* ========================================
+   Animations
+   ======================================== */
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
