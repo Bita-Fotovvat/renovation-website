@@ -26,6 +26,8 @@
   }
 
 .navbar{
+    position: relative;
+    z-index: 1000;
     @include tablet-and-desktop{
         display: none;
     }

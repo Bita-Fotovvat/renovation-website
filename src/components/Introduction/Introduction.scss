@@ -65,9 +65,20 @@
     padding-bottom: 1rem;
     gap: 1rem;
     
-    // Hide scrollbar
-    scrollbar-width: none;
-    &::-webkit-scrollbar { display: none; }
+    // Styled scrollbar for mobile visibility
+    scrollbar-width: thin;
+    scrollbar-color: $xeus-mediumbeige #f1f1f1;
+    &::-webkit-scrollbar { 
+      height: 4px; 
+    }
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $xeus-mediumbeige;
+      border-radius: 4px;
+    }
 
     @include tablet-and-desktop {
       flex-direction: column;
