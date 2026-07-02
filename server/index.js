@@ -15,6 +15,15 @@ const { getMetaForPath, injectMeta, LOCATION_PAGES } = require('./seoPrerender')
 const app = express();
 const PORT = process.env.PORT || 5001;
 
+// Redirect www to non-www (canonical)
+app.use((req, res, next) => {
+  const host = req.hostname;
+  if (host && host.startsWith('www.')) {
+    return res.redirect(301, `https://${host.slice(4)}${req.originalUrl}`);
+  }
+  next();
+});
+
 // Middleware
 app.use(cors());
 app.use(express.json({ limit: '50mb' }));
@@ -92,7 +101,8 @@ app.get('/sitemap.xml', async (req, res) => {
     // Blog article pages
     const blogSlugs = [
       'how-to-choose-renovation-contractor-hamilton-gta',
-      'what-to-expect-during-home-renovation-ontario'
+      'what-to-expect-during-home-renovation-ontario',
+      'luxury-kitchen-renovation-cost-oakville-2026'
     ];
 
     for (const blogSlug of blogSlugs) {
