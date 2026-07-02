@@ -14,26 +14,51 @@ const STATIC_PAGES = {
     title: 'Xeus Home | Premium Renovations',
     description: 'Xeus Home offers premium full home, kitchen, bathroom, and basement renovations. Managed by our dedicated core team and a trusted network of skilled trades.',
     ogImage: 'https://xeushome.ca/og-image.jpg',
+    bodyContent: '<h1>Xeus Home | Premium Renovations</h1>'
+      + '<p>Xeus Home offers premium full home, kitchen, bathroom, and basement renovations across Hamilton, Burlington, Oakville, Mississauga, Milton, St. Catharines, and the Greater Toronto Area. Managed by our dedicated core team and a trusted network of skilled trades.</p>'
+      + '<h2>Our Services</h2>'
+      + '<ul><li>Full Home Renovation</li><li>Kitchen Renovation</li><li>Bathroom Renovation</li><li>Basement Renovation</li><li>Commercial Renovation</li></ul>'
+      + '<h2>Why Choose Xeus Home</h2>'
+      + '<p>With 15+ years of experience, Xeus Home is your trusted renovation partner. We specialize in revitalizing spaces through exceptional renovation services with a focus on quality craftsmanship, efficiency, and affordability.</p>'
+      + '<h2>Service Areas</h2>'
+      + '<p>Hamilton, Burlington, Oakville, Mississauga, Milton, St. Catharines, and the Greater Toronto Area (GTA), Ontario, Canada.</p>'
+      + '<p>Contact us: xeushome@gmail.com | 437-599-1717</p>',
   },
   '/our-projects': {
     title: 'Our Projects | Xeus Home',
     description: 'Explore our portfolio of premium full home, kitchen, bathroom, and basement renovations across Hamilton, Burlington, Oakville, Mississauga, and the GTA.',
     ogImage: 'https://xeushome.ca/og-image.jpg',
+    bodyContent: '<h1>Our Projects</h1>'
+      + '<p>Explore our portfolio of premium full home, kitchen, bathroom, and basement renovations across Hamilton, Burlington, Oakville, Mississauga, and the GTA.</p>'
+      + '<p>Each project reflects our commitment to quality craftsmanship, thoughtful design, and attention to detail. Browse our completed renovations to see the Xeus Home difference.</p>',
   },
   '/about-us': {
     title: 'About Us | Xeus Home',
     description: 'Meet the specialized core team and trusted network of skilled trades leading Xeus Home renovations across Ontario.',
     ogImage: 'https://xeushome.ca/og-image.jpg',
+    bodyContent: '<h1>About Xeus Home</h1>'
+      + '<p>Meet the specialized core team and trusted network of skilled trades leading Xeus Home renovations across Ontario.</p>'
+      + '<p>With 15+ years of experience, we are committed to turning your vision into reality. Whether it is a residential upgrade or a commercial transformation, Xeus Home is your trusted partner in achieving beautiful, fast, and cost-effective renovations.</p>',
   },
   '/contact-us': {
     title: 'Contact Us | Xeus Home',
     description: 'Get in touch with Xeus Home for a free renovation consultation. Serving Hamilton, Burlington, Oakville, Mississauga, Milton, St. Catharines, and the GTA.',
     ogImage: 'https://xeushome.ca/og-image.jpg',
+    bodyContent: '<h1>Contact Xeus Home</h1>'
+      + '<p>Get in touch with Xeus Home for a free renovation consultation. Serving Hamilton, Burlington, Oakville, Mississauga, Milton, St. Catharines, and the GTA.</p>'
+      + '<p>Email: xeushome@gmail.com | Phone: 437-599-1717</p>',
   },
   '/blog': {
     title: 'Blog | Xeus Home',
     description: 'Renovation tips, guides, and expert advice from Xeus Home. Learn how to plan your renovation, choose the right contractor, and transform your home in Hamilton, Burlington, Mississauga, and the GTA.',
     ogImage: 'https://xeushome.ca/og-image.jpg',
+    bodyContent: '<h1>Xeus Home Blog</h1>'
+      + '<p>Renovation tips, guides, and expert advice from Xeus Home. Learn how to plan your renovation, choose the right contractor, and transform your home.</p>'
+      + '<ul>'
+      + '<li><a href="/blog/luxury-kitchen-renovation-cost-oakville-2026">How Much Does a Luxury Kitchen Renovation Cost in Oakville in 2026?</a></li>'
+      + '<li><a href="/blog/how-to-choose-renovation-contractor-hamilton-gta">How to Choose the Right Renovation Contractor in Hamilton &amp; the GTA</a></li>'
+      + '<li><a href="/blog/what-to-expect-during-home-renovation-ontario">What to Expect During a Home Renovation in Ontario</a></li>'
+      + '</ul>',
   },
 };
 
@@ -92,7 +117,7 @@ function getMetaForPath(reqPath, projectRow) {
     return {
       ...page,
       url: `https://xeushome.ca${reqPath === '/' ? '' : reqPath}`,
-      bodyContent: `<h1>${escapeHtml(page.title)}</h1><p>${escapeHtml(page.description)}</p>`,
+      bodyContent: page.bodyContent || `<h1>${escapeHtml(page.title)}</h1><p>${escapeHtml(page.description)}</p>`,
     };
   }
 
@@ -197,11 +222,12 @@ function injectMeta(html, meta) {
     );
   }
 
-  // Inject server-rendered content into <div id="root"> for crawlers
+  // Inject server-rendered content inside <div id="root"> for crawlers.
+  // React will replace this content when it mounts on the client.
   if (meta.bodyContent) {
     html = html.replace(
       '<div id="root"></div>',
-      `<div id="root"></div>\n  <div id="seo-content" style="display:none">${meta.bodyContent}</div>`
+      `<div id="root">${meta.bodyContent}</div>`
     );
   }
 
