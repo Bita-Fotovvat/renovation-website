@@ -13,6 +13,10 @@ const RELATED_ARTICLES = [
     slug: "what-to-expect-during-home-renovation-ontario",
     title: "What to Expect During a Home Renovation",
   },
+  {
+    slug: "luxury-kitchen-renovation-cost-oakville-2026",
+    title: "Luxury Kitchen Renovation Cost in Oakville (2026)",
+  },
 ];
 
 export default function LocationPage() {

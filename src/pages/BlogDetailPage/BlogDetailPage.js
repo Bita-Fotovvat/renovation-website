@@ -10,6 +10,8 @@ import kitchenDarkIsland from "../../assets/images/blog/kitchen-dark-island.png"
 import contractorMiterSaw from "../../assets/images/blog/contractor-miter-saw.jpg";
 import demolitionInProgress from "../../assets/images/blog/demolition-in-progress.jpg";
 import contractorTileCutting from "../../assets/images/blog/contractor-tile-cutting.jpg";
+import luxuryKitchenIsland from "../../assets/images/blog/luxury-kitchen-island.jpg";
+import luxuryKitchenWhite from "../../assets/images/blog/luxury-kitchen-white.jpg";
 
 const BLOG_IMAGES = {
   kitchenWhiteGold,
@@ -18,6 +20,8 @@ const BLOG_IMAGES = {
   contractorMiterSaw,
   demolitionInProgress,
   contractorTileCutting,
+  luxuryKitchenIsland,
+  luxuryKitchenWhite,
 };
 
 export default function BlogDetailPage() {

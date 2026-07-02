@@ -47,6 +47,10 @@ const BLOG_ARTICLES = {
     title: 'What to Expect During a Home Renovation in Ontario | Xeus Home',
     description: 'Wondering what happens during a kitchen, bathroom, or basement renovation? Xeus Home walks you through every phase, from planning to final walkthrough, so you know exactly what to expect.',
   },
+  'luxury-kitchen-renovation-cost-oakville-2026': {
+    title: 'How Much Does a Luxury Kitchen Renovation Cost in Oakville in 2026? | Xeus Home',
+    description: 'Wondering about the luxury kitchen renovation cost in Oakville in 2026? Learn typical price ranges, what affects cost, and what to expect from a high-end kitchen remodel.',
+  },
 };
 
 // Location landing page meta data
