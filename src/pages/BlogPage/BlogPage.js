@@ -5,13 +5,22 @@ import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import "./BlogPage.scss";
 
 import heroImg from "../../assets/images/blog/kitchen-white-gold.png";
-import cardImg1 from "../../assets/images/blog/kitchen-dark-island.png";
-import cardImg2 from "../../assets/images/blog/bathroom-dark-vanity.png";
+import kitchenDarkIsland from "../../assets/images/blog/kitchen-dark-island.png";
+import bathroomDarkVanity from "../../assets/images/blog/bathroom-dark-vanity.png";
+import luxuryKitchenIsland from "../../assets/images/blog/luxury-kitchen-island.jpg";
 
-const CARD_IMAGES = [cardImg1, cardImg2];
+const CARD_IMAGES = {
+  kitchenDarkIsland,
+  bathroomDarkVanity,
+  luxuryKitchenIsland,
+};
 
 export default function BlogPage() {
   const navigate = useNavigate();
+
+  const sortedArticles = [...blogArticles].sort(
+    (a, b) => new Date(b.publishedDate) - new Date(a.publishedDate)
+  );
 
   return (
     <main className="blog-page">
@@ -50,7 +59,7 @@ export default function BlogPage() {
       {/* Articles Grid */}
       <section className="blog-grid">
         <div className="blog-grid__container">
-          {blogArticles.map((article, index) => (
+          {sortedArticles.map((article) => (
             <article
               key={article.slug}
               className="blog-card"
@@ -58,7 +67,7 @@ export default function BlogPage() {
             >
               <div className="blog-card__image">
                 <img
-                  src={CARD_IMAGES[index] || CARD_IMAGES[0]}
+                  src={CARD_IMAGES[article.coverImageKey] || heroImg}
                   alt={article.title}
                   loading="lazy"
                 />
