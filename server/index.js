@@ -151,7 +151,7 @@ app.get('/sitemap.xml', async (req, res) => {
 // In production, serve the React build with SEO pre-rendering
 if (process.env.NODE_ENV === 'production') {
   const buildPath = path.join(__dirname, '..', 'build');
-  app.use(express.static(buildPath));
+  app.use(express.static(buildPath, { index: false }));
 
   // All non-API routes serve the React app with injected meta tags
   app.get('*', async (req, res) => {
