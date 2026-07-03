@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.5f46f97c.css",
-    "main.js": "/static/js/main.182c8909.js",
+    "main.js": "/static/js/main.9841074b.js",
     "static/js/239.ad81e450.chunk.js": "/static/js/239.ad81e450.chunk.js",
     "static/js/977.e8c20ed2.chunk.js": "/static/js/977.e8c20ed2.chunk.js",
     "static/js/455.6a67602b.chunk.js": "/static/js/455.6a67602b.chunk.js",
@@ -15,6 +15,8 @@
     "static/media/about.png": "/static/media/about.4471498ce895b502d42d.png",
     "static/media/whyhireus.png": "/static/media/whyhireus.4a83d16f0dc40e38243e.png",
     "static/media/bathroom-dark-vanity.png": "/static/media/bathroom-dark-vanity.88a258f4c6fb01cdcd85.png",
+    "static/media/luxury-kitchen-island.jpg": "/static/media/luxury-kitchen-island.826843e591260f3d8486.jpg",
+    "static/media/luxury-kitchen-white.jpg": "/static/media/luxury-kitchen-white.c8dd813ea4aad6d8a4e2.jpg",
     "static/media/contractor-miter-saw.jpg": "/static/media/contractor-miter-saw.3ed022baba334ef8a88c.jpg",
     "static/media/kitchen-dark-island.png": "/static/media/kitchen-dark-island.96b83f1f8d5ec938c769.png",
     "static/media/kitchen-white-gold.png": "/static/media/kitchen-white-gold.8c17155b8748aeb24532.png",
@@ -43,13 +45,13 @@
     "static/media/plumbing.jpg": "/static/media/plumbing.4bc518a286b2dbeb7f94.jpg",
     "index.html": "/index.html",
     "main.5f46f97c.css.map": "/static/css/main.5f46f97c.css.map",
-    "main.182c8909.js.map": "/static/js/main.182c8909.js.map",
+    "main.9841074b.js.map": "/static/js/main.9841074b.js.map",
     "239.ad81e450.chunk.js.map": "/static/js/239.ad81e450.chunk.js.map",
     "977.e8c20ed2.chunk.js.map": "/static/js/977.e8c20ed2.chunk.js.map",
     "455.6a67602b.chunk.js.map": "/static/js/455.6a67602b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5f46f97c.css",
-    "static/js/main.182c8909.js"
+    "static/js/main.9841074b.js"
   ]
 }
