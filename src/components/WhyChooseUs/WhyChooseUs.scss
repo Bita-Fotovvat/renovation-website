@@ -1,0 +1,74 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.home-trust {
+  background: $xeus-darkmaroon;
+  padding: 4rem 1.5rem;
+
+  @include tablet-and-desktop {
+    padding: 5.5rem 2rem;
+  }
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+    @include big-mobile-screen {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5rem;
+    }
+  }
+
+  &__card {
+    text-align: center;
+    padding: 0 1rem;
+    position: relative;
+
+    @include desktop {
+      &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: -1.25rem;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 60%;
+        width: 1px;
+        background: rgba(224, 196, 154, 0.25);
+      }
+    }
+  }
+
+  &__value {
+    display: block;
+    font-family: Cormorant, serif;
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 1;
+    color: $xeus-mediumbeige;
+    margin-bottom: 0.75rem;
+  }
+
+  &__label {
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $xeus-lightbeige;
+    margin-bottom: 0.75rem;
+  }
+
+  &__desc {
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: rgba(243, 226, 201, 0.7);
+  }
+}

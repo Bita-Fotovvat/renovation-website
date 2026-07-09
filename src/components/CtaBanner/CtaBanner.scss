@@ -1,0 +1,96 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.home-cta {
+  background: $xeus-darkmaroon;
+  padding: 4rem 1.5rem;
+
+  @include tablet-and-desktop {
+    padding: 6rem 2rem;
+  }
+
+  &__container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__label {
+    display: inline-block;
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: $xeus-mediumbeige;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-family: Cormorant, serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: $xeus-lightbeige;
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+
+    @include tablet-and-desktop {
+      font-size: 3.8rem;
+    }
+  }
+
+  &__desc {
+    font-family: GeneralSans, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: rgba(243, 226, 201, 0.8);
+    margin-bottom: 2.5rem;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    @include tablet-and-desktop {
+      flex-direction: row;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+  }
+
+  &__btn {
+    padding: 18px 44px;
+    background: $xeus-mediumbeige;
+    color: $xeus-darkmaroon;
+    border: none;
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: $xeus-lightbeige;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__phone {
+    font-family: Cormorant, serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $xeus-lightbeige;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $xeus-mediumbeige;
+    }
+  }
+}

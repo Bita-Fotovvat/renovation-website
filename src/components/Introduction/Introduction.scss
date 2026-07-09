@@ -2,11 +2,11 @@
 @use "../../styles/partials/mixins" as *;
 
 .home-services {
-  padding: 6rem 1.5rem;
+  padding: 4rem 1.5rem;
   background-color: #faf8f5;
 
   @include tablet-and-desktop {
-    padding: 10rem 2rem;
+    padding: 6rem 2rem;
   }
 
   &__header {

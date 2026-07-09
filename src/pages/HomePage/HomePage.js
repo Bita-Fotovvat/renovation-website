@@ -2,7 +2,13 @@ import "./HomePage.scss";
 import { Helmet } from 'react-helmet-async';
 import Hero from "../../components/Hero/Hero";
 import About from "../../components/About/About";
+import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs";
 import Introduction from "../../components/Introduction/Introduction";
+import Process from "../../components/Process/Process";
+import FeaturedProjects from "../../components/FeaturedProjects/FeaturedProjects";
+import Testimonials from "../../components/Testimonials/Testimonials";
+import ServiceAreas from "../../components/ServiceAreas/ServiceAreas";
+import CtaBanner from "../../components/CtaBanner/CtaBanner";
 
 export default function HomePage(){
     return(
@@ -21,7 +27,13 @@ export default function HomePage(){
             </Helmet>
             <Hero/>
             <About/>
+            <WhyChooseUs />
             <Introduction />
+            <Process />
+            <FeaturedProjects />
+            <Testimonials />
+            <ServiceAreas />
+            <CtaBanner />
         </main>
     )
 }

@@ -1,0 +1,127 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.home-process {
+  padding: 4rem 1.5rem;
+  background: #ffffff;
+
+  @include tablet-and-desktop {
+    padding: 6rem 2rem;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  &__label {
+    display: inline-block;
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #999;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-family: Cormorant, serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: $xeus-darkmaroon;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+
+    @include tablet-and-desktop {
+      font-size: 3.6rem;
+    }
+  }
+
+  &__divider {
+    width: 60px;
+    height: 2px;
+    background: $xeus-mediumbeige;
+    margin: 0 auto;
+  }
+
+  &__steps {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+    @include tablet-and-desktop {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3.5rem;
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5rem;
+    }
+  }
+
+  &__step {
+    position: relative;
+    padding-top: 1rem;
+    text-align: center;
+
+    @include desktop {
+      text-align: left;
+    }
+  }
+
+  &__number {
+    display: block;
+    font-family: Cormorant, serif;
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1;
+    color: $xeus-lightbeige;
+    margin-bottom: 1rem;
+  }
+
+  &__step-title {
+    font-family: Cormorant, serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $xeus-darkmaroon;
+    margin-bottom: 0.75rem;
+  }
+
+  &__step-desc {
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #666;
+  }
+
+  &__cta {
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  &__btn {
+    padding: 16px 36px;
+    background: transparent;
+    color: $xeus-darkmaroon;
+    border: 1.5px solid $xeus-darkmaroon;
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: $xeus-darkmaroon;
+      color: $xeus-lightbeige;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(47, 2, 12, 0.15);
+    }
+  }
+}

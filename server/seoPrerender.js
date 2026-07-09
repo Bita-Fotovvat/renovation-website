@@ -20,8 +20,12 @@ const STATIC_PAGES = {
       + '<ul><li>Full Home Renovation</li><li>Kitchen Renovation</li><li>Bathroom Renovation</li><li>Basement Renovation</li><li>Commercial Renovation</li></ul>'
       + '<h2>Why Choose Xeus Home</h2>'
       + '<p>With 15+ years of experience, Xeus Home is your trusted renovation partner. We specialize in revitalizing spaces through exceptional renovation services with a focus on quality craftsmanship, efficiency, and affordability.</p>'
+      + '<h2>Our Process</h2>'
+      + '<p>Free in-home consultation, detailed design and quote, expert build, and a final walkthrough — a clear four-step process on every project.</p>'
+      + '<h2>What Our Clients Say</h2>'
+      + '<p>Praised by homeowners across Ontario for quality craftsmanship, clean finishing, fair pricing, and clear communication on kitchen, basement, and commercial renovations.</p>'
       + '<h2>Service Areas</h2>'
-      + '<p>Hamilton, Burlington, Oakville, Mississauga, Milton, St. Catharines, and the Greater Toronto Area (GTA), Ontario, Canada.</p>'
+      + '<p>Hamilton, Dundas, Ancaster, Burlington, Oakville, Mississauga, Milton, St. Catharines, and the Greater Toronto Area (GTA), Ontario, Canada.</p>'
       + '<p>Contact us: xeushome@gmail.com | 437-599-1717</p>',
   },
   '/our-projects': {

@@ -1,0 +1,94 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.home-areas {
+  padding: 4rem 1.5rem;
+  background: #ffffff;
+
+  @include tablet-and-desktop {
+    padding: 6rem 2rem;
+  }
+
+  &__container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__header {
+    margin-bottom: 3rem;
+  }
+
+  &__label {
+    display: inline-block;
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #999;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-family: Cormorant, serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: $xeus-darkmaroon;
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+
+    @include tablet-and-desktop {
+      font-size: 3.6rem;
+    }
+  }
+
+  &__desc {
+    font-family: GeneralSans, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__link,
+  &__plain {
+    display: inline-block;
+    font-family: GeneralSans, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 12px 26px;
+    border-radius: 40px;
+    border: 1.5px solid $xeus-mediumbeige;
+    color: $xeus-darkmaroon;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  &__link:hover {
+    background: $xeus-darkmaroon;
+    border-color: $xeus-darkmaroon;
+    color: $xeus-lightbeige;
+    transform: translateY(-2px);
+  }
+
+  &__plain {
+    opacity: 0.75;
+  }
+}
